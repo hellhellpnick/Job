@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   wrapperLocation: {
-    paddingTop: '25px',
+    borderTop: `2px solid ${theme.palette.border.main}`
   },
 
   locationContent: {
@@ -90,15 +90,23 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    paddingTop: '25px'
   },
 
   locatioTitle: {
     marginBottom: '8px',
     color: theme.palette.text.primary,
     fontWeight: 600,
-    fontSize: '16px',
+    fontSize: '18px',
     lineHeight: '1.75',
   },
+
+  locationSubtitle: {
+    fontSize: '16px',
+    fontWeight: 400,
+    color: theme.palette.text.primary,
+    fontStyle: 'normal'
+  }
 }));
 
 const ShortInfoUser = () => {
@@ -140,6 +148,21 @@ const ShortInfoUser = () => {
         <Box className={classes.locationContent}>
           <h4 className={classes.locatioTitle}>Location </h4>
           <address className={classes.locationSubtitle}> Poltave, UK</address>
+        </Box>
+        
+        <Box className={classes.locationContent}>
+          <h4 className={classes.locatioTitle}>Phone </h4>
+          <address className={classes.locationSubtitle}> 098-131-xxxx, Vodafone</address>
+        </Box>
+        
+        <Box className={classes.locationContent}>
+          <h4 className={classes.locatioTitle}>Web </h4>
+          <address className={classes.locationSubtitle}> hellhellpnick.github.io/job</address>
+        </Box>
+        
+        <Box className={classes.locationContent}>
+          <h4 className={classes.locatioTitle}>Email </h4>
+          <address className={classes.locationSubtitle}>hellhellpnick@gmail.com</address>
         </Box>
       </Box>
     </Box>

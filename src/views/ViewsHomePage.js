@@ -3,6 +3,7 @@ import { Box } from '@material-ui/core';
 import MainNav from '../components/MainNav';
 import { makeStyles } from '@material-ui/core/styles';
 import ShortInfoUser from '../components/ShortInfoUser';
+import IntroUser from '../components/IntroUser';
 
 const useStyles = makeStyles((theme) => ({
   wrapperHeader: {
@@ -33,7 +34,7 @@ const ViewHomePage = ({ statusTheme, func }) => {
 
   return (
     <Box>
-      <MainNav statusTheme={statusTheme} func={func} />
+      <MainNav statusTheme={statusTheme} func={func} />{/* 
       <Box className={classes.wrapperHeader}>
         <Box className={classes.wrapperImg}>
           <img
@@ -44,6 +45,7 @@ const ViewHomePage = ({ statusTheme, func }) => {
         </Box>
       </Box>
       <ShortInfoUser />
+      <IntroUser /> */}
     </Box>
   );
 };
