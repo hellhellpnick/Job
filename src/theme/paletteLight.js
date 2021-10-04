@@ -5,6 +5,10 @@ const palette = {
     second: '#2b2b2b',
   },
 
+  backgroundArticle: {
+    main: '#fafafa'
+  },
+
   text: {
     main: '#939393',
     primary: '#727272',

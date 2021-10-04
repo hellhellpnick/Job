@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   wrapperShortInfo: {
     padding: '25px 25px 30px',
-    borderBottom: `2px solid ${theme.palette.border.main}`,
+    backgroundColor: theme.palette.background.main,
   },
 
   titleInfo: {
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     listStyle: 'none',
     display: 'flex',
     justifyContent: 'center',
-    marginBottom: '8px',
+    marginBottom: '33px',
   },
 
   socialBtn: {
@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   wrapperLocation: {
-    borderTop: `2px solid ${theme.palette.border.main}`
+    borderTop: `2px solid ${theme.palette.border.main}`,
   },
 
   locationContent: {
@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: '25px'
+    paddingTop: '25px',
   },
 
   locatioTitle: {
@@ -105,8 +105,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '16px',
     fontWeight: 400,
     color: theme.palette.text.primary,
-    fontStyle: 'normal'
-  }
+    fontStyle: 'normal',
+  },
 }));
 
 const ShortInfoUser = () => {
@@ -149,17 +149,17 @@ const ShortInfoUser = () => {
           <h4 className={classes.locatioTitle}>Location </h4>
           <address className={classes.locationSubtitle}> Poltave, UK</address>
         </Box>
-        
+
         <Box className={classes.locationContent}>
           <h4 className={classes.locatioTitle}>Phone </h4>
           <address className={classes.locationSubtitle}> 098-131-xxxx, Vodafone</address>
         </Box>
-        
+
         <Box className={classes.locationContent}>
           <h4 className={classes.locatioTitle}>Web </h4>
           <address className={classes.locationSubtitle}> hellhellpnick.github.io/job</address>
         </Box>
-        
+
         <Box className={classes.locationContent}>
           <h4 className={classes.locatioTitle}>Email </h4>
           <address className={classes.locationSubtitle}>hellhellpnick@gmail.com</address>

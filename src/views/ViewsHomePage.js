@@ -3,12 +3,16 @@ import { Box } from '@material-ui/core';
 import MainNav from '../components/MainNav';
 import { makeStyles } from '@material-ui/core/styles';
 import ShortInfoUser from '../components/ShortInfoUser';
-import IntroUser from '../components/IntroUser';
+import ArticleUser from '../components/ArticleUser';
+import AboutUser from '../components/AboutUser';
+import ExpertiseUser from '../components/ExpertiseUser';
+import ProgressSkill from '../components/ProgressSkill';
 
 const useStyles = makeStyles((theme) => ({
   wrapperHeader: {
     position: 'relative',
     padding: '25px 25px 0 25px',
+    backgroundColor: theme.palette.background.main,
   },
 
   wrapperImg: {
@@ -34,7 +38,7 @@ const ViewHomePage = ({ statusTheme, func }) => {
 
   return (
     <Box>
-      <MainNav statusTheme={statusTheme} func={func} />{/* 
+      <MainNav statusTheme={statusTheme} func={func} />
       <Box className={classes.wrapperHeader}>
         <Box className={classes.wrapperImg}>
           <img
@@ -45,7 +49,29 @@ const ViewHomePage = ({ statusTheme, func }) => {
         </Box>
       </Box>
       <ShortInfoUser />
-      <IntroUser /> */}
+      <ArticleUser title="intro" text="What I am all about" />
+      <AboutUser />
+      <ArticleUser title="expertise" text="Batman would be jealous" />
+      <ExpertiseUser
+        items={[
+          {
+            title: 'Advanced CSS',
+            text: 'Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.',
+          },
+          {
+            title: 'Front-end Design',
+            text: 'Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.',
+          },
+
+          {
+            title: 'JavaScript / jQuery',
+            text: 'Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.',
+          },
+        ]}
+      />
+
+      <ArticleUser title="skills" text="Progress bars, anyone?" />
+      <ProgressSkill />
     </Box>
   );
 };
