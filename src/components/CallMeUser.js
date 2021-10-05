@@ -112,7 +112,7 @@ const CallMeUser = ({ items }) => {
 
         <li className={classes.socialBtn}>
           <a href="http" className={classes.socialLink}>
-            <i className={`fas fa-paper-plane ${classes.socialIcon} `}></i>
+            <i className={` fab fa-linkedin ${classes.socialIcon} `}></i>
           </a>
         </li>
       </ul>

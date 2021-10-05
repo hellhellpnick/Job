@@ -73,7 +73,7 @@ export default function ProgressBarSkill({ procent, title }) {
   React.useEffect(() => {
     const timer = setInterval(() => {
       progressRef.current();
-    }, 500);
+    }, 300);
 
     return () => {
       clearInterval(timer);

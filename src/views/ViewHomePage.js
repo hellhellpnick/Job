@@ -11,6 +11,7 @@ import ExperienceAndEducationUser from '../components/ExperienceAndEducationUser
 import ProfilesUser from '../components/ProfilesUser';
 import AwardUser from '../components/AwardUser';
 import CallMeUser from '../components/CallMeUser';
+import ModalWindowFromComment from '../components/ModalWindowFromComment';
 
 const useStyles = makeStyles((theme) => ({
   wrapperHeader: {
@@ -91,16 +92,16 @@ const ViewHomePage = ({ statusTheme, func }) => {
         items={[
           {
             title: 'Advanced CSS',
-            text: 'Cras ornare tristique elit lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id.',
+            text: 'Advanced use of css capabilities. Such as flex, animation, pseudo-operators and more. There is also an implementation of these things. You can look in the Work section and see for yourself',
           },
           {
             title: 'Front-end Design',
-            text: 'Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.',
+            text: 'The ability to design and implement. You can create different interactive designs with different features :). Of course, you can check it in the Work section',
           },
 
           {
-            title: 'JavaScript / jQuery',
-            text: 'Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. Ut aliquam sollicitudin leo.',
+            title: 'JavaScript',
+            text: 'Quite a few features were developed, but they never came across in my repositories. Now all this can be checked in the Work section. JS is very easy to use, but I want to dive into TS in the future :)',
           },
         ]}
       />
@@ -111,35 +112,43 @@ const ViewHomePage = ({ statusTheme, func }) => {
         <ProgressBarSkill procent="70" title="git" />
         <ProgressBarSkill procent="65" title="after effects" />
         <ProgressBarSkill procent="60" title="css3" />
-        <ProgressBarSkill procent="50" title="pagespeed insights" />
+        <ProgressBarSkill procent="40" title="vue" />
+        <ProgressBarSkill procent="60" title="react" />
       </Box>
 
       <ArticleUser title="Experience" text="Yes. I've been around." />
       <Box className={classes.wrapperExperienceUser}>
         <ExperienceAndEducationUser
-          data="2015 - Present"
-          title="Unicorn Incubator Inc."
-          position="Senior Interface Designer"
-          location="Portland, QR"
-          text="Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
-        />
-        <ExperienceAndEducationUser
-          data="2015 - Present"
-          title="Unicorn Incubator Inc."
-          position="Senior Interface Designer"
-          location="Portland, QR"
-          text="Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+          data="2020 October - 2020 December"
+          title="Productera"
+          position="Junior Full-stack developer"
+          location="Canada"
+          text="Completed an internship as a fullstack developer in June. I learned React and Python from scratch. Learning React was successful, but Python was not. Helped maintain the main site and trained in a separate branch for the current project."
         />
       </Box>
 
       <ArticleUser title="Education" text="Lazy isn`t in my vocabulary." />
       <Box className={classes.wrapperExperienceUser}>
         <ExperienceAndEducationUser
-          data="2000 - 2003"
-          title="academy of fine arts"
-          position="Master of Arts"
-          location="Berlin, Germany"
-          text="Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales."
+          data="2015 - 2018"
+          title="Higher vocational school №7"
+          position="Operator with information processing and software"
+          location="Poltava, UK"
+          text="Skilled worker in such software: microsoft office (Powerpoint, Word, Excel), Adobe IndeSign, Adobe Photoshop and other. Trained in the basic concept of programming. Languages viewed visual basic 1996 and pascal"
+        />
+        <ExperienceAndEducationUser
+          data="2018 - Present"
+          title="KrNU named  Mikhail Ostrogradsky"
+          position="Computer science (122)"
+          location="Poltava, UK"
+          text="Trained in the basic concept of programming. Languages viewed с++, python, java, js and php. At the moment studying the theory of artificial intelligence, project management and computer networks"
+        />
+        <ExperienceAndEducationUser
+          data="2020 March - 2020 August"
+          title="Beetroot Academy"
+          position="Junior Front-end developer"
+          location="Poltava, UK"
+          text="Skilled worker in such software: microsoft office (Powerpoint, Word, Excel), Adobe IndeSign, Adobe Photoshop and other. Trained in the basic concept of programming. Considered visual basic 1996 and pascal"
         />
       </Box>
 
@@ -162,8 +171,12 @@ const ViewHomePage = ({ statusTheme, func }) => {
       <ArticleUser title="Awards" text="Happy times!" />
       <Box className={classes.wrapperAwards}>
         <AwardUser
-          title="1st Place at CSShacker Conference"
-          text="Praesent dapibus dolor sit amet, justo eget porttitor mauris sit amet. Neque id cursus faucibus."
+          title="1st Place at page designer"
+          text="Competition for 1 place between courses of the same specialty. Best web page creator wins an award "
+        />
+        <AwardUser
+          title="Certificate Brain Basket"
+          text="Certificate for completing the course from the brain basket. Languages considered: c ++, js, html, css and python"
         />
       </Box>
 
@@ -193,6 +206,10 @@ const ViewHomePage = ({ statusTheme, func }) => {
           ]}
         />
       </Box>
+      <ModalWindowFromComment
+        title="Appeal to the user"
+        text="The website is under construction. Please don't complain much"
+      />
     </Box>
   );
 };
