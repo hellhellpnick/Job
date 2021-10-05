@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
 import themeLight from './theme/themeLight';
 import themeDark from './theme/themeDark';
-import ViewsHomePage from './views/ViewsHomePage';
+import ViewHomePage from './views/ViewHomePage';
 
 const App = () => {
   const [themeMode, setThemeMode] = React.useState(true);
@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={themeMode ? themeLight : themeDark}>
-      <ViewsHomePage statusTheme={themeMode} func={switchStateTheme} />
+      <ViewHomePage statusTheme={themeMode} func={switchStateTheme} />
     </ThemeProvider>
   );
 };

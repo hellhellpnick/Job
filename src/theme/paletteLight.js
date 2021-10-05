@@ -6,7 +6,7 @@ const palette = {
   },
 
   backgroundArticle: {
-    main: '#fafafa'
+    main: '#fafafa',
   },
 
   text: {
@@ -30,6 +30,10 @@ const palette = {
 
   border: {
     main: '#ececec',
+  },
+
+  progress: {
+    main: '#1c92ca',
   },
 };
 

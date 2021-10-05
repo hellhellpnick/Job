@@ -12,7 +12,7 @@ const palette = {
   text: {
     primary: '#979899',
     main: '#a4a5a6',
-    second: '#1c82cc',
+    second: '#1c92ca',
   },
 
   link: {
@@ -29,6 +29,10 @@ const palette = {
 
   border: {
     main: '#404242',
+  },
+
+  progress: {
+    main: '#1c92ca',
   },
 };
 

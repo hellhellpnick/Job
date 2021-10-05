@@ -6,7 +6,8 @@ import ShortInfoUser from '../components/ShortInfoUser';
 import ArticleUser from '../components/ArticleUser';
 import AboutUser from '../components/AboutUser';
 import ExpertiseUser from '../components/ExpertiseUser';
-import ProgressSkill from '../components/ProgressSkill';
+import ProgressBarSkill from '../components/ProgressBarSkill';
+import ExperienceUser from '../components/ExperienceUser';
 
 const useStyles = makeStyles((theme) => ({
   wrapperHeader: {
@@ -31,6 +32,21 @@ const useStyles = makeStyles((theme) => ({
     objectPosition: 'center',
     margin: '0 auto',
   },
+
+  wrapperSkills: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '25px 25px 0 25px',
+    backgroundColor: theme.palette.background.main,
+  },
+
+  wrapperExperienceUser: {
+    padding: '25px 25px 0 25px',
+    backgroundColor: theme.palette.background.main,
+  },
 }));
 
 const ViewHomePage = ({ statusTheme, func }) => {
@@ -49,8 +65,10 @@ const ViewHomePage = ({ statusTheme, func }) => {
         </Box>
       </Box>
       <ShortInfoUser />
+
       <ArticleUser title="intro" text="What I am all about" />
       <AboutUser />
+
       <ArticleUser title="expertise" text="Batman would be jealous" />
       <ExpertiseUser
         items={[
@@ -71,7 +89,24 @@ const ViewHomePage = ({ statusTheme, func }) => {
       />
 
       <ArticleUser title="skills" text="Progress bars, anyone?" />
-      <ProgressSkill />
+      <Box className={classes.wrapperSkills}>
+        <ProgressBarSkill procent="85" title="photoshop" />
+        <ProgressBarSkill procent="70" title="git" />
+        <ProgressBarSkill procent="65" title="after effects" />
+        <ProgressBarSkill procent="60" title="css3" />
+        <ProgressBarSkill procent="50" title="pagespeed insights" />
+      </Box>
+
+      <ArticleUser title="Experience" text="Yes. I've been around." />
+      <Box className={classes.wrapperExperienceUser}>
+        <ExperienceUser
+          data="2015 - Present"
+          title="Unicorn Incubator Inc."
+          position="Senior Interface Designer"
+          location="Portland, QR"
+          text="Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+        />
+      </Box>
     </Box>
   );
 };
