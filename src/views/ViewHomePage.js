@@ -106,7 +106,16 @@ const ViewHomePage = ({ statusTheme, func }) => {
           location="Portland, QR"
           text="Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
         />
+        <ExperienceUser
+          data="2015 - Present"
+          title="Unicorn Incubator Inc."
+          position="Senior Interface Designer"
+          location="Portland, QR"
+          text="Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
+        />
       </Box>
+
+      <ArticleUser title="Education" text="Lazy isn`t in my vocabulary." />
     </Box>
   );
 };
