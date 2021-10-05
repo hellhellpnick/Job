@@ -57,7 +57,7 @@ const ExpertiseUser = ({ items }) => {
         {items.map((item, index) => {
           return (
             <li className={classes.expertiseItem} key={index + 1}>
-              <h1 className={classes.expertiseTitle}>0{index + 1}</h1>
+              <h2 className={classes.expertiseTitle}>0{index + 1}</h2>;
               <Box className={classes.expertiseBox}>
                 <h2 className={classes.expertiseSubtitle}>{item.title}</h2>
                 <p className={classes.expertiseText}>{item.text}</p>

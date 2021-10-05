@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ExperienceUser = ({ data, title, position, location, text }) => {
+const ExperienceAndEducationUser = ({ data, title, position, location, text }) => {
   const classes = useStyles();
 
   return (
@@ -78,4 +78,4 @@ const ExperienceUser = ({ data, title, position, location, text }) => {
   );
 };
 
-export default ExperienceUser;
+export default ExperienceAndEducationUser;

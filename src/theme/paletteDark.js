@@ -25,6 +25,7 @@ const palette = {
 
   iconColor: {
     main: '#717273',
+    primary: '#575859',
   },
 
   border: {

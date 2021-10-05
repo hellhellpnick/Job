@@ -7,7 +7,10 @@ import ArticleUser from '../components/ArticleUser';
 import AboutUser from '../components/AboutUser';
 import ExpertiseUser from '../components/ExpertiseUser';
 import ProgressBarSkill from '../components/ProgressBarSkill';
-import ExperienceUser from '../components/ExperienceUser';
+import ExperienceAndEducationUser from '../components/ExperienceAndEducationUser';
+import ProfilesUser from '../components/ProfilesUser';
+import AwardUser from '../components/AwardUser';
+import CallMeUser from '../components/CallMeUser';
 
 const useStyles = makeStyles((theme) => ({
   wrapperHeader: {
@@ -44,6 +47,20 @@ const useStyles = makeStyles((theme) => ({
   },
 
   wrapperExperienceUser: {
+    padding: '25px 25px 0 25px',
+    backgroundColor: theme.palette.background.main,
+  },
+
+  wrapperProfileUser: {
+    backgroundColor: theme.palette.background.main,
+  },
+
+  wrapperAwards: {
+    padding: '25px 25px 0 25px',
+    backgroundColor: theme.palette.background.main,
+  },
+
+  wrapperCallMeUser: {
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
   },
@@ -99,14 +116,14 @@ const ViewHomePage = ({ statusTheme, func }) => {
 
       <ArticleUser title="Experience" text="Yes. I've been around." />
       <Box className={classes.wrapperExperienceUser}>
-        <ExperienceUser
+        <ExperienceAndEducationUser
           data="2015 - Present"
           title="Unicorn Incubator Inc."
           position="Senior Interface Designer"
           location="Portland, QR"
           text="Consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti."
         />
-        <ExperienceUser
+        <ExperienceAndEducationUser
           data="2015 - Present"
           title="Unicorn Incubator Inc."
           position="Senior Interface Designer"
@@ -116,6 +133,66 @@ const ViewHomePage = ({ statusTheme, func }) => {
       </Box>
 
       <ArticleUser title="Education" text="Lazy isn`t in my vocabulary." />
+      <Box className={classes.wrapperExperienceUser}>
+        <ExperienceAndEducationUser
+          data="2000 - 2003"
+          title="academy of fine arts"
+          position="Master of Arts"
+          location="Berlin, Germany"
+          text="Fusce lacinia arcu et nulla. Nulla vitae mauris non felis mollis faucibus. Phasellus hendrerit. Pellentesque aaliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales."
+        />
+      </Box>
+
+      <ArticleUser title="Profiles" text="Busy as usualy." />
+      <Box className={classes.wrapperProfileUser}>
+        <ProfilesUser
+          icon="fab fa-github-alt"
+          title="github"
+          link="https://github.com/hellhellpnick"
+          text="All my open source projects for you analyze. "
+        />
+        <ProfilesUser
+          icon="fab fa-linkedin"
+          link="https://ru.linkedin.com/"
+          title="linkedin"
+          text="All brief information about me can be found here. Also view comments about me "
+        />
+      </Box>
+
+      <ArticleUser title="Awards" text="Happy times!" />
+      <Box className={classes.wrapperAwards}>
+        <AwardUser
+          title="1st Place at CSShacker Conference"
+          text="Praesent dapibus dolor sit amet, justo eget porttitor mauris sit amet. Neque id cursus faucibus."
+        />
+      </Box>
+
+      <ArticleUser title="Contact" text="Call me, maybe" />
+      <Box className={classes.wrapperCallMeUser}>
+        <CallMeUser
+          items={[
+            {
+              title: 'Location',
+              text: 'Poltave, UK',
+            },
+
+            {
+              title: 'Phone',
+              text: '098-131-xxxx',
+            },
+
+            {
+              title: 'Web',
+              text: 'hellhellpnick.github.io/Job',
+            },
+
+            {
+              title: 'Email',
+              text: 'hellhellpnick@gmail.com',
+            },
+          ]}
+        />
+      </Box>
     </Box>
   );
 };
