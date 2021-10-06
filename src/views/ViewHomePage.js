@@ -12,12 +12,15 @@ import ProfilesUser from '../components/ProfilesUser';
 import AwardUser from '../components/AwardUser';
 import CallMeUser from '../components/CallMeUser';
 import ModalWindowFromComment from '../components/ModalWindowFromComment';
+import LazyLoad from 'react-lazyload';
 
 const useStyles = makeStyles((theme) => ({
   wrapperHeader: {
     position: 'relative',
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
+    transition: 'all 0.2s ease',
+    zIndex: 1,
   },
 
   wrapperImg: {
@@ -45,25 +48,30 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
+    transition: 'all 0.2s ease',
   },
 
   wrapperExperienceUser: {
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
+    transition: 'all 0.2s ease',
   },
 
   wrapperProfileUser: {
     backgroundColor: theme.palette.background.main,
+    transition: 'all 0.2s ease',
   },
 
   wrapperAwards: {
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
+    transition: 'all 0.2s ease',
   },
 
   wrapperCallMeUser: {
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
+    transition: 'all 0.2s ease',
   },
 }));
 
@@ -85,9 +93,11 @@ const ViewHomePage = ({ statusTheme, func }) => {
       <ShortInfoUser />
 
       <ArticleUser title="intro" text="What I am all about" />
+
       <AboutUser />
 
       <ArticleUser title="expertise" text="Batman would be jealous" />
+
       <ExpertiseUser
         items={[
           {
@@ -133,21 +143,21 @@ const ViewHomePage = ({ statusTheme, func }) => {
           data="2015 - 2018"
           title="Higher vocational school №7"
           position="Operator with information processing and software"
-          location="Poltava, UK"
+          location="Poltava, UA"
           text="Skilled worker in such software: microsoft office (Powerpoint, Word, Excel), Adobe IndeSign, Adobe Photoshop and other. Trained in the basic concept of programming. Languages viewed visual basic 1996 and pascal"
         />
         <ExperienceAndEducationUser
           data="2018 - Present"
           title="KrNU named  Mikhail Ostrogradsky"
           position="Computer science (122)"
-          location="Poltava, UK"
+          location="Poltava, UA"
           text="Trained in the basic concept of programming. Languages viewed с++, python, java, js and php. At the moment studying the theory of artificial intelligence, project management and computer networks"
         />
         <ExperienceAndEducationUser
           data="2020 March - 2020 August"
           title="Beetroot Academy"
           position="Junior Front-end developer"
-          location="Poltava, UK"
+          location="Poltava, UA"
           text="Skilled worker in such software: microsoft office (Powerpoint, Word, Excel), Adobe IndeSign, Adobe Photoshop and other. Trained in the basic concept of programming. Considered visual basic 1996 and pascal"
         />
       </Box>
@@ -162,7 +172,7 @@ const ViewHomePage = ({ statusTheme, func }) => {
         />
         <ProfilesUser
           icon="fab fa-linkedin"
-          link="https://ru.linkedin.com/"
+          link="https://www.linkedin.com/in/alexander-vodoriz-24a27a1b5/"
           title="linkedin"
           text="All brief information about me can be found here. Also view comments about me "
         />
@@ -186,7 +196,7 @@ const ViewHomePage = ({ statusTheme, func }) => {
           items={[
             {
               title: 'Location',
-              text: 'Poltave, UK',
+              text: 'Poltave, UA',
             },
 
             {

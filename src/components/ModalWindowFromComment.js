@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
     transform: 'translate(-50%, -50%)',
     width: 400,
     backgroundColor: theme.palette.background.main,
-    border: 'none',
     outline: 'none',
     border: `2px solid ${theme.palette.border.main}`,
     padding: 20,

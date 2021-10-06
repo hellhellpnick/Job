@@ -99,20 +99,26 @@ const CallMeUser = ({ items }) => {
       </Box>
       <ul className={classes.wrapperSocial}>
         <li className={classes.socialBtn}>
-          <a href="http" className={classes.socialLink}>
+          <a
+            href="https://www.facebook.com/profile.php?id=100008973467157"
+            className={classes.socialLink}
+          >
             <i className={`fab fa-facebook-f ${classes.socialIcon} `}></i>
           </a>
         </li>
 
         <li className={classes.socialBtn}>
-          <a href="http" className={classes.socialLink}>
+          <a href="https://github.com/hellhellpnick" className={classes.socialLink}>
             <i className={`fab fa-github ${classes.socialIcon} `}></i>
           </a>
         </li>
 
         <li className={classes.socialBtn}>
-          <a href="http" className={classes.socialLink}>
-            <i className={` fab fa-linkedin ${classes.socialIcon} `}></i>
+          <a
+            href="https://www.linkedin.com/in/alexander-vodoriz-24a27a1b5/"
+            className={classes.socialLink}
+          >
+            <i className={`fab fa-linkedin ${classes.socialIcon} `}></i>
           </a>
         </li>
       </ul>

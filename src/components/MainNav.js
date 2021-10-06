@@ -1,12 +1,25 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import SwitchTheme from './switches/switcheTheme';
-import { Box } from '@material-ui/core';
+import { Box, Button } from '@material-ui/core';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
+const InputLabelCustom = withStyles((theme) => ({
+  root: {
+    color: theme.palette.text.main,
+  },
+
+  formControl: {
+    color: `${theme.palette.text.main} !important`,
+  },
+
+  focused: {
+    color: `${theme.palette.text.primary} !important`,
+  },
+}))(InputLabel);
 const useStyles = makeStyles((theme) => ({
   header: {
     padding: '10px',
@@ -15,34 +28,88 @@ const useStyles = makeStyles((theme) => ({
     transition: 'all 0.2s ease',
   },
 
-  nav: {
+  navActive: {
+    width: '100%',
+    height: '100%',
+    top: 0,
+    right: 0,
+    left: 0,
+    zIndex: 12,
+    position: 'fixed',
     display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
     alignItems: 'center',
     maxWidth: '1440px',
     margin: '0 auto',
     padding: 0,
+    backgroundColor: theme.palette.background.main,
+    animation: '$move-menu-to-right-open 2s',
 
     '@media (min-width: 780px)': {
       justifyContent: 'space-between',
     },
   },
 
+  '@keyframes move-menu-to-right-open': {
+    '0%': {
+      width: '0%',
+      left: '-100%',
+    },
+    '100%': {
+      left: 0,
+      width: '100%',
+    },
+  },
+
+  navDisable: {
+    width: '0',
+    height: '100%',
+    top: 0,
+    right: 0,
+    left: '-200%',
+    zIndex: 12,
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    maxWidth: '1440px',
+    margin: '0 auto',
+    padding: 0,
+    backgroundColor: theme.palette.background.main,
+    animation: '$move-menu-to-right-close 2s',
+  },
+
+  '@keyframes move-menu-to-right-close': {
+    '0%': {
+      width: '100%',
+      left: '0',
+    },
+    '100%': {
+      left: '-200%',
+      width: '0%',
+    },
+  },
+
   menu: {
+    width: '100%',
     listStyle: 'none',
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
-
+    justifyContent: 'center',
     padding: '0 20px',
   },
 
   item: {
+    cursor: 'pointer',
+    textAlign: 'center',
+    width: '100%',
     position: 'relative',
-    padding: 20,
-    ...theme.typography.link,
+    padding: 30,
+    fontSize: 20,
+    color: theme.palette.text.main,
     textTransform: 'uppercase',
     textDecoration: 'none',
     marginRight: '20px',
@@ -118,29 +185,81 @@ const useStyles = makeStyles((theme) => ({
   },
 
   flexRow: {
+    width: '100%',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'center',
+    paddingBottom: 20,
+  },
+
+  wrapperBtn: {
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    padding: 10,
+    zIndex: 10,
+  },
+
+  wrapperBtnOpenDisable: {
+    position: 'fixed',
+    top: 20,
+    left: -30,
+    padding: '5px 0 5px 25px',
+    backgroundColor: theme.palette.background.primary,
+    borderTopRightRadius: '10px',
+    borderBottomRightRadius: '10px',
+    zIndex: 10,
+    animation: '$move-btn-to-right-open 2s',
+  },
+
+  wrapperBtnOpenActive: {
+    position: 'fixed',
+    top: 20,
+    left: -30,
+    padding: '5px 0 5px 25px',
+    backgroundColor: theme.palette.background.primary,
+    borderTopRightRadius: '10px',
+    borderBottomRightRadius: '10px',
+    zIndex: 10,
+    animation: '$move-btn-to-right-close 2s',
+  },
+
+  '@keyframes move-btn-to-right-open': {
+    '0%': {
+      position: 'absolute',
+      left: '-30px',
+    },
+    '100%': {
+      left: '100%',
+    },
+  },
+
+  '@keyframes move-btn-to-right-close': {
+    '0%': {
+      position: 'absolute',
+      left: '100%',
+    },
+    '100%': {
+      left: '-30px',
+    },
+  },
+
+  iconClose: {
+    fontSize: 20,
+    color: theme.palette.iconColor.main,
+  },
+
+  iconArrow: {
+    fontSize: 20,
+    color: theme.palette.iconColor.main,
+    textAlign: 'right',
   },
 }));
 
-const InputLabelCustom = withStyles((theme) => ({
-  root: {
-    color: theme.palette.text.main,
-  },
-
-  formControl: {
-    color: `${theme.palette.text.main} !important`,
-  },
-
-  focused: {
-    color: `${theme.palette.text.primary} !important`,
-  },
-}))(InputLabel);
-
 const MainNav = ({ statusTheme, func }) => {
   const [lang, setAge] = React.useState('');
+  const [stateMenu, setStateMenu] = React.useState(false);
   const [open, setOpen] = React.useState(false);
 
   const handleChange = (event) => {
@@ -155,14 +274,38 @@ const MainNav = ({ statusTheme, func }) => {
     setOpen(true);
   };
 
+  const handleCloseMenu = () => {
+    setStateMenu(false);
+    document.body.style.overflow = 'visible';
+  };
+
+  const handleOpenMenu = () => {
+    setStateMenu(true);
+    document.body.style.overflow = 'hidden';
+  };
+
   const classes = useStyles();
 
   return (
     <header className={classes.header}>
-      <nav className={classes.nav}>
+      <Button
+        variant="text"
+        className={stateMenu ? classes.wrapperBtnOpenDisable : classes.wrapperBtnOpenActive}
+        onClick={handleOpenMenu}
+      >
+        <i className={`fas fa-angle-double-right ${classes.iconArrow}`}></i>
+      </Button>
+      <nav className={stateMenu ? classes.navActive : classes.navDisable}>
+        <Button variant="text" className={classes.wrapperBtn} onClick={handleCloseMenu}>
+          <i className={`fas fa-times ${classes.iconClose}`}></i>
+        </Button>
         <ul className={classes.menu}>
-          <li className={classes.item}>Home</li>
-          <li className={classes.item}>Works</li>
+          <li className={classes.item} onClick={handleCloseMenu}>
+            Home
+          </li>
+          <li className={classes.item} onClick={handleCloseMenu}>
+            Works
+          </li>
         </ul>
 
         <Box>

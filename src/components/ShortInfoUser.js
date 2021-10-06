@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
   wrapperShortInfo: {
     padding: '25px 25px 30px',
     backgroundColor: theme.palette.background.main,
+    transition: 'all 0.2s ease',
   },
 
   titleInfo: {
@@ -127,19 +128,25 @@ const ShortInfoUser = () => {
       </Box>
       <ul className={classes.wrapperSocial}>
         <li className={classes.socialBtn}>
-          <a href="http" className={classes.socialLink}>
+          <a
+            href="https://www.facebook.com/profile.php?id=100008973467157"
+            className={classes.socialLink}
+          >
             <i className={`fab fa-facebook-f ${classes.socialIcon} `}></i>
           </a>
         </li>
 
         <li className={classes.socialBtn}>
-          <a href="http" className={classes.socialLink}>
+          <a href="https://github.com/hellhellpnick" className={classes.socialLink}>
             <i className={`fab fa-github ${classes.socialIcon} `}></i>
           </a>
         </li>
 
         <li className={classes.socialBtn}>
-          <a href="http" className={classes.socialLink}>
+          <a
+            href="https://www.linkedin.com/in/alexander-vodoriz-24a27a1b5/"
+            className={classes.socialLink}
+          >
             <i className={`fab fa-linkedin ${classes.socialIcon} `}></i>
           </a>
         </li>
@@ -147,7 +154,7 @@ const ShortInfoUser = () => {
       <Box className={classes.wrapperLocation}>
         <Box className={classes.locationContent}>
           <h4 className={classes.locatioTitle}>Location </h4>
-          <address className={classes.locationSubtitle}> Poltave, UK</address>
+          <address className={classes.locationSubtitle}> Poltave, UA</address>
         </Box>
 
         <Box className={classes.locationContent}>
