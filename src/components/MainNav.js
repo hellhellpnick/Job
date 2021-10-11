@@ -20,6 +20,7 @@ const InputLabelCustom = withStyles((theme) => ({
     color: `${theme.palette.text.primary} !important`,
   },
 }))(InputLabel);
+
 const useStyles = makeStyles((theme) => ({
   header: {
     padding: '10px',
@@ -44,22 +45,14 @@ const useStyles = makeStyles((theme) => ({
     margin: '0 auto',
     padding: 0,
     backgroundColor: theme.palette.background.main,
-    animation: '$move-menu-to-right-open 2s',
 
     '@media (min-width: 780px)': {
       justifyContent: 'space-between',
     },
   },
 
-  '@keyframes move-menu-to-right-open': {
-    '0%': {
-      width: '0%',
-      left: '-100%',
-    },
-    '100%': {
-      left: 0,
-      width: '100%',
-    },
+  navActiveAnimation: {
+    animation: '$move-menu-to-right-open 2s',
   },
 
   navDisable: {
@@ -78,18 +71,10 @@ const useStyles = makeStyles((theme) => ({
     margin: '0 auto',
     padding: 0,
     backgroundColor: theme.palette.background.main,
-    animation: '$move-menu-to-right-close 2s',
   },
 
-  '@keyframes move-menu-to-right-close': {
-    '0%': {
-      width: '100%',
-      left: '0',
-    },
-    '100%': {
-      left: '-200%',
-      width: '0%',
-    },
+  navDisableAnimation: {
+    animation: '$move-menu-to-right-close 2s',
   },
 
   menu: {
@@ -171,15 +156,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  '@keyframes move-forever': {
-    '0%': {
-      transform: 'translate3d(-90px,0,0)',
-    },
-    '100%': {
-      transform: 'translate3d(85px,0,0)',
-    },
-  },
-
   formControl: {
     minWidth: 120,
   },
@@ -225,6 +201,37 @@ const useStyles = makeStyles((theme) => ({
     animation: '$move-btn-to-right-close 2s',
   },
 
+  iconClose: {
+    fontSize: 20,
+    color: theme.palette.iconColor.main,
+  },
+
+  iconArrow: {
+    fontSize: 20,
+    color: theme.palette.iconColor.main,
+    textAlign: 'right',
+  },
+
+  '@keyframes move-menu-to-right-close': {
+    '0%': {
+      width: '100%',
+      left: '0',
+    },
+    '100%': {
+      left: '-200%',
+      width: '0%',
+    },
+  },
+
+  '@keyframes move-forever': {
+    '0%': {
+      transform: 'translate3d(-90px,0,0)',
+    },
+    '100%': {
+      transform: 'translate3d(85px,0,0)',
+    },
+  },
+
   '@keyframes move-btn-to-right-open': {
     '0%': {
       position: 'absolute',
@@ -245,21 +252,22 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  iconClose: {
-    fontSize: 20,
-    color: theme.palette.iconColor.main,
-  },
-
-  iconArrow: {
-    fontSize: 20,
-    color: theme.palette.iconColor.main,
-    textAlign: 'right',
+  '@keyframes move-menu-to-right-open': {
+    '0%': {
+      width: '0%',
+      left: '-100%',
+    },
+    '100%': {
+      left: 0,
+      width: '100%',
+    },
   },
 }));
 
 const MainNav = ({ statusTheme, func }) => {
   const [lang, setAge] = React.useState('');
   const [stateMenu, setStateMenu] = React.useState(false);
+  const [stateAnimationMenu, setstateAnimationMenu] = React.useState(false);
   const [open, setOpen] = React.useState(false);
 
   const handleChange = (event) => {
@@ -284,6 +292,14 @@ const MainNav = ({ statusTheme, func }) => {
     document.body.style.overflow = 'hidden';
   };
 
+  const handleOpenAnimation = () => {
+    setstateAnimationMenu(true);
+  };
+
+  const handleCloseAnimation = () => {
+    setstateAnimationMenu(false);
+  };
+
   const classes = useStyles();
 
   return (
@@ -291,19 +307,46 @@ const MainNav = ({ statusTheme, func }) => {
       <Button
         variant="text"
         className={stateMenu ? classes.wrapperBtnOpenDisable : classes.wrapperBtnOpenActive}
-        onClick={handleOpenMenu}
+        onClick={() => {
+          handleOpenMenu();
+          handleOpenAnimation();
+        }}
       >
         <i className={`fas fa-angle-double-right ${classes.iconArrow}`}></i>
       </Button>
-      <nav className={stateMenu ? classes.navActive : classes.navDisable}>
-        <Button variant="text" className={classes.wrapperBtn} onClick={handleCloseMenu}>
+      <nav
+        className={`
+          ${stateMenu ? classes.navActive : classes.navDisable}
+          ${stateAnimationMenu ? classes.navActiveAnimation : classes.navDisableAnimation}
+        `}
+      >
+        <Button
+          variant="text"
+          className={classes.wrapperBtn}
+          onClick={() => {
+            handleCloseMenu();
+            handleCloseAnimation();
+          }}
+        >
           <i className={`fas fa-times ${classes.iconClose}`}></i>
         </Button>
         <ul className={classes.menu}>
-          <li className={classes.item} onClick={handleCloseMenu}>
+          <li
+            className={classes.item}
+            onClick={() => {
+              handleCloseMenu();
+              handleCloseAnimation();
+            }}
+          >
             Home
           </li>
-          <li className={classes.item} onClick={handleCloseMenu}>
+          <li
+            className={classes.item}
+            onClick={() => {
+              handleCloseMenu();
+              handleCloseAnimation();
+            }}
+          >
             Works
           </li>
         </ul>

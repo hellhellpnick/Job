@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.main,
     outline: 'none',
     border: `2px solid ${theme.palette.border.main}`,
-    padding: 20,
+    padding: '20px 40px',
   },
 
   modalText: {

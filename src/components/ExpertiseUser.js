@@ -48,6 +48,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const ConditionH2Render = ({ index }) => {
+  const classes = useStyles();
+  if (index < 10) {
+    return <h2 className={classes.expertiseTitle}>0{index + 1}</h2>;
+  } else {
+    return <h2 className={classes.expertiseTitle}>{index + 1}</h2>;
+  }
+};
+
 const ExpertiseUser = ({ items }) => {
   const classes = useStyles();
 
@@ -57,7 +66,7 @@ const ExpertiseUser = ({ items }) => {
         {items.map((item, index) => {
           return (
             <li className={classes.expertiseItem} key={index + 1}>
-              <h2 className={classes.expertiseTitle}>0{index + 1}</h2>;
+              <ConditionH2Render index={index} />
               <Box className={classes.expertiseBox}>
                 <h2 className={classes.expertiseSubtitle}>{item.title}</h2>
                 <p className={classes.expertiseText}>{item.text}</p>

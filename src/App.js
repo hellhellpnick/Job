@@ -5,7 +5,7 @@ import themeDark from './theme/themeDark';
 import ViewHomePage from './views/ViewHomePage';
 
 const App = () => {
-  const [themeMode, setThemeMode] = React.useState(false);
+  const [themeMode, setThemeMode] = React.useState(true);
 
   const switchStateTheme = () => {
     setThemeMode(!themeMode);
