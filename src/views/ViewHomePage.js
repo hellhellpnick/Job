@@ -105,6 +105,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   wrapperCallMeUser: {
+    width: '100%',
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
     transition: 'all 0.2s ease',

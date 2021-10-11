@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: `1px solid ${theme.palette.border.main}`,
   },
 
+  wrapperCallMeUser: {
+    width: '100%',
+  },
+
   titleAward: {
     fontSize: 16,
     color: theme.palette.text.main,
@@ -26,6 +30,11 @@ const useStyles = makeStyles((theme) => ({
     '@media screen and (min-width: 600px)': {
       paddingRight: 50,
       width: '50%',
+    },
+
+    '@media screen and (min-width: 1024px)': {
+      width: '25%',
+      paddingRight: 0,
     },
   },
 
