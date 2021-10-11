@@ -35,6 +35,10 @@ const palette = {
   progress: {
     main: '#1c92ca',
   },
+
+  shadow: {
+    main: '#fff',
+  },
 };
 
 export default palette;

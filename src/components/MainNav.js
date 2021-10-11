@@ -46,10 +46,10 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
-    maxWidth: '1440px',
     margin: '0 auto',
     padding: 0,
     backgroundColor: theme.palette.background.main,
+    boxShadow: `0 5px 5px -5px ${theme.palette.shadow.main}`,
 
     '@media (min-width: 780px)': {
       justifyContent: 'space-between',
