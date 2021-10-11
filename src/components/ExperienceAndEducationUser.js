@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const useStyles = makeStyles((theme) => ({
   wrapperExperience: {
@@ -59,11 +61,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ExperienceAndEducationUser = ({ data, title, position, location, text }) => {
+const ExperienceAndEducationUser = ({ data, title, position, location, text, time }) => {
   const classes = useStyles();
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <Box className={classes.wrapperExperience}>
+    <Box className={classes.wrapperExperience} data-aos="fade-up" data-aos-duration={time}>
       <Box className={classes.wrapperExperienceInterior}>
         <h4 className={classes.titleData}>{data}</h4>
         <h2 className={classes.titleWork}>{title}</h2>

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const useStyles = makeStyles((theme) => ({
   wrapperProfiles: {
@@ -8,6 +10,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'stretch',
+
+    '@media screen and (min-width: 600px)': {
+      width: '50%',
+      paddingRight: 50,
+    },
   },
 
   wrapperInfo: {
@@ -45,11 +52,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ProfilesUser = ({ icon, link, title, text }) => {
+const ProfilesUser = ({ icon, link, title, text, time }) => {
   const classes = useStyles();
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <Box className={classes.wrapperProfiles}>
+    <Box className={classes.wrapperProfiles} data-aos="fade-up" data-aos-duration={time}>
       <a href={link} alt={title} className={classes.linkProfileUser}>
         <i className={`${icon} ${classes.iconProfileUser}`}></i>
       </a>

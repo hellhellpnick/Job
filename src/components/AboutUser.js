@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
     '&:not(:last-child)': {
       marginBottom: 15,
     },
+
+    '@media screen and (min-width: 600px)': {
+      fontSize: 20,
+    },
   },
 }));
 const AboutUser = ({ title, text }) => {

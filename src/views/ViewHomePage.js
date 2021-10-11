@@ -16,12 +16,25 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 const useStyles = makeStyles((theme) => ({
+  wrapperMain: {
+    backgroundColor: theme.palette.background.main,
+  },
+
   wrapperHeader: {
     position: 'relative',
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
     transition: 'all 0.2s ease',
     zIndex: 1,
+
+    '@media screen and (min-width: 1024px)': {
+      minWidth: '30%',
+      backgroundColor: theme.palette.backgroundArticle.main,
+      paddingTop: '20%',
+      paddingBottom: '20%',
+      height: '100%',
+      padding: '0 25px',
+    },
   },
 
   wrapperImg: {
@@ -50,6 +63,10 @@ const useStyles = makeStyles((theme) => ({
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
     transition: 'all 0.2s ease',
+
+    '@media screen and (min-width: 600px)': {
+      alignItems: 'stretch',
+    },
   },
 
   wrapperExperienceUser: {
@@ -59,20 +76,58 @@ const useStyles = makeStyles((theme) => ({
   },
 
   wrapperProfileUser: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     backgroundColor: theme.palette.background.main,
     transition: 'all 0.2s ease',
+
+    '@media screen and (min-width: 600px)': {
+      alignItems: 'stretch',
+    },
   },
 
   wrapperAwards: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
     transition: 'all 0.2s ease',
+
+    '@media screen and (min-width: 600px)': {
+      alignItems: 'stretch',
+    },
   },
 
   wrapperCallMeUser: {
     padding: '25px 25px 0 25px',
     backgroundColor: theme.palette.background.main,
     transition: 'all 0.2s ease',
+  },
+
+  wrapperSection: {
+    display: 'flex',
+    flexDirection: 'column',
+
+    '@media screen and (min-width: 1024px)': {
+      flexDirection: 'row',
+      borderTop: `2px solid ${theme.palette.border.main}`,
+    },
+  },
+
+  wrapperFlex: {
+    display: 'flex',
+    flexDirection: 'column',
+
+    '@media screen and (min-width: 1024px)': {
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
   },
 }));
 
@@ -84,9 +139,9 @@ const ViewHomePage = ({ statusTheme, func }) => {
   }, []);
 
   return (
-    <Box>
+    <Box className={classes.wrapperMain}>
       <MainNav statusTheme={statusTheme} func={func} />
-      <Box data-aos="zoom-out-right">
+      <Box className={classes.wrapperFlex}>
         <Box className={classes.wrapperHeader}>
           <Box className={classes.wrapperImg}>
             <img
@@ -99,12 +154,12 @@ const ViewHomePage = ({ statusTheme, func }) => {
         <ShortInfoUser />
       </Box>
 
-      <Box data-aos="zoom-out-right">
+      <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="intro" text="What I am all about" />
         <AboutUser />
       </Box>
 
-      <Box data-aos="zoom-out-right">
+      <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="expertise" text="Batman would be jealous" />
         <ExpertiseUser
           items={[
@@ -125,19 +180,19 @@ const ViewHomePage = ({ statusTheme, func }) => {
         />
       </Box>
 
-      <Box data-aos="zoom-out-right">
+      <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="skills" text="Progress bars, anyone?" />
         <Box className={classes.wrapperSkills}>
-          <ProgressBarSkill procent="85" title="photoshop" />
-          <ProgressBarSkill procent="70" title="git" />
-          <ProgressBarSkill procent="65" title="after effects" />
-          <ProgressBarSkill procent="60" title="css3" />
-          <ProgressBarSkill procent="40" title="vue" />
-          <ProgressBarSkill procent="60" title="react" />
+          <ProgressBarSkill procent="85" title="photoshop" time="1000" />
+          <ProgressBarSkill procent="70" title="git" time="1500" />
+          <ProgressBarSkill procent="65" title="after effects" time="2000" />
+          <ProgressBarSkill procent="60" title="css3" time="2500" />
+          <ProgressBarSkill procent="40" title="vue" time="3000" />
+          <ProgressBarSkill procent="60" title="react" time="3500" />
         </Box>
       </Box>
 
-      <Box data-aos="zoom-out-right">
+      <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Experience" text="Yes. I've been around." />
         <Box className={classes.wrapperExperienceUser}>
           <ExperienceAndEducationUser
@@ -146,11 +201,12 @@ const ViewHomePage = ({ statusTheme, func }) => {
             position="Junior Full-stack developer"
             location="Canada"
             text="Completed an internship as a fullstack developer in June. I learned React and Python from scratch. Learning React was successful, but Python was not. Helped maintain the main site and trained in a separate branch for the current project."
+            time="1000"
           />
         </Box>
       </Box>
 
-      <Box data-aos="zoom-out-right">
+      <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Education" text="Lazy isn`t in my vocabulary." />
         <Box className={classes.wrapperExperienceUser}>
           <ExperienceAndEducationUser
@@ -159,6 +215,7 @@ const ViewHomePage = ({ statusTheme, func }) => {
             position="Operator with information processing and software"
             location="Poltava, UA"
             text="Skilled worker in such software: microsoft office (Powerpoint, Word, Excel), Adobe IndeSign, Adobe Photoshop and other. Trained in the basic concept of programming. Languages viewed visual basic 1996 and pascal"
+            time="1000"
           />
           <ExperienceAndEducationUser
             data="2018 - Present"
@@ -166,6 +223,7 @@ const ViewHomePage = ({ statusTheme, func }) => {
             position="Computer science (122)"
             location="Poltava, UA"
             text="Trained in the basic concept of programming. Languages viewed с++, python, java, js and php. At the moment studying the theory of artificial intelligence, project management and computer networks"
+            time="1500"
           />
           <ExperienceAndEducationUser
             data="2020 March - 2020 August"
@@ -173,11 +231,12 @@ const ViewHomePage = ({ statusTheme, func }) => {
             position="Junior Front-end developer"
             location="Poltava, UA"
             text="Skilled worker in such software: microsoft office (Powerpoint, Word, Excel), Adobe IndeSign, Adobe Photoshop and other. Trained in the basic concept of programming. Considered visual basic 1996 and pascal"
+            time="2000"
           />
         </Box>
       </Box>
 
-      <Box data-aos="zoom-out-right">
+      <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Profiles" text="Busy as usualy." />
         <Box className={classes.wrapperProfileUser}>
           <ProfilesUser
@@ -185,31 +244,35 @@ const ViewHomePage = ({ statusTheme, func }) => {
             title="github"
             link="https://github.com/hellhellpnick"
             text="All my open source projects for you analyze. "
+            time="1000"
           />
           <ProfilesUser
             icon="fab fa-linkedin"
             link="https://www.linkedin.com/in/alexander-vodoriz-24a27a1b5/"
             title="linkedin"
             text="All brief information about me can be found here. Also view comments about me "
+            time="1500"
           />
         </Box>
       </Box>
 
-      <Box data-aos="zoom-out-right">
+      <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Awards" text="Happy times!" />
         <Box className={classes.wrapperAwards}>
           <AwardUser
             title="1st Place at page designer"
             text="Competition for 1 place between courses of the same specialty. Best web page creator wins an award "
+            time="1000"
           />
           <AwardUser
             title="Certificate Brain Basket"
             text="Certificate for completing the course from the brain basket. Languages considered: c ++, js, html, css and python"
+            time="1500"
           />
         </Box>
       </Box>
 
-      <Box data-aos="zoom-out-right">
+      <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Contact" text="Call me, maybe" />
         <Box className={classes.wrapperCallMeUser}>
           <CallMeUser

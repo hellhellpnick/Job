@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.main,
     boxShadow: `0px 8px 10px -11px ${theme.palette.text.main}`,
     transition: 'all 0.2s ease',
+
+    '@media screen and (min-width: 1024px)': {
+      padding: 0,
+    },
   },
 
   navActive: {
@@ -48,6 +52,12 @@ const useStyles = makeStyles((theme) => ({
 
     '@media (min-width: 780px)': {
       justifyContent: 'space-between',
+    },
+
+    '@media (min-width: 1024px)': {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      height: '10%',
     },
   },
 
@@ -71,6 +81,12 @@ const useStyles = makeStyles((theme) => ({
     margin: '0 auto',
     padding: 0,
     backgroundColor: theme.palette.background.main,
+
+    '@media (min-width: 1024px)': {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      height: '10%',
+    },
   },
 
   navDisableAnimation: {
@@ -85,6 +101,11 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     padding: '0 20px',
+
+    '@media (min-width: 1024px)': {
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+    },
   },
 
   item: {
@@ -167,6 +188,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     alignItems: 'center',
     paddingBottom: 20,
+
+    '@media (min-width: 1024px)': {
+      justifyContent: 'center',
+    },
   },
 
   wrapperBtn: {
@@ -175,6 +200,11 @@ const useStyles = makeStyles((theme) => ({
     right: 20,
     padding: 10,
     zIndex: 10,
+
+    '@media (min-width: 1024px)': {
+      top: 10,
+      right: 10,
+    },
   },
 
   wrapperBtnOpenDisable: {

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const useStyles = makeStyles((theme) => ({
   wrapperInfo: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     borderBottom: `1px solid ${theme.palette.border.main}`,
   },
 
@@ -16,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
 
   wrapperCallMeInfo: {
     paddingBottom: 25,
+    width: '100%',
+
+    '@media screen and (min-width: 600px)': {
+      paddingRight: 50,
+      width: '50%',
+    },
   },
 
   textAward: {
@@ -27,6 +38,11 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 25,
     paddingTop: 50,
     marginBottom: 25,
+
+    '@media screen and (min-width: 600px)': {
+      paddingBottom: 0,
+      marginBottom: 0,
+    },
   },
 
   titleFirstName: {
@@ -48,6 +64,10 @@ const useStyles = makeStyles((theme) => ({
     top: '-70px',
     listStyle: 'none',
     display: 'flex',
+
+    '@media screen and (min-width: 600px)': {
+      top: 0,
+    },
   },
 
   socialBtn: {
@@ -76,52 +96,71 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: '0.75em',
     verticalAlign: '-15%',
   },
+
+  wrapperShortInfo: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
 }));
 
 const CallMeUser = ({ items }) => {
   const classes = useStyles();
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
 
   return (
     <Box className={classes.wrapperCallMeUser}>
       <Box className={classes.wrapperInfo}>
         {items.map((item, index) => {
           return (
-            <Box key={index} className={classes.wrapperCallMeInfo}>
+            <Box
+              key={index}
+              className={classes.wrapperCallMeInfo}
+              data-aos="fade-up"
+              data-aos-duration={(index + 1) * 500}
+            >
               <h2 className={classes.titleAward}>{item.title}</h2>
               <p className={classes.textAward}>{item.text}</p>
             </Box>
           );
         })}
       </Box>
-      <Box className={classes.wrapperNameUser}>
-        <h3 className={classes.titleFirstName}>Alexander</h3>
-        <h2 className={classes.titleLastName}>Vodorez</h2>
+      <Box className={classes.wrapperShortInfo}>
+        <Box className={classes.wrapperNameUser}>
+          <h3 className={classes.titleFirstName}>Alexander</h3>
+          <h2 className={classes.titleLastName}>Vodorez</h2>
+        </Box>
+        <ul className={classes.wrapperSocial}>
+          <li className={classes.socialBtn}>
+            <a
+              href="https://www.facebook.com/profile.php?id=100008973467157"
+              className={classes.socialLink}
+            >
+              <i className={`fab fa-facebook-f ${classes.socialIcon} `}></i>
+            </a>
+          </li>
+
+          <li className={classes.socialBtn}>
+            <a href="https://github.com/hellhellpnick" className={classes.socialLink}>
+              <i className={`fab fa-github ${classes.socialIcon} `}></i>
+            </a>
+          </li>
+
+          <li className={classes.socialBtn}>
+            <a
+              href="https://www.linkedin.com/in/alexander-vodoriz-24a27a1b5/"
+              className={classes.socialLink}
+            >
+              <i className={`fab fa-linkedin ${classes.socialIcon} `}></i>
+            </a>
+          </li>
+        </ul>
       </Box>
-      <ul className={classes.wrapperSocial}>
-        <li className={classes.socialBtn}>
-          <a
-            href="https://www.facebook.com/profile.php?id=100008973467157"
-            className={classes.socialLink}
-          >
-            <i className={`fab fa-facebook-f ${classes.socialIcon} `}></i>
-          </a>
-        </li>
-
-        <li className={classes.socialBtn}>
-          <a href="https://github.com/hellhellpnick" className={classes.socialLink}>
-            <i className={`fab fa-github ${classes.socialIcon} `}></i>
-          </a>
-        </li>
-
-        <li className={classes.socialBtn}>
-          <a
-            href="https://www.linkedin.com/in/alexander-vodoriz-24a27a1b5/"
-            className={classes.socialLink}
-          >
-            <i className={`fab fa-linkedin ${classes.socialIcon} `}></i>
-          </a>
-        </li>
-      </ul>
     </Box>
   );
 };

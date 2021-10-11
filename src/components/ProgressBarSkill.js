@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box } from '@material-ui/core';
 import MuiLinearProgress from '@material-ui/core/LinearProgress';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const useStyles = makeStyles((theme) => ({
   wrapperProgressBar: {
@@ -9,6 +11,11 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     paddingBottom: '25px',
+
+    '@media screen and (min-width: 600px)': {
+      width: '50%',
+      paddingRight: 50,
+    },
   },
 
   wrapperInfoProgressBar: {
@@ -53,7 +60,11 @@ const LinearProgress = withStyles((theme) => ({
   },
 }))(MuiLinearProgress);
 
-export default function ProgressBarSkill({ procent, title }) {
+export default function ProgressBarSkill({ procent, title, time }) {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   const [progress, setProgress] = React.useState(0);
   const [buffer, setBuffer] = React.useState(10);
 
@@ -83,7 +94,7 @@ export default function ProgressBarSkill({ procent, title }) {
   const classes = useStyles();
 
   return (
-    <Box className={classes.wrapperProgressBar}>
+    <Box className={classes.wrapperProgressBar} data-aos="fade-up" data-aos-duration={time}>
       <Box className={classes.wrapperInfoProgressBar}>
         <h2 className={classes.procentProgressBar}>{procent}%</h2>
         <h2 className={classes.titleProgressBar}>{title} </h2>

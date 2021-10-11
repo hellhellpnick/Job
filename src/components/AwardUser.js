@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const useStyles = makeStyles((theme) => ({
   wrapperAwardUser: {
     position: 'relative',
     paddingTop: 25,
     paddingBottom: 25,
+    width: '100%',
 
     '&::after': {
       position: 'absolute',
@@ -16,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
       height: 5,
       width: '30%',
       backgroundColor: theme.palette.text.second,
+    },
+
+    '@media screen and (min-width: 600px)': {
+      width: '50%',
+      paddingRight: 50,
     },
   },
 
@@ -33,11 +41,16 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
   },
 }));
-const AwardUser = ({ title, text }) => {
+
+const AwardUser = ({ title, text, time }) => {
   const classes = useStyles();
 
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
-    <Box className={classes.wrapperAwardUser}>
+    <Box className={classes.wrapperAwardUser} data-aos="fade-up" data-aos-duration={time}>
       <h2 className={classes.titleAward}>{title}</h2>
       <p className={classes.textAward}>{text}</p>
     </Box>
