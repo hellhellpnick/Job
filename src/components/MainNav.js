@@ -6,6 +6,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import '../css/mainNavAnimation.css';
 
 const InputLabelCustom = withStyles((theme) => ({
   root: {
@@ -61,10 +62,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 
-  navActiveAnimation: {
-    animation: '$move-menu-to-right-open 2s',
-  },
-
   navDisable: {
     width: '0',
     height: '100%',
@@ -87,10 +84,6 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'space-between',
       height: '10%',
     },
-  },
-
-  navDisableAnimation: {
-    animation: '$move-menu-to-right-close 2s',
   },
 
   menu: {
@@ -242,17 +235,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'right',
   },
 
-  '@keyframes move-menu-to-right-close': {
-    '0%': {
-      width: '100%',
-      left: '0',
-    },
-    '100%': {
-      left: '-200%',
-      width: '0%',
-    },
-  },
-
   '@keyframes move-forever': {
     '0%': {
       transform: 'translate3d(-90px,0,0)',
@@ -269,27 +251,6 @@ const useStyles = makeStyles((theme) => ({
     },
     '100%': {
       left: '100%',
-    },
-  },
-
-  '@keyframes move-btn-to-right-close': {
-    '0%': {
-      position: 'absolute',
-      left: '100%',
-    },
-    '100%': {
-      left: '-30px',
-    },
-  },
-
-  '@keyframes move-menu-to-right-open': {
-    '0%': {
-      width: '0%',
-      left: '-100%',
-    },
-    '100%': {
-      left: 0,
-      width: '100%',
     },
   },
 }));
@@ -347,7 +308,7 @@ const MainNav = ({ statusTheme, func }) => {
       <nav
         className={`
           ${stateMenu ? classes.navActive : classes.navDisable}
-          ${stateAnimationMenu ? classes.navActiveAnimation : classes.navDisableAnimation}
+          ${stateAnimationMenu ? `nav-active-animation` : `nav-disable-animation`}
         `}
       >
         <Button

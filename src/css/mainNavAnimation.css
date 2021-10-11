@@ -1,0 +1,40 @@
+.nav-disable-animation {
+  animation: 2s move-menu-to-right-close;
+}
+
+.nav-active-animation {
+  animation: 2s move-menu-to-right-open;
+}
+
+/*   @keyframes move-btn-to-right-close {
+    0% {
+      position: absolute;
+      left: 100%;
+    }
+
+    100% {
+      left: -30px;
+    }
+  }
+ */
+@keyframes move-menu-to-right-open {
+  0% {
+    width: 0%;
+    left: -100%;
+  }
+  100% {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@keyframes move-menu-to-right-close {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    left: -200%;
+    width: 0%;
+  }
+}
