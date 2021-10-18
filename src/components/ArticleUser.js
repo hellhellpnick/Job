@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titleArticle: {
+    ...theme.typography.h2,
     fontSize: 20,
     textTransform: 'uppercase',
     lineHeight: '1.5',
@@ -29,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   subtitleArticle: {
+    ...theme.typography.h3,
     fontSize: 16,
     color: theme.palette.text.main,
     fontWeight: 300,

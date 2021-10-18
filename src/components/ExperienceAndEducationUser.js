@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titleData: {
+    ...theme.typography.h2,
     fontSize: 11,
     opacity: 0.7,
     color: theme.palette.text.main,
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titleWork: {
+    ...theme.typography.h3,
     fontSize: 20,
     color: theme.palette.text.primary,
     fontWeight: 700,
@@ -28,12 +30,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titlePosition: {
+    ...theme.typography.text,
     fontSize: 14,
     color: theme.palette.text.primary,
     marginBottom: 8,
   },
 
   textInfo: {
+    ...theme.typography.text,
     fontSize: 14,
     lineHeight: '1.5',
     color: theme.palette.text.primary,

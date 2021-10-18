@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titleAward: {
+    ...theme.typography.h2,
     lineHeight: '1.5',
     color: theme.palette.text.main,
     fontSize: 20,
@@ -36,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   textAward: {
+    ...theme.typography.text,
     lineHeight: '1.5',
     color: theme.palette.text.primary,
     fontSize: 14,

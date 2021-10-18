@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   expertiseSubtitle: {
+    ...theme.typography.h2,
     color: theme.palette.text.main,
     fontSize: 20,
     textTransform: 'uppercase',

@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   procentProgressBar: {
+    ...theme.typography.h2,
     fontSize: 25,
     color: theme.palette.text.second,
     lineHeight: '1.5',
@@ -34,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titleProgressBar: {
+    ...theme.typography.h2,
     fontSize: 25,
     color: theme.palette.text.primary,
     lineHeight: '1.5',

@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titleAward: {
+    ...theme.typography.h2,
     fontSize: 16,
     color: theme.palette.text.main,
     fontWeight: 600,
@@ -39,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   textAward: {
+    ...theme.typography.text,
     fontSize: 14,
     color: theme.palette.text.primary,
   },

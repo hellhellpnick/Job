@@ -15,12 +15,14 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titleInfo: {
+    ...theme.typography.h1,
     fontSize: '76px',
     lineHeight: '0.9',
     marginBottom: '8px',
   },
 
   subtitleInfo: {
+    ...theme.typography.h2,
     textAlign: 'center',
     fontSize: '26px',
     lineHeight: '0.9',

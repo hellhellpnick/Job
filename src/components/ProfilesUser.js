@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   titleProfileUser: {
+    ...theme.typography.h2,
     marginBottom: 10,
     fontSize: 20,
     color: theme.palette.text.second,
@@ -36,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   textProfileUser: {
+    ...theme.typography.text,
     marginBottom: 10,
     fontSize: 14,
     lineHeight: '1.5',

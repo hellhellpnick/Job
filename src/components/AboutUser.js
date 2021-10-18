@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
 
   aboutText: {
     color: theme.palette.text.main,
+    ...theme.typography.text,
     fontSize: 16,
     lineHeight: '1.5',
 
