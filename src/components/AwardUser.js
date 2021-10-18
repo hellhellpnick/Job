@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -51,7 +51,9 @@ const AwardUser = ({ title, text, time }) => {
 
   return (
     <Box className={classes.wrapperAwardUser} data-aos="fade-up" data-aos-duration={time}>
-      <h2 className={classes.titleAward}>{title}</h2>
+      <Typography className={classes.titleAward} component="h2" variant="h3">
+        {title}
+      </Typography>
       <p className={classes.textAward}>{text}</p>
     </Box>
   );

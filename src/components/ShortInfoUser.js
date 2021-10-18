@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Typography, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -152,60 +152,68 @@ const ShortInfoUser = () => {
     <Box className={classes.wrapperShortInfo}>
       <Box className={classes.wrapperFlexWrap}>
         <Box className={classes.wrapperUser}>
-          <h1 className={classes.titleInfo}>
+          <Typography className={classes.titleInfo} component="h1" variant="h2">
             <span className={classes.wrapperName}>
               <span className={classes.firstWord}>Alexander</span>
               <span className={classes.secondWord}>Vodorez</span>
             </span>
-          </h1>
-          <h2 className={classes.subtitleInfo}>
+          </Typography>
+          <Typography className={classes.subtitleInfo} component="h2" variant="h3">
             <span className={classes.wrapperName}>Web Developer & Front-end Expert</span>
-          </h2>
+          </Typography>
         </Box>
         <ul className={classes.wrapperSocial}>
           <li className={classes.socialBtn}>
-            <a
+            <Link
               href="https://www.facebook.com/profile.php?id=100008973467157"
               className={classes.socialLink}
             >
               <i className={`fab fa-facebook-f ${classes.socialIcon} `}></i>
-            </a>
+            </Link>
           </li>
 
           <li className={classes.socialBtn}>
-            <a href="https://github.com/hellhellpnick" className={classes.socialLink}>
+            <Link href="https://github.com/hellhellpnick" className={classes.socialLink}>
               <i className={`fab fa-github ${classes.socialIcon} `}></i>
-            </a>
+            </Link>
           </li>
 
           <li className={classes.socialBtn}>
-            <a
+            <Link
               href="https://www.linkedin.com/in/alexander-vodoriz-24a27a1b5/"
               className={classes.socialLink}
             >
               <i className={`fab fa-linkedin ${classes.socialIcon} `}></i>
-            </a>
+            </Link>
           </li>
         </ul>
       </Box>
       <Box className={classes.wrapperLocation}>
         <Box className={classes.locationContent}>
-          <h4 className={classes.locatioTitle}>Location </h4>
+          <Typography className={classes.locatioTitle} component="h4" variant="h5">
+            Location{' '}
+          </Typography>
           <address className={classes.locationSubtitle}> Poltave, UA</address>
         </Box>
 
         <Box className={classes.locationContent}>
-          <h4 className={classes.locatioTitle}>Phone </h4>
+          <Typography className={classes.locatioTitle} component="h4" variant="h5">
+            Phone{' '}
+          </Typography>
           <address className={classes.locationSubtitle}> 098-131-xxxx, Vodafone</address>
         </Box>
 
         <Box className={classes.locationContent}>
-          <h4 className={classes.locatioTitle}>Web </h4>
+          <Typography className={classes.locatioTitle} component="h4" variant="h5">
+            Web{' '}
+          </Typography>
           <address className={classes.locationSubtitle}> hellhellpnick.github.io/job</address>
         </Box>
 
         <Box className={classes.locationContent}>
-          <h4 className={classes.locatioTitle}>Email </h4>
+          <Typography className={classes.locatioTitle} component="h4" variant="h5">
+            Email{' '}
+          </Typography>
           <address className={classes.locationSubtitle}>hellhellpnick@gmail.com</address>
         </Box>
       </Box>

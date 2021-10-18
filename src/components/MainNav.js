@@ -1,11 +1,7 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import SwitchTheme from './switches/switcheTheme';
-import { Box, Button } from '@material-ui/core';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import { Box, Button, Select, InputLabel, MenuItem, FormControl } from '@material-ui/core';
 import '../css/mainNavAnimation.css';
 
 const InputLabelCustom = withStyles((theme) => ({

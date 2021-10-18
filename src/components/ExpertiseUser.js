@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -92,7 +92,9 @@ const ExpertiseUser = ({ items }) => {
             >
               <ConditionH2Render index={index} />
               <Box className={classes.expertiseBox}>
-                <h2 className={classes.expertiseSubtitle}>{item.title}</h2>
+                <Typography className={classes.expertiseSubtitle} component="h2" variant="h3">
+                  {item.title}
+                </Typography>
                 <p className={classes.expertiseText}>{item.text}</p>
               </Box>
             </li>

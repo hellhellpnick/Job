@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -40,8 +40,12 @@ const ArticleUser = ({ title, text }) => {
 
   return (
     <Box className={classes.wrapperArticle}>
-      <h1 className={classes.titleArticle}>{title}</h1>
-      <h2 className={classes.subtitleArticle}>{text}</h2>
+      <Typography className={classes.titleArticle} component="h2" variant="h3">
+        {title}
+      </Typography>
+      <Typography className={classes.subtitleArticle} component="h3" variant="h4">
+        {text}
+      </Typography>
     </Box>
   );
 };

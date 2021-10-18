@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -71,8 +71,12 @@ const ExperienceAndEducationUser = ({ data, title, position, location, text, tim
   return (
     <Box className={classes.wrapperExperience} data-aos="fade-up" data-aos-duration={time}>
       <Box className={classes.wrapperExperienceInterior}>
-        <h4 className={classes.titleData}>{data}</h4>
-        <h2 className={classes.titleWork}>{title}</h2>
+        <Typography className={classes.titleData} component="h4" variant="h5">
+          {data}
+        </Typography>
+        <Typography className={classes.titleWork} component="h2" variant="h3">
+          {title}
+        </Typography>
         <p className={classes.titlePosition}>{position}</p>
         <p className={classes.titleData}>{location}</p>
         <p className={classes.textInfo}>{text}</p>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Typography, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -133,7 +133,9 @@ const CallMeUser = ({ items }) => {
               data-aos="fade-up"
               data-aos-duration={(index + 1) * 500}
             >
-              <h2 className={classes.titleAward}>{item.title}</h2>
+              <Typography className={classes.titleAward} component="h2" variant="h3">
+                {item.title}
+              </Typography>
               <p className={classes.textAward}>{item.text}</p>
             </Box>
           );
@@ -141,32 +143,36 @@ const CallMeUser = ({ items }) => {
       </Box>
       <Box className={classes.wrapperShortInfo}>
         <Box className={classes.wrapperNameUser}>
-          <h3 className={classes.titleFirstName}>Alexander</h3>
-          <h2 className={classes.titleLastName}>Vodorez</h2>
+          <Typography className={classes.titleFirstName} component="h3" variant="h4">
+            Alexander
+          </Typography>
+          <Typography className={classes.titleLastName} component="h2" variant="h3">
+            Vodorez
+          </Typography>
         </Box>
         <ul className={classes.wrapperSocial}>
           <li className={classes.socialBtn}>
-            <a
+            <Link
               href="https://www.facebook.com/profile.php?id=100008973467157"
               className={classes.socialLink}
             >
               <i className={`fab fa-facebook-f ${classes.socialIcon} `}></i>
-            </a>
+            </Link>
           </li>
 
           <li className={classes.socialBtn}>
-            <a href="https://github.com/hellhellpnick" className={classes.socialLink}>
+            <Link href="https://github.com/hellhellpnick" className={classes.socialLink}>
               <i className={`fab fa-github ${classes.socialIcon} `}></i>
-            </a>
+            </Link>
           </li>
 
           <li className={classes.socialBtn}>
-            <a
+            <Link
               href="https://www.linkedin.com/in/alexander-vodoriz-24a27a1b5/"
               className={classes.socialLink}
             >
               <i className={`fab fa-linkedin ${classes.socialIcon} `}></i>
-            </a>
+            </Link>
           </li>
         </ul>
       </Box>

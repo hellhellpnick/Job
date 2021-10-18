@@ -184,12 +184,12 @@ const ViewHomePage = ({ statusTheme, func }) => {
       <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="skills" text="Progress bars, anyone?" />
         <Box className={classes.wrapperSkills}>
-          <ProgressBarSkill procent="85" title="photoshop" time="1000" />
-          <ProgressBarSkill procent="70" title="git" time="1500" />
-          <ProgressBarSkill procent="65" title="after effects" time="2000" />
-          <ProgressBarSkill procent="60" title="css3" time="2500" />
-          <ProgressBarSkill procent="40" title="vue" time="3000" />
-          <ProgressBarSkill procent="60" title="react" time="3500" />
+          <ProgressBarSkill procent="85" title="photoshop" />
+          <ProgressBarSkill procent="70" title="git" />
+          <ProgressBarSkill procent="65" title="after effects" />
+          <ProgressBarSkill procent="60" title="css3" />
+          <ProgressBarSkill procent="40" title="vue" />
+          <ProgressBarSkill procent="60" title="react" />
         </Box>
       </Box>
 

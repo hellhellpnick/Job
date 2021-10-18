@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Typography, Link } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -61,11 +61,13 @@ const ProfilesUser = ({ icon, link, title, text, time }) => {
 
   return (
     <Box className={classes.wrapperProfiles} data-aos="fade-up" data-aos-duration={time}>
-      <a href={link} alt={title} className={classes.linkProfileUser}>
+      <Link href={link} alt={title} className={classes.linkProfileUser}>
         <i className={`${icon} ${classes.iconProfileUser}`}></i>
-      </a>
+      </Link>
       <Box className={classes.wrapperInfo}>
-        <h2 className={classes.titleProfileUser}>{title}</h2>
+        <Typography className={classes.titleProfileUser} component="h2" variant="h3">
+          {title}
+        </Typography>
         <p className={classes.textProfileUser}>{text}</p>
       </Box>
     </Box>
