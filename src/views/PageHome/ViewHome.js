@@ -1,17 +1,18 @@
-import React, { useEffect } from 'react';
-import { Box } from '@material-ui/core';
-import MainNav from '../components/MainNav';
+import { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import ShortInfoUser from '../components/ShortInfoUser';
-import ArticleUser from '../components/ArticleUser';
-import AboutUser from '../components/AboutUser';
-import ExpertiseUser from '../components/ExpertiseUser';
-import ProgressBarSkill from '../components/ProgressBarSkill';
-import ExperienceAndEducationUser from '../components/ExperienceAndEducationUser';
-import ProfilesUser from '../components/ProfilesUser';
-import AwardUser from '../components/AwardUser';
-import CallMeUser from '../components/CallMeUser';
-import ModalWindowFromComment from '../components/ModalWindowFromComment';
+import { Box } from '@material-ui/core';
+import {
+  AboutUser,
+  ArticleUser,
+  AwardUser,
+  CallMeUser,
+  ExperienceAndEducationUser,
+  ExpertiseUser,
+  ProfilesUser,
+  ProgressBarSkill,
+  ShortInfoUser,
+} from './../../components/HomePage';
+import { ModalWindow } from './../../components/ModalWindow';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -132,16 +133,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ViewHomePage = ({ statusTheme, func }) => {
+const ViewHome = ({ statusTheme, func }) => {
   const classes = useStyles();
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
-  }, []);
+  });
 
   return (
     <Box className={classes.wrapperMain}>
-      <MainNav statusTheme={statusTheme} func={func} />
       <Box className={classes.wrapperFlex}>
         <Box className={classes.wrapperHeader}>
           <Box className={classes.wrapperImg}>
@@ -302,7 +302,7 @@ const ViewHomePage = ({ statusTheme, func }) => {
         </Box>
       </Box>
 
-      <ModalWindowFromComment
+      <ModalWindow
         data-aos="flip-up"
         title="Appeal to the user"
         text="The website is under construction. Please don't complain much"
@@ -311,4 +311,4 @@ const ViewHomePage = ({ statusTheme, func }) => {
   );
 };
 
-export default ViewHomePage;
+export default ViewHome;

@@ -39,6 +39,8 @@ const palette = {
 
   shadow: {
     main: '#2b2b2b',
+    primary: '#1c92ca',
+    second: '#fafafa',
   },
 };
 

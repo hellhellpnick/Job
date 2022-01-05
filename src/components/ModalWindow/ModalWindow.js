@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ModalWindowFromComment({ title, text }) {
+const ModalWindow = ({ title, text }) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleClose = () => setOpen(false);
@@ -58,4 +58,6 @@ export default function ModalWindowFromComment({ title, text }) {
       </Modal>
     </Box>
   );
-}
+};
+
+export default ModalWindow;

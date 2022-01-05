@@ -1,8 +1,10 @@
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
-import SwitchTheme from './switches/switcheTheme';
+import { SwitchTheme } from './Switches/';
 import { Box, Button, Select, InputLabel, MenuItem, FormControl } from '@material-ui/core';
-import '../css/mainNavAnimation.css';
+import '../../css/mainNavAnimation.css';
+import { NavLink } from 'react-router-dom';
+import { routes } from '../../Router';
 
 const InputLabelCustom = withStyles((theme) => ({
   root: {
@@ -93,31 +95,35 @@ const useStyles = makeStyles((theme) => ({
 
     '@media (min-width: 1024px)': {
       flexDirection: 'row',
-      justifyContent: 'flex-start',
+      justifyContent: 'center',
     },
   },
 
   item: {
     cursor: 'pointer',
-    textAlign: 'center',
-    width: '100%',
-    position: 'relative',
     padding: 30,
-    fontSize: 20,
-    color: theme.palette.text.main,
-    textTransform: 'uppercase',
-    textDecoration: 'none',
-    marginRight: '20px',
 
-    '&:before': {
-      position: 'absolute',
-      bottom: '-2px',
-      content: '""',
+    '& > a': {
+      textAlign: 'center',
       width: '100%',
-      height: '3px',
-      background: theme.palette.link.primary,
-      transform: 'translateX(100%)',
-      opacity: 0,
+      position: 'relative',
+      fontSize: 20,
+      padding: 30,
+      color: theme.palette.text.main,
+      textTransform: 'uppercase',
+      textDecoration: 'none',
+      marginRight: '20px',
+
+      '&:before': {
+        position: 'absolute',
+        bottom: '-2px',
+        content: '""',
+        width: '100%',
+        height: '3px',
+        background: theme.palette.link.primary,
+        transform: 'translateX(100%)',
+        opacity: 0,
+      },
     },
 
     '&:hover': {
@@ -325,7 +331,7 @@ const MainNav = ({ statusTheme, func }) => {
               handleCloseAnimation();
             }}
           >
-            Home
+            <NavLink to={routes.main}>Home</NavLink>
           </li>
           <li
             className={classes.item}
@@ -334,7 +340,7 @@ const MainNav = ({ statusTheme, func }) => {
               handleCloseAnimation();
             }}
           >
-            Works
+            <NavLink to={routes.works.main}>Works</NavLink>
           </li>
         </ul>
 

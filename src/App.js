@@ -1,11 +1,13 @@
-import React from 'react';
+import { Suspense, useState } from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
+import { Switch, BrowserRouter } from 'react-router-dom';
+import { MainNav } from './components/MainNav/';
 import themeLight from './theme/themeLight';
 import themeDark from './theme/themeDark';
-import ViewHomePage from './views/ViewHomePage';
+import { Router } from './Router';
 
 const App = () => {
-  const [themeMode, setThemeMode] = React.useState(false);
+  const [themeMode, setThemeMode] = useState(false);
 
   const switchStateTheme = () => {
     setThemeMode(!themeMode);
@@ -13,7 +15,16 @@ const App = () => {
 
   return (
     <ThemeProvider theme={themeMode ? themeLight : themeDark}>
-      <ViewHomePage statusTheme={themeMode} func={switchStateTheme} />
+      <BrowserRouter>
+        <div className="App">
+          <Suspense fallback={<>sa</>}>
+            <MainNav statusTheme={themeMode} func={switchStateTheme} />
+            <Switch>
+              <Router />
+            </Switch>
+          </Suspense>
+        </div>
+      </BrowserRouter>
     </ThemeProvider>
   );
 };
