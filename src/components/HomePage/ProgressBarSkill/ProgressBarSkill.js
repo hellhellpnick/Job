@@ -62,7 +62,7 @@ const LinearProgress = withStyles((theme) => ({
   },
 }))(MuiLinearProgress);
 
-export default function ProgressBarSkill({ procent, title }) {
+export default function ProgressBarSkill({ item }) {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -74,7 +74,7 @@ export default function ProgressBarSkill({ procent, title }) {
 
   React.useEffect(() => {
     progressRef.current = () => {
-      if (progress < procent) {
+      if (progress < item.procent) {
         const diff = Math.random() * 10;
         const diff2 = Math.random() * 10;
         setProgress(progress + diff);
@@ -99,10 +99,10 @@ export default function ProgressBarSkill({ procent, title }) {
     <Box className={classes.wrapperProgressBar} data-aos="fade-up" data-aos-duration="1000">
       <Box className={classes.wrapperInfoProgressBar}>
         <Typography className={classes.procentProgressBar} component="h2" variant="h3">
-          {procent}%
+          {item.procent}%
         </Typography>
         <Typography className={classes.titleProgressBar} component="h2" variant="h3">
-          {title}{' '}
+          {item.title}{' '}
         </Typography>
       </Box>
       <LinearProgress

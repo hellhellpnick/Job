@@ -12,7 +12,15 @@ import {
   ProgressBarSkill,
   ShortInfoUser,
 } from './../../components/HomePage';
-import { ModalWindow } from './../../components/ModalWindow';
+import {
+  ExpertiseUserArr,
+  ProgressBarSkillArr,
+  CallMeUserArr,
+  AwardUserArr,
+  ProfilesUserArr,
+  EducationUserArr,
+  ExperienceUserArr,
+} from '../../constants';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -133,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ViewHome = ({ statusTheme, func }) => {
+const ViewHome = () => {
   const classes = useStyles();
 
   useEffect(() => {
@@ -162,151 +170,58 @@ const ViewHome = ({ statusTheme, func }) => {
 
       <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="expertise" text="Batman would be jealous" />
-        <ExpertiseUser
-          items={[
-            {
-              title: 'Advanced CSS',
-              text: 'Advanced use of css capabilities. Such as flex, animation, pseudo-operators and more. There is also an implementation of these things. You can look in the Work section and see for yourself',
-            },
-            {
-              title: 'Front-end Design',
-              text: 'The ability to design and implement. You can create different interactive designs with different features :). Of course, you can check it in the Work section',
-            },
-
-            {
-              title: 'JavaScript',
-              text: 'Quite a few features were developed, but they never came across in my repositories. Now all this can be checked in the Work section. JS is very easy to use, but I want to dive into TS in the future :)',
-            },
-          ]}
-        />
+        <ExpertiseUser items={ExpertiseUserArr} />
       </Box>
 
       <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="skills" text="Progress bars, anyone?" />
         <Box className={classes.wrapperSkills}>
-          <ProgressBarSkill procent="85" title="photoshop" />
-          <ProgressBarSkill procent="70" title="git" />
-          <ProgressBarSkill procent="65" title="after effects" />
-          <ProgressBarSkill procent="60" title="css3" />
-          <ProgressBarSkill procent="40" title="vue" />
-          <ProgressBarSkill procent="60" title="react" />
+          {ProgressBarSkillArr &&
+            ProgressBarSkillArr.map((item, index) => <ProgressBarSkill item={item} />)}
         </Box>
       </Box>
 
       <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Experience" text="Yes. I've been around." />
         <Box className={classes.wrapperExperienceUser}>
-          <ExperienceAndEducationUser
-            data="2020 October - 2020 December"
-            title="Productera"
-            position="Junior Full-stack developer"
-            location="Canada"
-            text="Completed an internship as a fullstack developer in June. I learned React and Python from scratch. Learning React was successful, but Python was not. Helped maintain the main site and trained in a separate branch for the current project."
-            time="1000"
-          />
+          {ExperienceUserArr &&
+            ExperienceUserArr.map((item, index) => (
+              <ExperienceAndEducationUser item={item} key={index} />
+            ))}
         </Box>
       </Box>
 
       <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Education" text="Lazy isn`t in my vocabulary." />
         <Box className={classes.wrapperExperienceUser}>
-          <ExperienceAndEducationUser
-            data="2015 - 2018"
-            title="Higher vocational school №7"
-            position="Operator with information processing and software"
-            location="Poltava, UA"
-            text="Skilled worker in such software: microsoft office (Powerpoint, Word, Excel), Adobe IndeSign, Adobe Photoshop and other. Trained in the basic concept of programming. Languages viewed visual basic 1996 and pascal"
-            time="1000"
-          />
-          <ExperienceAndEducationUser
-            data="2018 - Present"
-            title="KrNU named  Mikhail Ostrogradsky"
-            position="Computer science (122)"
-            location="Poltava, UA"
-            text="Trained in the basic concept of programming. Languages viewed с++, python, java, js and php. At the moment studying the theory of artificial intelligence, project management and computer networks"
-            time="1500"
-          />
-          <ExperienceAndEducationUser
-            data="2020 March - 2020 August"
-            title="Beetroot Academy"
-            position="Junior Front-end developer"
-            location="Poltava, UA"
-            text="Skilled worker in such software: microsoft office (Powerpoint, Word, Excel), Adobe IndeSign, Adobe Photoshop and other. Trained in the basic concept of programming. Considered visual basic 1996 and pascal"
-            time="2000"
-          />
+          {EducationUserArr &&
+            EducationUserArr.map((item, index) => (
+              <ExperienceAndEducationUser item={item} key={index} />
+            ))}
         </Box>
       </Box>
 
       <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Profiles" text="Busy as usualy." />
         <Box className={classes.wrapperProfileUser}>
-          <ProfilesUser
-            icon="fab fa-github-alt"
-            title="github"
-            link="https://github.com/hellhellpnick"
-            text="All my open source projects for you analyze. "
-            time="1000"
-          />
-          <ProfilesUser
-            icon="fab fa-linkedin"
-            link="https://www.linkedin.com/in/alexander-vodoriz-24a27a1b5/"
-            title="linkedin"
-            text="All brief information about me can be found here. Also view comments about me "
-            time="1500"
-          />
+          {ProfilesUserArr &&
+            ProfilesUserArr.map((item, index) => <ProfilesUser item={item} key={index} />)}
         </Box>
       </Box>
 
       <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Awards" text="Happy times!" />
         <Box className={classes.wrapperAwards}>
-          <AwardUser
-            title="1st Place at page designer"
-            text="Competition for 1 place between courses of the same specialty. Best web page creator wins an award "
-            time="1000"
-          />
-          <AwardUser
-            title="Certificate Brain Basket"
-            text="Certificate for completing the course from the brain basket. Languages considered: c ++, js, html, css and python"
-            time="1500"
-          />
+          {AwardUserArr && AwardUserArr.map((item, index) => <AwardUser item={item} key={index} />)}
         </Box>
       </Box>
 
       <Box data-aos="fade-right" className={classes.wrapperSection}>
         <ArticleUser title="Contact" text="Call me, maybe" />
         <Box className={classes.wrapperCallMeUser}>
-          <CallMeUser
-            items={[
-              {
-                title: 'Location',
-                text: 'Poltave, UA',
-              },
-
-              {
-                title: 'Phone',
-                text: '098-131-xxxx',
-              },
-
-              {
-                title: 'Web',
-                text: 'hellhellpnick.github.io/Job',
-              },
-
-              {
-                title: 'Email',
-                text: 'hellhellpnick@gmail.com',
-              },
-            ]}
-          />
+          <CallMeUser items={CallMeUserArr} />
         </Box>
       </Box>
-
-      <ModalWindow
-        data-aos="flip-up"
-        title="Appeal to the user"
-        text="The website is under construction. Please don't complain much"
-      />
     </Box>
   );
 };

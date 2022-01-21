@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ProfilesUser = ({ icon, link, title, text, time }) => {
+const ProfilesUser = ({ item }) => {
   const classes = useStyles();
 
   useEffect(() => {
@@ -62,15 +62,15 @@ const ProfilesUser = ({ icon, link, title, text, time }) => {
   }, []);
 
   return (
-    <Box className={classes.wrapperProfiles} data-aos="fade-up" data-aos-duration={time}>
-      <Link href={link} alt={title} className={classes.linkProfileUser}>
-        <i className={`${icon} ${classes.iconProfileUser}`}></i>
+    <Box className={classes.wrapperProfiles} data-aos="fade-up" data-aos-duration={item.time}>
+      <Link href={item.link} alt={item.title} className={classes.linkProfileUser}>
+        <i className={`${item.icon} ${classes.iconProfileUser}`}></i>
       </Link>
       <Box className={classes.wrapperInfo}>
         <Typography className={classes.titleProfileUser} component="h2" variant="h3">
-          {title}
+          {item.title}
         </Typography>
-        <p className={classes.textProfileUser}>{text}</p>
+        <p className={classes.textProfileUser}>{item.text}</p>
       </Box>
     </Box>
   );

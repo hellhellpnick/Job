@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ExperienceAndEducationUser = ({ data, title, position, location, text, time }) => {
+const ExperienceAndEducationUser = ({ item }) => {
   const classes = useStyles();
 
   useEffect(() => {
@@ -73,17 +73,17 @@ const ExperienceAndEducationUser = ({ data, title, position, location, text, tim
   }, []);
 
   return (
-    <Box className={classes.wrapperExperience} data-aos="fade-up" data-aos-duration={time}>
+    <Box className={classes.wrapperExperience} data-aos="fade-up" data-aos-duration={item.time}>
       <Box className={classes.wrapperExperienceInterior}>
         <Typography className={classes.titleData} component="h4" variant="h5">
-          {data}
+          {item.data}
         </Typography>
         <Typography className={classes.titleWork} component="h2" variant="h3">
-          {title}
+          {item.title}
         </Typography>
-        <p className={classes.titlePosition}>{position}</p>
-        <p className={classes.titleData}>{location}</p>
-        <p className={classes.textInfo}>{text}</p>
+        <p className={classes.titlePosition}>{item.position}</p>
+        <p className={classes.titleData}>{item.location}</p>
+        <p className={classes.textInfo}>{item.text}</p>
       </Box>
       <Box className={classes.wrapperDot}>
         <Box className={classes.dot}></Box>

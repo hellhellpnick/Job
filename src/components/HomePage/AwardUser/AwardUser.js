@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AwardUser = ({ title, text, time }) => {
+const AwardUser = ({ item }) => {
   const classes = useStyles();
 
   useEffect(() => {
@@ -52,11 +52,11 @@ const AwardUser = ({ title, text, time }) => {
   }, []);
 
   return (
-    <Box className={classes.wrapperAwardUser} data-aos="fade-up" data-aos-duration={time}>
+    <Box className={classes.wrapperAwardUser} data-aos="fade-up" data-aos-duration={item.time}>
       <Typography className={classes.titleAward} component="h2" variant="h3">
-        {title}
+        {item.title}
       </Typography>
-      <p className={classes.textAward}>{text}</p>
+      <p className={classes.textAward}>{item.text}</p>
     </Box>
   );
 };
