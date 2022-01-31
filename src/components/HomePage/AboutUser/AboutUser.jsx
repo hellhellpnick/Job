@@ -1,28 +1,7 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { useStyles } from './AboutUser.styled';
 
-const useStyles = makeStyles((theme) => ({
-  wrapperAbout: {
-    padding: 25,
-    backgroundColor: theme.palette.background.main,
-  },
-
-  aboutText: {
-    color: theme.palette.text.main,
-    ...theme.typography.text,
-    fontSize: 16,
-    lineHeight: '1.5',
-
-    '&:not(:last-child)': {
-      marginBottom: 15,
-    },
-
-    '@media screen and (min-width: 600px)': {
-      fontSize: 20,
-    },
-  },
-}));
 const AboutUser = ({ title, text }) => {
   const classes = useStyles();
 

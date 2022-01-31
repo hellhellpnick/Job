@@ -1,12 +1,12 @@
-import { AboutUser } from './AboutUser/';
-import { ArticleUser } from './ArticleUser/';
-import { AwardUser } from './AwardUser/';
-import { CallMeUser } from './CallMeUser';
-import { ExperienceAndEducationUser } from './ExperienceAndEducationUser/';
-import { ExpertiseUser } from './ExpertiseUser/';
-import { ProfilesUser } from './ProfileUser/';
-import { ProgressBarSkill } from './ProgressBarSkill/';
-import { ShortInfoUser } from './ShortInfoUser/';
+import AboutUser from './AboutUser/AboutUser';
+import ArticleUser from './ArticleUser/ArticleUser';
+import AwardUser from './AwardUser/AwardUser';
+import CallMeUser from './CallMeUser/CallMeUser';
+import ExperienceAndEducationUser from './ExperienceAndEducationUser/ExperienceAndEducationUser';
+import ExpertiseUser from './ExpertiseUser/ExpertiseUser';
+import ProfilesUser from './ProfileUser/ProfilesUser';
+import ProgressBarSkill from './ProgressBarSkill/ProgressBarSkill';
+import ShortInfoUser from './ShortInfoUser/ShortInfoUser';
 
 export {
   AboutUser,

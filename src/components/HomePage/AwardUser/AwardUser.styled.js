@@ -1,8 +1,4 @@
-import React, { useEffect } from 'react';
-import { Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 
 const useStyles = makeStyles((theme) => ({
   wrapperAwardUser: {
@@ -44,21 +40,4 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const AwardUser = ({ item }) => {
-  const classes = useStyles();
-
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
-
-  return (
-    <Box className={classes.wrapperAwardUser} data-aos="fade-up" data-aos-duration={item.time}>
-      <Typography className={classes.titleAward} component="h2" variant="h3">
-        {item.title}
-      </Typography>
-      <p className={classes.textAward}>{item.text}</p>
-    </Box>
-  );
-};
-
-export default AwardUser;
+export { useStyles };
