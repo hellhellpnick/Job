@@ -1,7 +1,6 @@
 import { Suspense, useState } from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { Switch, BrowserRouter } from 'react-router-dom';
-import { MainNav } from './components/MainNav/';
+import { BrowserRouter } from 'react-router-dom';
 import themeLight from './theme/themeLight';
 import themeDark from './theme/themeDark';
 import { Router } from './Router';
@@ -19,10 +18,7 @@ const App = () => {
       <BrowserRouter>
         <div className="App">
           <Suspense fallback={<>sa</>}>
-            <MainNav statusTheme={themeMode} func={switchStateTheme} />
-            <Switch>
-              <Router />
-            </Switch>
+            <Router statusTheme={themeMode} func={switchStateTheme} />
 
             <ModalWindow
               data-aos="flip-up"

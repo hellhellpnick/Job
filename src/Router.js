@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
 const routes = {
   main: '/',
@@ -12,16 +12,15 @@ const routes = {
 
 const Home = lazy(() => import('./views/PageHome/ViewHome'));
 const NotFound = lazy(() => import('./views/PageNotFound/ViewNotFound'));
+const Layout = lazy(() => import('./components/MainNav/MainNav'));
 
-const Router = () => (
-  <Switch>
-    <Route exact path={routes.main}>
-      <Home />
+const Router = ({ statusTheme, func }) => (
+  <Routes>
+    <Route path={routes.main} element={<Layout statusTheme={statusTheme} func={func} />}>
+      <Route index element={<Home />} />
+      <Route path={routes.notFound} element={<NotFound />} />
     </Route>
-    <Route path={routes.notFound}>
-      <NotFound />
-    </Route>
-  </Switch>
+  </Routes>
 );
 
 export { routes, Router };
