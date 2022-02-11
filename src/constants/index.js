@@ -1,3 +1,10 @@
+import imgVue from './../assets/works/beetoor.jpg';
+import imgJsonPlaceholder from './../assets/works/json_placeholder.jpg';
+import imgCahee from './../assets/works/cahee.PNG';
+import imgTajam from './../assets/works/tajam.PNG';
+import imgContango from './../assets/works/contango.PNG';
+import imgMonticello from './../assets/works/monticello.PNG';
+
 const ExpertiseUserArr = [
   {
     title: 'Advanced CSS',
@@ -86,11 +93,11 @@ const EducationUserArr = [
   },
   {
     data: '2018 - Present',
-    titl: 'KrNU named  Mikhail Ostrogradsky',
-    positio: 'Computer science (122)',
-    locatio: 'Poltava, UA',
-    tex: 'Trained in the basic concept of programming. Languages viewed с++, python, java, js and php. At the moment studying the theory of artificial intelligence, project management and computer networks',
-    tim: '1500',
+    title: 'KrNU named  Mikhail Ostrogradsky',
+    position: 'Computer science (122)',
+    location: 'Poltava, UA',
+    text: 'Trained in the basic concept of programming. Languages viewed с++, python, java, js and php. At the moment studying the theory of artificial intelligence, project management and computer networks',
+    time: '1500',
   },
   {
     data: '2020 March - 2020 August',
@@ -113,6 +120,79 @@ const ExperienceUserArr = [
   },
 ];
 
+const ListVue = [
+  {
+    id: 1,
+    title: 'Search video',
+    description: 'Web-app',
+    text: 'Final work on courses from Beetroot-Academy. It was created in a month and on the Vue framework',
+    img: imgVue,
+    url: 'https://hellhellpnick.github.io/project-beetroot/',
+  },
+];
+
+const ListReact = [
+  {
+    id: 2,
+    title: 'Work with JSON Placeholder',
+    description: 'Web-app',
+    text: 'Initially, it was a test task for an interview, and now it has become a pet-project.',
+    img: imgJsonPlaceholder,
+    url: 'json_placeholder',
+  },
+  {
+    id: 3,
+    title: 'Work with API and React',
+    description: 'Web-app',
+    text: 'It was a task for an courses. Technologies used: Redux, React, Formik, Jest and others',
+    img: imgJsonPlaceholder,
+    url: 'doctor_api',
+  },
+  {
+    id: 4,
+    title: 'Work with EmailJS-com and React',
+    description: 'Web-app',
+    text: 'It was a test task for an interview. The purpose of the assignment was to demonstrate React skills and interaction with the library.',
+    img: imgJsonPlaceholder,
+    url: 'https://hellhellpnick.github.io/react-form/',
+  },
+];
+
+const ListLayout = [
+  {
+    id: 5,
+    title: 'Cahee',
+    description: 'Web-app',
+    text: 'My first website created. It used clean markup. This site was created during the training courses at the Beetroot-Academy',
+    img: imgCahee,
+    url: 'https://hellhellpnick.github.io/Cahee/',
+  },
+  {
+    id: 6,
+    title: 'Tajam',
+    description: 'Web-app',
+    text: 'Created my site for the closure of the subject of the university. The layout was found on the Internet',
+    img: imgTajam,
+    url: 'https://hellhellpnick.github.io/front-end/',
+  },
+  {
+    id: 7,
+    title: 'Contango',
+    description: 'Web-app',
+    text: 'Test task of one of the vacancies. It was required to create a website with a custom slider and get data from the Network',
+    img: imgContango,
+    url: 'https://hellhellpnick.github.io/contango/',
+  },
+  {
+    id: 8,
+    title: 'Monticello',
+    description: 'Web-app',
+    text: 'A test task for a module in Beetroot-Academy courses to confirm your knowledge',
+    img: imgMonticello,
+    url: 'https://hellhellpnick.github.io/monticello/',
+  },
+];
+
 export {
   ExperienceUserArr,
   ExpertiseUserArr,
@@ -121,4 +201,7 @@ export {
   AwardUserArr,
   ProfilesUserArr,
   EducationUserArr,
+  ListVue,
+  ListReact,
+  ListLayout,
 };

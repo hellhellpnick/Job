@@ -1,29 +1,15 @@
 import React from 'react';
 import SwitchTheme from './Switches/SwitcheTheme';
-import { Box, Button, Select, MenuItem, FormControl } from '@material-ui/core';
+import { Box, Button } from '@material-ui/core';
 import '../../css/mainNavAnimation.css';
 import { NavLink, Outlet } from 'react-router-dom';
-import { InputLabelCustom, useStyles } from './MainNav.styled';
+import { useStyles } from './MainNav.styled';
 import ModalWindow from './../ModalWindow/ModalWindow';
 import { routes } from '../../Router';
 
 const MainNav = ({ statusTheme, func }) => {
-  const [lang, setAge] = React.useState('');
   const [stateMenu, setStateMenu] = React.useState(false);
   const [stateAnimationMenu, setstateAnimationMenu] = React.useState(false);
-  const [open, setOpen] = React.useState(false);
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
 
   const handleCloseMenu = () => {
     setStateMenu(false);
@@ -121,23 +107,6 @@ const MainNav = ({ statusTheme, func }) => {
 
           <Box className={classes.flexRow}>
             <SwitchTheme statusTheme={statusTheme} func={func} />
-
-            <FormControl className={classes.formControl}>
-              <InputLabelCustom id="demo-controlled-open-select-label">Lang</InputLabelCustom>
-              <Select
-                labelId="demo-controlled-open-select-label"
-                id="demo-controlled-open-select"
-                open={open}
-                onClose={handleClose}
-                onOpen={handleOpen}
-                value={lang}
-                onChange={handleChange}
-              >
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
           </Box>
         </nav>
       </header>
