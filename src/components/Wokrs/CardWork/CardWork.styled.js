@@ -4,7 +4,6 @@ import { styled } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 340,
-    margin: 'auto',
     overflowY: 'auto',
     position: 'relative',
     marginBottom: '20px',
@@ -19,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '0 0 0 8px rgba(255, 255, 255, 0.2)',
 
     '@media (min-width: 768px)': {
-      marginBottom: '20px',
+      marginBottom: '40px',
       marginRight: '20px',
     },
   },
@@ -123,6 +122,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Link = styled('a')(({ theme }) => ({
+  position: 'absolute',
+  bottom: '-10px',
+  right: '-10px',
   alignSelf: 'flex-end',
   marginBottom: 20,
   marginRight: 20,

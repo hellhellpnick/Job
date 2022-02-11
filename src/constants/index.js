@@ -4,6 +4,11 @@ import imgCahee from './../assets/works/cahee.PNG';
 import imgTajam from './../assets/works/tajam.PNG';
 import imgContango from './../assets/works/contango.PNG';
 import imgMonticello from './../assets/works/monticello.PNG';
+import imgBhromaon from './../assets/works/bhromaon.PNG';
+import imgITRex from './../assets/works/itRex.PNG';
+import imgAppside from './../assets/works/appside.PNG';
+import imgEmailJS from './../assets/works/emailJS.PNG';
+import imgITRexMedicine from './../assets/works/itRex_medicine.PNG';
 
 const ExpertiseUserArr = [
   {
@@ -145,15 +150,15 @@ const ListReact = [
     title: 'Work with API and React',
     description: 'Web-app',
     text: 'It was a task for an courses. Technologies used: Redux, React, Formik, Jest and others',
-    img: imgJsonPlaceholder,
-    url: 'doctor_api',
+    img: imgITRexMedicine,
+    url: 'https://hellhellpnick.github.io/itrex-training/',
   },
   {
     id: 4,
     title: 'Work with EmailJS-com and React',
     description: 'Web-app',
     text: 'It was a test task for an interview. The purpose of the assignment was to demonstrate React skills and interaction with the library.',
-    img: imgJsonPlaceholder,
+    img: imgEmailJS,
     url: 'https://hellhellpnick.github.io/react-form/',
   },
 ];
@@ -187,9 +192,33 @@ const ListLayout = [
     id: 8,
     title: 'Monticello',
     description: 'Web-app',
-    text: 'A test task for a module in Beetroot-Academy courses to confirm your knowledge',
+    text: 'A test task for a module in Beetroot-Academy courses to confirm your knowledge. Start learning JS',
     img: imgMonticello,
     url: 'https://hellhellpnick.github.io/monticello/',
+  },
+  {
+    id: 9,
+    title: 'Bhromaon',
+    description: 'Web-app',
+    text: 'A test task for a module in Beetroot-Academy courses to confirm your knowledge',
+    img: imgBhromaon,
+    url: 'https://hellhellpnick.github.io/bhromaon/',
+  },
+  {
+    id: 10,
+    title: 'ItRex-JSON',
+    description: 'Web-app',
+    text: 'It was a test task for an interview. After the successful completion of the assignment, he was admitted to the courses. The essence of the task is to use the JSON server and work with it',
+    img: imgITRex,
+    url: 'https://hellhellpnick.github.io/itRex/',
+  },
+  {
+    id: 11,
+    title: 'Appside-Network',
+    description: 'Web-app',
+    text: 'It was a test task for an interview. The essence of the task is to get information from the network and receive encrypted video',
+    img: imgAppside,
+    url: 'https://hellhellpnick.github.io/appside/',
   },
 ];
 
