@@ -81,7 +81,7 @@ const MainNav = ({ statusTheme, func }) => {
             </li>
           </ul>
 
-          <Box>
+          <Box style={{ maxWidth: 200, width: '100%' }}>
             <svg
               className={classes.waves}
               xmlns="http://www.w3.org/2000/svg"

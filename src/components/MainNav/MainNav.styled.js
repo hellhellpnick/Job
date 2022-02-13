@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: `0 5px 5px -5px ${theme.palette.shadow.main}`,
 
     '@media (min-width: 780px)': {
-      justifyContent: 'space-between',
+      justifyContent: 'space-around',
     },
 
     '@media (min-width: 1024px)': {
@@ -87,6 +87,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     padding: '0 20px',
+    transition: 'all 0.2s ease',
 
     '@media (min-width: 1024px)': {
       flexDirection: 'row',
@@ -97,6 +98,7 @@ const useStyles = makeStyles((theme) => ({
   item: {
     cursor: 'pointer',
     padding: 30,
+    transition: 'all 0.2s ease',
 
     '& > a': {
       textAlign: 'center',
@@ -108,17 +110,7 @@ const useStyles = makeStyles((theme) => ({
       textTransform: 'uppercase',
       textDecoration: 'none',
       marginRight: '20px',
-
-      '&:before': {
-        position: 'absolute',
-        bottom: '-2px',
-        content: '""',
-        width: '100%',
-        height: '3px',
-        background: theme.palette.link.primary,
-        transform: 'translateX(100%)',
-        opacity: 0,
-      },
+      transition: 'all 0.2s ease',
     },
 
     '&:hover': {
@@ -134,11 +126,13 @@ const useStyles = makeStyles((theme) => ({
 
   waves: {
     position: 'relative',
-    width: '200px',
+    width: '100%',
+    maxWidth: '400px',
     height: '15vh',
-    marginBottom: '-7px' /*Fix for safari gap*/,
+    marginBottom: '-7px',
     minHeight: '10px',
     maxHeight: '20px',
+    transition: 'all 0.2s ease',
   },
 
   parallax: {

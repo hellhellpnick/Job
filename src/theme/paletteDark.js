@@ -21,6 +21,7 @@ const palette = {
 
   iconBack: {
     main: '#3f4040',
+    primary: '#717273',
   },
 
   iconColor: {

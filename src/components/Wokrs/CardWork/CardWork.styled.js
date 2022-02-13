@@ -6,11 +6,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 340,
     overflowY: 'auto',
     position: 'relative',
-    marginBottom: '20px',
+    marginBottom: '30px',
     zIndex: 1,
     overflowX: 'hidden',
-    backgroundColor: theme.palette.background.primary,
+    backgroundColor: theme.palette.background.second,
     display: 'flex',
+    marginRight: '0',
     transition: '0.3s',
     flexDirection: 'column',
     alignItems: 'center',
@@ -140,7 +141,7 @@ const Link = styled('a')(({ theme }) => ({
 
   '& > i': {
     fontSize: 13,
-    color: theme.palette.iconColor.main,
+    color: theme.palette.iconBack.primary,
   },
 }));
 

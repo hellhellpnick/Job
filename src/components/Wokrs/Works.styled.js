@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'stretch',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
 
   wrapperTypeWorks: {
