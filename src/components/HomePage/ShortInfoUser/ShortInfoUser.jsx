@@ -50,19 +50,19 @@ const ShortInfoUser = () => {
           <Typography className={classes.locatioTitle} component="h4" variant="h5">
             Location{' '}
           </Typography>
-          <address className={classes.locationSubtitle}> Poltave, UA</address>
+          <address className={classes.locationSubtitle}> Kremenchuk, UA</address>
         </Box>
 
         <Box className={classes.locationContent}>
           <Typography className={classes.locatioTitle} component="h4" variant="h5">
             Phone{' '}
           </Typography>
-          <address className={classes.locationSubtitle}> 098-131-xxxx, Vodafone</address>
+          <address className={classes.locationSubtitle}> 098-131-0543, Vodafone</address>
         </Box>
 
         <Box className={classes.locationContent}>
           <Typography className={classes.locatioTitle} component="h4" variant="h5">
-            Web{' '}
+            Web
           </Typography>
           <address className={classes.locationSubtitle}> hellhellpnick.github.io/job</address>
         </Box>

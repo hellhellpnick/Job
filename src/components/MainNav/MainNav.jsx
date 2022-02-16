@@ -4,7 +4,6 @@ import { Box, Button } from '@material-ui/core';
 import '../../css/mainNavAnimation.css';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useStyles } from './MainNav.styled';
-import ModalWindow from './../ModalWindow/ModalWindow';
 import { routes } from '../../Router';
 
 const MainNav = ({ statusTheme, func }) => {
@@ -110,12 +109,6 @@ const MainNav = ({ statusTheme, func }) => {
           </Box>
         </nav>
       </header>
-
-      <ModalWindow
-        data-aos="flip-up"
-        title="Appeal to the user"
-        text="The website is under construction. Please don't complain much"
-      />
       <Outlet />
     </>
   );

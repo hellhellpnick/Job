@@ -2,10 +2,10 @@ import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 const routes = {
-  main: '/',
+  main: '/Job',
   works: {
-    main: '/works',
-    work: '/works/:id',
+    main: 'works',
+    work: 'works/:id',
   },
   notFound: '*',
 };

@@ -19,10 +19,13 @@ const ExpertiseUserArr = [
     title: 'Front-end Design',
     text: 'The ability to design and implement. You can create different interactive designs with different features :). Of course, you can check it in the Work section',
   },
-
   {
     title: 'JavaScript',
     text: 'Quite a few features were developed, but they never came across in my repositories. Now all this can be checked in the Work section. JS is very easy to use, but I want to dive into TS in the future :)',
+  },
+  {
+    title: 'React',
+    text: 'The best library I have ever used. Gives a lot of opportunities and the implementation of the same task in different ways. You can look in the Work section and see for yourself',
   },
 ];
 
@@ -38,12 +41,12 @@ const ProgressBarSkillArr = [
 const CallMeUserArr = [
   {
     title: 'Location',
-    text: 'Poltave, UA',
+    text: 'Kremenchuk, UA',
   },
 
   {
     title: 'Phone',
-    text: '098-131-xxxx',
+    text: '098-131-0543',
   },
 
   {
@@ -73,7 +76,7 @@ const AwardUserArr = [
 const ProfilesUserArr = [
   {
     icon: 'fab fa-github-alt',
-    titl: 'github',
+    title: 'github',
     link: 'https://github.com/hellhellpnick',
     text: 'All my open source projects for you analyze. ',
     time: '1000',
@@ -109,7 +112,7 @@ const EducationUserArr = [
     title: 'Beetroot Academy',
     position: 'Junior Front-end developer',
     location: 'Poltava, UA',
-    text: 'Skilled worker in such software: microsoft office (Powerpoint, Word, Excel), Adobe IndeSign, Adobe Photoshop and other. Trained in the basic concept of programming. Considered visual basic 1996 and pascal',
+    text: 'Trained in the basic concepts of Front - end development. The learning came from scratch HTML, CSS, JS and ended with Vue. The final project of the courses was a video search site',
     time: '2000',
   },
 ];
@@ -121,6 +124,14 @@ const ExperienceUserArr = [
     position: 'Junior Full-stack developer',
     location: 'Canada',
     text: 'Completed an internship as a fullstack developer in June. I learned React and Python from scratch. Learning React was successful, but Python was not. Helped maintain the main site and trained in a separate branch for the current project.',
+    time: '1000',
+  },
+  {
+    data: '2021 September - 2021 December',
+    title: 'It-Rex',
+    position: 'Junior Front-end developer',
+    location: 'Kyiv',
+    text: 'Creation of a website for medicine using various technologies Formic, yup, Redux and others. The essence of the project is to check the ability of a candidate for the position of Front-end developer in the company.',
     time: '1000',
   },
 ];
