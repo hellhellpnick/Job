@@ -15,9 +15,9 @@ const Works = lazy(() => import('./views/PageWorks/WorksView'));
 const NotFound = lazy(() => import('./views/PageNotFound/ViewNotFound'));
 const Layout = lazy(() => import('./components/MainNav/MainNav'));
 
-const Router = ({ statusTheme, func }) => (
+const Router = () => (
   <Routes>
-    <Route path={routes.main} element={<Layout statusTheme={statusTheme} func={func} />}>
+    <Route path={routes.main} element={<Layout />}>
       <Route index element={<Home />} />
       <Route path={routes.works.main} element={<Works />} />
       <Route path={routes.notFound} element={<NotFound />} />

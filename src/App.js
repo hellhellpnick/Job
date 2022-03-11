@@ -1,24 +1,21 @@
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { BrowserRouter } from 'react-router-dom';
+import { Router } from './Router';
 import themeLight from './theme/themeLight';
 import themeDark from './theme/themeDark';
-import { Router } from './Router';
 import LoaderView from './views/PageLoader/LoaderView';
+import useActionTheme from './hooks/useActionTheme';
 
 const App = () => {
-  const [themeMode, setThemeMode] = useState(false);
-
-  const switchStateTheme = () => {
-    setThemeMode(!themeMode);
-  };
+  const { getTheme } = useActionTheme();
 
   return (
-    <ThemeProvider theme={themeMode ? themeLight : themeDark}>
+    <ThemeProvider theme={getTheme ? themeLight : themeDark}>
       <BrowserRouter>
         <div className="App">
           <Suspense fallback={<LoaderView />}>
-            <Router statusTheme={themeMode} func={switchStateTheme} />
+            <Router />
           </Suspense>
         </div>
       </BrowserRouter>

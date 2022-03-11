@@ -1,6 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { SwitchThemeStyle } from './SwitcheTheme.styled';
 import { Box } from '@material-ui/core';
+import useActionTheme from '../../../hooks/useActionTheme';
 
 const useStyles = makeStyles((theme) => ({
   wrapperSwitch: {
@@ -16,12 +17,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SwitchTheme = ({ func, statusTheme }) => {
+const SwitchTheme = () => {
+  const { getTheme, changeTheme } = useActionTheme();
   const classes = useStyles();
+
   return (
     <Box className={classes.wrapperSwitch}>
       <p className={classes.textSwitch}>Switch theme</p>
-      <SwitchThemeStyle onClick={func} checked={statusTheme} />
+      <SwitchThemeStyle onClick={changeTheme} checked={getTheme} />
     </Box>
   );
 };

@@ -6,7 +6,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { useStyles } from './MainNav.styled';
 import { routes } from '../../Router';
 
-const MainNav = ({ statusTheme, func }) => {
+const MainNav = () => {
   const [stateMenu, setStateMenu] = React.useState(false);
   const [stateAnimationMenu, setstateAnimationMenu] = React.useState(false);
 
@@ -105,7 +105,7 @@ const MainNav = ({ statusTheme, func }) => {
           </Box>
 
           <Box className={classes.flexRow}>
-            <SwitchTheme statusTheme={statusTheme} func={func} />
+            <SwitchTheme />
           </Box>
         </nav>
       </header>
