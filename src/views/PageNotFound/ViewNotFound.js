@@ -1,5 +1,11 @@
-import NotFound from './../../components/NotFound/NotFound';
+import NotFound from '../../components/NotFound/NotFound';
+import useChangeTitle from '../../hooks/useChangeTitlePage';
 
-const ViewNotFound = () => <NotFound />;
+const ViewNotFound = ({ title }) => {
+  const { ChangeTitle } = useChangeTitle();
+  ChangeTitle(title);
+
+  return <NotFound />;
+};
 
 export default ViewNotFound;

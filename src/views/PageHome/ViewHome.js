@@ -23,6 +23,7 @@ import {
 } from '../../constants';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import useChangeTitlePage from '../../hooks/useChangeTitlePage';
 
 const useStyles = makeStyles((theme) => ({
   wrapperMain: {
@@ -146,8 +147,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ViewHome = () => {
+const ViewHome = ({ title }) => {
   const classes = useStyles();
+  const { ChangeTitle } = useChangeTitlePage();
+  ChangeTitle(title);
 
   useEffect(() => {
     Aos.init({ duration: 1000 });

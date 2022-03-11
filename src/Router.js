@@ -5,7 +5,7 @@ const routes = {
   main: '/Job',
   works: {
     main: 'works',
-    work: 'works/:id',
+    work: 'work/:id',
   },
   notFound: '*',
 };
@@ -18,9 +18,9 @@ const Layout = lazy(() => import('./components/MainNav/MainNav'));
 const Router = () => (
   <Routes>
     <Route path={routes.main} element={<Layout />}>
-      <Route index element={<Home />} />
-      <Route path={routes.works.main} element={<Works />} />
-      <Route path={routes.notFound} element={<NotFound />} />
+      <Route index element={<Home title="Home page" />} />
+      <Route path={routes.works.main} element={<Works title="Works" />} />
+      <Route path={routes.notFound} element={<NotFound title="Not found" />} />
     </Route>
   </Routes>
 );
