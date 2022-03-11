@@ -136,100 +136,94 @@ const ExperienceUserArr = [
   },
 ];
 
-const ListVue = [
+const ListWorks = [
   {
-    id: 1,
     title: 'Search video',
     description: 'Web-app',
     text: 'Final work on courses from Beetroot-Academy. It was created in a month and on the Vue framework',
     img: imgVue,
     url: 'https://hellhellpnick.github.io/project-beetroot/',
+    typeWork: 'vue',
   },
-];
-
-const ListReact = [
   {
-    id: 2,
     title: 'Work with JSON Placeholder',
     description: 'Web-app',
     text: 'Initially, it was a test task for an interview, and now it has become a pet-project.',
     img: imgJsonPlaceholder,
     url: 'json_placeholder',
+    typeWork: 'react',
   },
   {
-    id: 3,
     title: 'Work with API and React',
     description: 'Web-app',
     text: 'It was a task for an courses. Technologies used: Redux, React, Formik, Jest and others',
     img: imgITRexMedicine,
     url: 'https://hellhellpnick.github.io/itrex-training/',
+    typeWork: 'react',
   },
   {
-    id: 4,
     title: 'Work with EmailJS-com and React',
     description: 'Web-app',
     text: 'It was a test task for an interview. The purpose of the assignment was to demonstrate React skills and interaction with the library.',
     img: imgEmailJS,
     url: 'https://hellhellpnick.github.io/react-form/',
+    typeWork: 'react',
   },
-];
-
-const ListLayout = [
   {
-    id: 5,
     title: 'Cahee',
     description: 'Web-app',
     text: 'My first website created. It used clean markup. This site was created during the training courses at the Beetroot-Academy',
     img: imgCahee,
     url: 'https://hellhellpnick.github.io/Cahee/',
+    typeWork: 'layout',
   },
   {
-    id: 6,
     title: 'Tajam',
     description: 'Web-app',
     text: 'Created my site for the closure of the subject of the university. The layout was found on the Internet',
     img: imgTajam,
     url: 'https://hellhellpnick.github.io/front-end/',
+    typeWork: 'layout',
   },
   {
-    id: 7,
     title: 'Contango',
     description: 'Web-app',
     text: 'Test task of one of the vacancies. It was required to create a website with a custom slider and get data from the Network',
     img: imgContango,
     url: 'https://hellhellpnick.github.io/contango/',
+    typeWork: 'layout',
   },
   {
-    id: 8,
     title: 'Monticello',
     description: 'Web-app',
     text: 'A test task for a module in Beetroot-Academy courses to confirm your knowledge. Start learning JS',
     img: imgMonticello,
     url: 'https://hellhellpnick.github.io/monticello/',
+    typeWork: 'layout',
   },
   {
-    id: 9,
     title: 'Bhromaon',
     description: 'Web-app',
     text: 'A test task for a module in Beetroot-Academy courses to confirm your knowledge',
     img: imgBhromaon,
     url: 'https://hellhellpnick.github.io/bhromaon/',
+    typeWork: 'layout',
   },
   {
-    id: 10,
     title: 'ItRex-JSON',
     description: 'Web-app',
     text: 'It was a test task for an interview. After the successful completion of the assignment, he was admitted to the courses. The essence of the task is to use the JSON server and work with it',
     img: imgITRex,
     url: 'https://hellhellpnick.github.io/itRex/',
+    typeWork: 'layout',
   },
   {
-    id: 11,
     title: 'Appside-Network',
     description: 'Web-app',
     text: 'It was a test task for an interview. The essence of the task is to get information from the network and receive encrypted video',
     img: imgAppside,
     url: 'https://hellhellpnick.github.io/appside/',
+    typeWork: 'layout',
   },
 ];
 
@@ -241,7 +235,5 @@ export {
   AwardUserArr,
   ProfilesUserArr,
   EducationUserArr,
-  ListVue,
-  ListReact,
-  ListLayout,
+  ListWorks,
 };

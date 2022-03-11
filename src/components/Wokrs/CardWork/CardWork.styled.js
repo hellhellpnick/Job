@@ -3,7 +3,9 @@ import { styled } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    maxWidth: 340,
+    maxWidth: 'auto',
+    width: '100%',
+    margin: '0 20px',
     overflowY: 'auto',
     position: 'relative',
     marginBottom: '30px',
@@ -11,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     overflowX: 'hidden',
     backgroundColor: theme.palette.background.second,
     display: 'flex',
-    marginRight: '0',
     transition: '0.3s',
     flexDirection: 'column',
     alignItems: 'center',
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     '@media (min-width: 768px)': {
       marginBottom: '40px',
       marginRight: '20px',
+      maxWidth: 340,
     },
   },
   cardHeader: {
