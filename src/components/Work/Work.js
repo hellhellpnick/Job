@@ -1,15 +1,18 @@
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
+import DOMPurify from 'dompurify';
 import { ListWorks } from './../../constants/index';
 import React from 'react';
+import { routes } from './../../Router';
 
 const Work = () => {
   const { title } = useParams();
   const objSite = ListWorks.find((item) => item.tag === title);
-  //const path = require(`${objSite.truePath}`)
 
-  console.log(objSite, title, objSite.truePath)
+  if (objSite === undefined) {
+    return <Navigate to={routes.works.main} />
+  }
 
-  return <iframe src={objSite.truePath} title={objSite.title} width='100%' height='100vh' />;
+  return <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(objSite.truePath) }} />;
 };
 
 export default Work;

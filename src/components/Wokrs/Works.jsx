@@ -10,13 +10,10 @@ const Works = () => {
     <Box className={classes.wrapper}>
       <Box className={classes.works}>
         <BoxWork title={'Vue'} workArray={ListWorks.filter((item) => item.typeWork === 'vue')} />
+        
         <BoxWork
           title={'React'}
           workArray={ListWorks.filter((item) => item.typeWork === 'react')}
-        />
-        <BoxWork
-          title={'JavaScript'}
-          workArray={ListWorks.filter((item) => item.typeWork === 'js')}
         />
         <BoxWork
           title={'Games'}
@@ -25,11 +22,10 @@ const Works = () => {
         <BoxWork
           title={'Layout'}
           workArray={ListWorks.filter((item) => item.typeWork === 'layout')}
-        />
-        <BoxWork
-          title={'Training JS'}
-          workArray={ListWorks.filter((item) => item.typeWork === 'TrainingJS')}
-        />
+        /><BoxWork
+        title={'JavaScript'}
+        workArray={ListWorks.filter((item) => item.typeWork === 'js')}
+      />
       </Box>
     </Box>
   );

@@ -1,11 +1,13 @@
 {
   "name": "job-site",
+  "homepage": "http://hellhellpnick.github.io/Job",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@reduxjs/toolkit": "^1.8.0",
     "aos": "^2.3.4",
+    "dompurify": "^2.3.6",
     "install": "^0.13.0",
     "react": "^17.0.2",
     "react-animate-on-scroll": "^2.1.5",
@@ -24,7 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build&&gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,7 +47,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "http://hellhellpnick.github.io/Job",
   "devDependencies": {
     "gh-pages": "^3.2.3",
     "html-loader": "^3.1.0"
