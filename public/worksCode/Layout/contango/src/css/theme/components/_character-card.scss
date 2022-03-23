@@ -1,0 +1,105 @@
+.character-img {
+  max-width: 350px;
+  min-height: 450px;
+  margin-top: -100px;
+  margin-left: -100px;
+
+  @include tablet {
+    max-width: 550px;
+    min-height: 650px;
+  }
+}
+
+.character-card-title {
+  @include text($font-size-large-second, 700, $color-title-second);
+  line-height: 48px;
+  margin-bottom: 10px;
+}
+
+.character-card-subtitle {
+  @include text($font-size-medium-second, 500, $color-title-second);
+  line-height: 27px;
+  margin-bottom: 20px;
+}
+
+.character-card-text {
+  @include text($font-size-small-second, 500, $color-title-second);
+  max-width: 380px;
+  line-height: 27px;
+  margin-bottom: 50px;
+}
+
+.character-circle {
+  &:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    width: 15px;
+    height: 15px;
+    background-image: $background-gradient-button;
+    border-radius: 50%;
+
+    @include tablet {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+.character-info {
+  position: absolute;
+  top: -20px;
+  left: 25px;
+  @include text(12px, 400, $color-title-second);
+
+  @include tablet {
+    top: -15px;
+    left: 55px;
+    font-size: $font-size-small-second;
+    white-space: nowrap;
+  }
+}
+
+.character-mini-info {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  @include text(12px, 400, $color-title-primary);
+
+  @include tablet {
+    top: 15px;
+    left: 65px;
+    font-size: $font-size-small-primary;
+    white-space: nowrap;
+  }
+}
+
+.character-button {
+  position: absolute;
+  bottom: 130px;
+  left: -30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+
+  & > img {
+    width: 46px;
+    height: 46px;
+  }
+
+  @include tablet {
+    bottom: 190px;
+    left: 20px;
+  }
+
+  @include desktop {
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(1.1) rotate(180deg);
+    }
+  }
+}

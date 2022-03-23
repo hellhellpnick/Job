@@ -1,0 +1,158 @@
+.wrapper-nav {
+  @extend %container;
+  @include flex(space-between, center, row, nowrap);
+  margin-bottom: 20px;
+
+  @include mobile-large {
+    margin-bottom: 100px;
+    width: auto;
+  }
+
+  @include desktop-hd {
+    max-width: $screen-hd;
+  }
+}
+
+.wrapper-logo {
+  width: 90%;
+
+  @include mobile-large {
+    width: auto;
+  }
+}
+
+.wrapper-header {
+  @extend %container;
+  @include flex(center, center, row, wrap);
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+
+  @include desktop-hd {
+    max-width: $screen-hd;
+  }
+}
+
+.wrapper-column {
+  @include flex(flex-start, stretch, column);
+  margin-right: 0;
+  margin-bottom: 35px;
+
+  @include desktop {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
+
+.wrapper-info {
+  position: relative;
+  max-width: 920px;
+  min-height: 395px;
+  background-color: $color-main;
+  padding: 55px 20px;
+  box-shadow: 5px 6px 43px rgba($color-text-second, 0.3);
+  border-radius: 8px;
+  background-image: url('./../images/robot-info.png');
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+
+  @include desktop {
+    padding: 55px 100px 60px 210px;
+  }
+}
+.slick-list {
+  max-height: 600px !important;
+}
+.wrapper-cards {
+  display: flex !important;
+  @include flex(center, center, row);
+  max-width: 225px;
+
+  @include desktop {
+    max-width: 330px;
+    min-height: 330px !important;
+  }
+
+  @include desktop-hd {
+    max-width: 600px;
+    max-height: 600px !important;
+  }
+
+  &::before {
+    content: 'scroll';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0;
+    bottom: -36px;
+    @include text($font-size-small-primary, 300, $color-main);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -36px;
+    left: 45px;
+    width: 30px;
+    height: 1px;
+    background-color: $color-main;
+
+    @include desktop {
+      width: 125px;
+    }
+  }
+}
+
+.wrapper-rate {
+  @extend %container;
+  @include flex(center, center, row, wrap);
+  max-width: 1400px;
+}
+
+.wrapper-cost {
+  padding-top: 50px;
+
+  @media (min-width: 540px) {
+    padding-top: 0;
+  }
+}
+
+.wrapper-character {
+  position: absolute;
+  left: 53%;
+  top: 2%;
+
+  &:nth-child(2) {
+    left: 72%;
+    top: 25%;
+  }
+
+  &:nth-child(3) {
+    left: 74%;
+    top: 52%;
+  }
+
+  &:nth-child(4) {
+    left: 60%;
+    top: 71%;
+  }
+
+  @include tablet {
+    top: 5%;
+    &:nth-child(2) {
+      left: 75%;
+      top: 25%;
+    }
+
+    &:nth-child(3) {
+      left: 78%;
+      top: 48%;
+    }
+
+    &:nth-child(4) {
+      left: 68%;
+      top: 69%;
+    }
+  }
+}

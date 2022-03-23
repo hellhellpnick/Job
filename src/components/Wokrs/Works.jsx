@@ -19,8 +19,16 @@ const Works = () => {
           workArray={ListWorks.filter((item) => item.typeWork === 'js')}
         />
         <BoxWork
+          title={'Games'}
+          workArray={ListWorks.filter((item) => item.typeWork === 'game')}
+        />
+        <BoxWork
           title={'Layout'}
           workArray={ListWorks.filter((item) => item.typeWork === 'layout')}
+        />
+        <BoxWork
+          title={'Training JS'}
+          workArray={ListWorks.filter((item) => item.typeWork === 'TrainingJS')}
         />
       </Box>
     </Box>

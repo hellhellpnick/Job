@@ -1,0 +1,38 @@
+%container {
+  max-width: $container-width;
+
+  @include mobile-large {
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+%btn {
+  max-width: 140px;
+  width: 100%;
+  padding: 10px 15px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  white-space: nowrap;
+  @include text($font-size-small-primary, 400, $color-main);
+  text-align: center;
+  border: 1px solid $color-main;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+
+  @include desktop {
+    max-width: 160px;
+    padding: 15px 20px;
+    font-size: $font-size-medium-primary;
+    letter-spacing: 1.5px;
+
+    &:hover {
+      background-color: $color-main;
+      color: $color-title-second;
+    }
+
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+}

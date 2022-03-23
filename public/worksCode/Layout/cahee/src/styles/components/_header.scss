@@ -1,0 +1,38 @@
+.header{
+    background-image: url("../images/header.png");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 100vh;
+    max-height: max-content;
+    padding-bottom: 200px;
+    &__scroll {
+        position: absolute;
+        bottom: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__content{
+        position: relative;
+        top: 30%;
+        @extend %container;
+        @include flex(center, center, column);
+        @media screen and (min-width: $screen-tablet){
+            @include flex(flex-start, stretch, column);
+        }
+        &--title{
+            @include text($H800, 900, $dark);
+            margin-bottom: 15px;
+        }
+        &--text{
+            @include text($H200,300, $dark);
+            line-height:27px;
+            max-width: 370px;
+            margin-bottom: 31px;
+            @media screen and (min-width: $screen-fullhd) {
+                font-size: $H400;
+            }
+        }
+        
+    }    
+}

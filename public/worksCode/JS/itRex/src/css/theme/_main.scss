@@ -1,0 +1,22 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-line {
+  background-color: $color-line-main;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.main-title {
+  margin-left: 20px;
+  color: $color-text-extra-ligth;
+  font-size: $font-size-medium;
+}
+
+.fas {
+  color: $color-text-extra-ligth;
+}

@@ -1,0 +1,31 @@
+.date-title {
+  margin-bottom: 14px;
+  @include text($font-size-large-primary, 700, $color-main);
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.date-text {
+  margin: 0 auto;
+  margin-bottom: 60px;
+  max-width: 550px;
+  @include text($font-size-medium-primary, 400, $color-main);
+  line-height: 30px;
+  text-align: center;
+}
+
+.date-input {
+  @include text($font-size-small-second, 400, $color-text-second);
+  width: 80px;
+  border: none;
+  outline: none;
+
+  @include mobile-large {
+    width: 250px;
+  }
+
+  &::placeholder {
+    @include text($font-size-small-second, 400, $color-text-primary);
+  }
+}

@@ -1,0 +1,46 @@
+.contact{
+    position: static;
+    z-index: 1;
+    background-color: #fff;
+    margin: 0 auto;
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    bottom: 270px;
+    max-width: 770px;
+    padding: 0 60px;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    @media screen and (min-width: $screen-tablet){
+        position: absolute;
+    }
+    &__title{
+        @include text($H200, 400, $button);
+        font-family: $second-font;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 60px;
+        &:before{
+            @include line(100px, $button);
+            }
+    }
+    &__info{
+        @include flex(flex-start, stretch, row);
+    }
+    &__form{
+        @include flex(flex-start, stretch, column);
+        &:valid .button--contact{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    
+}
+.box{
+    @include flex(space-between, center
+    , row);
+    flex-wrap: wrap;
+    @media screen and (max-width: $screen-tablet){
+        justify-content: center;
+    }
+}

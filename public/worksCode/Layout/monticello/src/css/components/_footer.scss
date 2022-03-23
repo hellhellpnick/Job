@@ -1,0 +1,54 @@
+.footer{
+    position: relative;
+    background-image: url("../images/footer.png"), $get-bg-color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: max-content;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    @media screen and(max-width: $screen-tablet){
+        padding-top: 50px;
+    }
+    &__content{
+        @include flex(space-around, center row);
+        margin-bottom: 40px;
+        @media screen and (max-width: $screen-tablet){
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        &-text{
+            @include text($H10, 400, $white);
+            margin-right: 15px;
+            &:nth-child(3){
+                margin-right: 5px;
+            }
+            @media screen and (max-width: $screen-tablet){
+                &:nth-child(2){
+                    display: none; 
+                }
+                margin-bottom: 10px;
+            }
+        }
+        &-svg{
+            @include svg(15px, $white);
+            margin-right: 5px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            &:hover{
+                fill: pink;
+                transform: scale(1.2);
+            }
+            @media screen and (max-width: $screen-tablet){
+                margin-bottom: 10px;
+            }
+        }
+        &--inline{
+            justify-content: flex-start;
+            padding-left: 10px;
+            @media screen and (min-width: $screen-desktop){
+                padding-left: 195px;
+            }
+        }
+    }
+}

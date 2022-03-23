@@ -1,0 +1,76 @@
+.section-works{
+    padding-bottom: 150px;
+    &__our{
+        margin-bottom: 71px;
+        @extend %container;
+        @include flex(space-between, stretch, row);
+        &-title{
+            @include text($H200, 700, $text);
+            font-family: $logo-font;
+            text-transform: uppercase;
+        }
+        &-text{
+            @include text($H50, 400, $text);
+        }
+        &-wrapper{
+            width: 10px;
+            z-index: -1;
+        }
+        &-icon{
+            @include svg(10px, $text);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            @media screen and (min-width: $screen-tablet) {
+                &:hover{
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+    &__container{
+        width: 100%;
+        margin-bottom: 35px;
+        padding: 0 10px;
+        @media screen and (max-width: $screen-tablet){
+            width: 100%;
+            height: 300px;
+            overflow-y: hidden;
+            overflow-x: auto;  
+        }
+         
+        &-list{
+            list-style: none;
+            @include flex();
+            flex-wrap: wrap;
+            background-color: #fff;
+            @media screen and (max-width: $screen-tablet){
+                @include flex(flex-start, flex-start, row);
+                flex-wrap: nowrap;
+                background-color: #251d45;
+            }
+        }
+        &-item{
+            max-width: 20%;
+            max-height: 400px;
+            @media screen and (max-width: $screen-tablet){
+                max-width: 768px;
+            }
+        }
+        &-image{
+                max-width: 100%;
+                height: 100%;
+                @media screen and (max-width: $screen-tablet){
+                    max-width: 768px;
+                }
+            object-fit: cover;
+            object-position:center center;
+            transition: all 0.2s ease;
+            @media screen and (min-width: $screen-tablet) {
+                &:hover{
+                    transform: translateY(20px);
+                }
+            }
+            
+        }
+    }
+}

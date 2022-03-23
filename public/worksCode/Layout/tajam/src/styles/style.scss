@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Roboto:100,400,900&display=swap');
+
+//Core
+@import "core/vars";
+@import "core/common";
+@import 'core/inheritance';
+@import 'core/mixins';
+
+//components
+@import "components/header";
+@import 'components/section-story';
+@import 'components/section-city';
+@import 'components/section-expertise';
+@import 'components/section-meet';
+@import 'components/section-works';
+@import 'components/section-info';
+@import 'components/section-contact';
+@import 'components/footer';
+
+//common
+@import 'components/common/nav';
+@import 'components/common/button';
+@import 'components/common/burger';

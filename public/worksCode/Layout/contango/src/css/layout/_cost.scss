@@ -1,0 +1,8 @@
+.layout-cost {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @include tablet {
+    padding: 75px 0;
+  }
+}

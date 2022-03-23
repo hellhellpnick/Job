@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { styled } from '@material-ui/core';
-
 const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 'auto',
@@ -146,5 +145,6 @@ const Link = styled('a')(({ theme }) => ({
     color: theme.palette.iconBack.primary,
   },
 }));
+
 
 export { useStyles, Link };

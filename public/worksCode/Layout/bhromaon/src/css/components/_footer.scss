@@ -1,0 +1,40 @@
+.footer{
+    width: 100%;
+    background-color: $dark;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    &__wrapper{
+        @include flex(center, center, column);
+    }
+    &-title{
+        @include text(24px, 400, $white, $secondary-font);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    &-text{
+        @include text(16px, 400, $white, $secondary-font);
+        letter-spacing: -0.5px;
+        margin-bottom: 30px;
+    }
+&__list{
+    list-style: none;
+    @include flex(center, center, row);
+   
+}
+&__icon{
+    @include svg(13px, $white);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover{
+        fill: $blue;
+        transform: scale(1.5);
+    }
+    &-inner{
+        width: 10px; 
+        &:not(:last-child){
+            margin-right: 23px;
+            
+        }
+    }
+}
+}

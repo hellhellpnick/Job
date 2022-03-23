@@ -1,0 +1,45 @@
+.section-about{   
+    background-color: $about-bg-color;
+    @extend %section;
+    &__container{
+        @include flex(center, center, column);
+        @extend %container;
+        @media screen and (min-width: $screen-tablet){
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: flex-start;
+        }
+    }
+    &__image{
+        transition: all 0.5s ease;
+        @media screen and (min-width: $screen-tablet){  
+            &:hover{
+                transform: rotate(360deg);
+            }
+        }
+    }
+    &__content{
+        max-width: 500px;
+        @media screen and (min-width: $screen-tablet){
+            margin-top: 180px;
+        }
+        &--title{
+            @include text($H800, 700, $white); 
+            margin-bottom: 24px;
+            text-align: center;
+            @media screen and (min-width: $screen-tablet){
+                font-size: $H900;
+                text-align: left;
+            }
+        }
+        &--text{
+            max-width: 500px;
+            @include text($H200, 300, $white);
+            margin-bottom: 25px;
+            @media screen and (min-width: $screen-fullhd) {
+                font-size: $H400;
+                max-width: 700px;
+            }
+        }
+    }
+}

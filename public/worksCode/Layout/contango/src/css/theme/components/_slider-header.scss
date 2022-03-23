@@ -1,0 +1,61 @@
+.layout-header .slick-dots {
+  bottom: -45px;
+  right: -35px;
+  width: 150px;
+
+  @include desktop {
+    right: 0px;
+  }
+
+  @include desktop-hd {
+    left: 180px;
+  }
+}
+
+.layout-header .slick-track,
+.layout-header .slick-list {
+  max-height: 400px !important;
+
+  @include desktop {
+    max-height: 600px !important;
+  }
+}
+
+.layout-header .slick-active {
+  @include desktop-hd {
+    margin-right: 50px;
+  }
+}
+
+.layout-header .slick-dots li {
+  transition: all 0.2s ease;
+  width: 8px;
+  height: 8px;
+  padding: 6px;
+  margin-right: 10px;
+
+  @include desktop {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.layout-header .slick-dots li button::before {
+  opacity: 1 !important;
+}
+
+.layout-header .slick-dots li button::before {
+  color: $color-main !important;
+
+  @include desktop {
+    &:hover {
+      background-color: $color-main !important;
+    }
+  }
+}
+
+.layout-header .slick-active button::before {
+  border: 1px solid $color-main;
+  border-radius: 50%;
+}

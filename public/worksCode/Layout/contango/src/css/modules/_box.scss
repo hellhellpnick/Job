@@ -1,0 +1,81 @@
+.box-btn {
+  @include flex(space-between, center, row, nowrap);
+  max-width: 330px;
+}
+
+.box-row {
+  @include flex(center, center, row, wrap);
+}
+
+.box-center {
+  margin: 0 auto;
+  max-width: 330px;
+  width: 100%;
+
+  @include desktop {
+    margin: 0;
+  }
+}
+
+.box-small-btn {
+  max-width: 170px;
+}
+
+.box-large-btn {
+  max-width: 260px;
+}
+
+.box-large {
+  max-width: 1440px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop-large {
+    flex-wrap: nowrap;
+  }
+}
+
+.box-input {
+  @include flex(space-between, center, row, nowrap);
+  max-width: 540px;
+  width: 100%;
+  padding: 5px;
+  margin: 0 auto;
+  padding-left: 35px;
+  border-radius: 100px;
+  background-color: $color-main;
+
+  &:valid {
+    .btn-subscribe {
+      opacity: 1;
+    }
+
+    & {
+      border: 1px solid green;
+    }
+  }
+
+  &:invalid {
+    & {
+      border: 1px solid red;
+    }
+  }
+}
+
+.box-flex {
+  justify-content: center;
+  align-items: center;
+
+  @include desktop {
+    justify-content: space-between;
+  }
+}
+
+.box-character {
+  position: relative;
+}
+
+.box-choose-card {
+  padding: 0 10px;
+}

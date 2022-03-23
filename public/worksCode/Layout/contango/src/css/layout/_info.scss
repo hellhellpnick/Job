@@ -1,0 +1,13 @@
+.layout-info {
+  @include flex(center, center, row, nowrap);
+  padding: 40px 0;
+  background-image: url('./../images/robots-info-bg.png');
+  background-color: $color-main;
+  background-repeat: no-repeat;
+  background-position: -105px -127px;
+
+  @include desktop-large {
+    padding: 95px 260px;
+    background-position: 0 -73px;
+  }
+}

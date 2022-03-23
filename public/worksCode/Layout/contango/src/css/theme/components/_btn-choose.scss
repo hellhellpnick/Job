@@ -1,0 +1,25 @@
+.btn-choose {
+  @include flex(center, center, row);
+  padding: 8px 30px;
+  background-image: $background-gradient-circle;
+  border-radius: 8px;
+  max-width: 80px;
+  max-height: 40px;
+  width: 100%;
+  @include text($font-size-small-second, 400, $color-main);
+  transition: all 0.2s ease;
+
+  @include desktop {
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(1.1) translateX(5px);
+    }
+  }
+}
+
+.btn-another-gradient {
+  background-image: $background-gradient-button;
+}

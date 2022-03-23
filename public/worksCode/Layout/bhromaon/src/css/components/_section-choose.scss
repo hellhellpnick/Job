@@ -1,0 +1,74 @@
+.section-choose {
+  background-image: url("../images/section-1.png");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  padding-top: 140px;
+  @media screen and (max-width: $screen-tablet) {
+    height: 100vh;
+    height: max-content;
+    padding-bottom: 100px;
+  }
+
+  &__wrapper {
+    @include flex(space-between, center, column-reverse);
+    padding-bottom: 140px;
+    @media screen and (min-width: $screen-tablet) {
+      flex-direction: row;
+    }
+  }
+  &__content {
+    max-width: 530px;
+  }
+  &__title {
+    @include text(36px, 400, $white);
+    margin-bottom: 62px;
+  }
+  &__text {
+    @include text(16px, 400, $grey, $secondary-font);
+    text-align: justify;
+    margin-bottom: 40px;
+    line-height: 30px;
+    &:nth-child(3) {
+      padding-bottom: 48px;
+    }
+  }
+  &__image {
+    width: 300px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    @media screen and (min-width: 450px) {
+      width: 450px;
+    }
+  }
+  &__picture {
+    width: 100%;
+    height: 100%;
+    &-wrapper {
+      width: 350px;
+      height: 100%;
+      @include padding-hack(49.7%);
+      transition: all 0.5s ease;
+      border: 1px solid transparent;
+      margin: 0 auto;
+      @media screen and (min-width: $screen-tablet) {
+        max-width: 350px;
+        margin: 0;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-left: auto;
+          @include padding-hack(41.2%);
+          &:hover {
+            transform: translateX(-100px);
+          }
+        }
+        &:first-child {
+          margin-right: auto;
+          &:hover {
+            transform: translateX(100px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="nav">
+          <h1>Flashcards</h1>
+          <div>
+            <button id="create-card">New Card</button>
+            <button id="delete-card">Del Card</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="create-box">
+        <h2 style="text-align: center; color: #000">Create Flashcards</h2>
+        <label for="question">Question</label>
+        <textarea id="question"></textarea>
+        <br />
+        <label for="answer">Answer</label>
+        <textarea id="answer"></textarea>
+        <div>
+          <button id="save-card">Save</button>
+          <button id="close-card">Close</button>
+        </div>
+      </div>
+      <div class="flashcards"></div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

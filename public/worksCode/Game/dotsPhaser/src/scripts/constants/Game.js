@@ -1,0 +1,16 @@
+const GAME_STATE = {
+  START: 0,
+  RUNNING: 1,
+  OVER: 2,
+};
+
+const GAME_CONSTANTS = {
+  NUM_ROWS: 6,
+  NUM_COLUMNS: 6,
+  NUM_COLORS: 5,
+  MIN_LOOP_COUNT: 3,
+  ROUND_TIME: 60000,
+  ROUND_MOVE: 30,
+};
+
+export { GAME_STATE, GAME_CONSTANTS };

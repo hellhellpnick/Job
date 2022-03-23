@@ -1,0 +1,64 @@
+.is-open-menu {
+  position: fixed;
+  display: flex;
+  top: 80px;
+  left: -20px;
+  height: 95%;
+  width: 110%;
+  background-color: $color-main;
+}
+
+.is-active-burger {
+  .burger-item:nth-child(1) {
+    transform: rotate(135deg) translateX(15px);
+    -moz-transform: rotate(135deg) translateX(15px);
+    -o-transform: rotate(135deg) translateX(15px);
+    -webkit-transform: rotate(135deg) translateX(15px);
+  }
+
+  .burger-item:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-item:nth-child(3) {
+    transform: rotate(-135deg) translateX(15px);
+    -moz-transform: rotate(-135deg) translateX(15px);
+    -o-transform: rotate(-135deg) translateX(15px);
+    -webkit-transform: rotate(-135deg) translateX(15px);
+  }
+}
+
+.is-no-scroll {
+  overflow: hidden;
+}
+
+.is-opacity-card {
+  position: relative;
+  top: 50px;
+  height: 440px !important;
+  width: 250px !important;
+  opacity: 0.5 !important;
+  z-index: 1000 !important;
+  margin-left: 10px;
+
+  & .card-img {
+    max-height: 360px !important;
+    max-width: 250px !important;
+    min-width: 150px;
+
+    width: 100% !important;
+  }
+
+  & .card-box {
+    max-height: 360px !important;
+    min-width: 150px !important;
+  }
+}
+
+.is-hidden-card {
+  opacity: 0;
+}
+
+.is-hidden-character {
+  display: none;
+}

@@ -1,0 +1,52 @@
+.choose-title {
+  @extend %container;
+  @include text(48px, 900, $color-title-second);
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 23px;
+  border-bottom: 1px solid rgba($color-text-primary, 0.5);
+  margin-bottom: 150px;
+
+  @media (min-width: 540px) {
+    margin-bottom: 108px;
+  }
+}
+
+.choose-card {
+  background-image: url('./../images/bg-choose.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 0 50px;
+
+  @include mobile-large {
+    padding: 20px 0;
+  }
+}
+
+.choose-card-img {
+  max-height: 300px;
+
+  @include tablet {
+    max-height: 800px;
+    margin-right: 35px;
+  }
+}
+
+.choose-card-title {
+  @include text($font-size-large-primary, 900, $color-title-second);
+  line-height: 32px;
+  margin-bottom: 6px;
+}
+
+.choose-card-subtitle {
+  @include text($font-size-medium-primary, 500, $color-title-second);
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.choose-card-text {
+  @include text($font-size-small-primary, 500, $color-text-main);
+  line-height: 24px;
+  margin-bottom: 30px;
+  max-width: 380px;
+}

@@ -1,0 +1,21 @@
+.title {
+  margin-bottom: 10px;
+  @include text($font-size-small-primary, $font-weight-bold, $color-main);
+  text-align: center;
+  line-height: 22px;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 740px;
+
+  @include mobile-large {
+    font-size: $font-size-medium-primary;
+    line-height: 40px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1300px) {
+    margin: auto;
+  }
+}

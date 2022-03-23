@@ -24,9 +24,9 @@ const CardWork = ({ item }) => {
           <Box className={classes.cardSubtitle}>ABOUT</Box>
           <p className={classes.cardDesc}>{item.text}</p>
         </Box>
-        <Link href={item.url}>
-          <i className="fas fa-arrow-right"></i>
-        </Link>
+          <Link href={item.url}>
+            <i className="fas fa-arrow-right"></i>
+          </Link>
       </Box>
     </Box>
   );

@@ -1,0 +1,47 @@
+.btn-main {
+  position: relative;
+  @include text(17px, $font-weight-bold, $color-main);
+  background: $bg-btn-gradient;
+  line-height: 24px;
+  padding: 5px 15px;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px 0 #1eacf5;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    &:hover {
+      box-shadow: 0 10px 15px 0 #1eacf5;
+      transform: translateY(-7px);
+
+      &::before {
+        transform: translateY(7px);
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    display: none;
+    content: '';
+    width: 132px;
+    height: 126px;
+    background: url('../images/main-form-button.png') center center no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+    left: -40px;
+    top: 50%;
+    margin-top: -62px;
+    pointer-events: none;
+    -webkit-transition: 0.3s;
+    transition: all 0s !important;
+    filter: hue-rotate(180deg);
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+}

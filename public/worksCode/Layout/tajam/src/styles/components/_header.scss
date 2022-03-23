@@ -1,0 +1,74 @@
+.header{
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 207px;
+    margin-bottom: 70px;
+    @media screen and (min-width: $screen-tablet){
+        padding-top: 20px;
+    }
+    &__image{
+        @extend %image-absolute;
+    }
+    &__container{
+        @extend %container;
+    }
+
+    &__logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 128px;
+    }
+    &__logo-text{
+        padding-left: 11px;
+        font-size: $logo-fs;
+        font-weight: 100;
+        font-family: $base-font;
+        color: $btn-color;
+    }    
+    &__title{
+        text-align: center;
+        color: $white;
+        font-size: $H300;
+        font-weight: 800;
+        font-family: $logo-font;
+        padding-bottom: 52px;
+    }
+    &__title:after{
+        display: block;
+        width: 50px;
+        content: "";
+        margin: 0 auto;
+        padding-bottom: 21px;
+        border-bottom: 1px solid $btn-color;
+        left: 48.5%;
+    }
+    &__text{
+        font-size: $H50;
+        text-align: center;
+        color: $white;
+        line-height: 24px;
+        font-weight: 300;
+        margin-bottom: 50px;
+    }
+}
+.navigation{
+    position: fixed;
+    background-color: rgba(rgb(38, 28, 99),0.75);
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    padding: 0 10px;
+    height: 100px;
+    margin-bottom: 20px;
+    @include flex(space-between, center, row);
+    @media screen and (min-width: $screen-tablet){
+        position: static;
+        background-color: transparent;
+        margin-bottom: 120px;
+        padding: 0;
+        height: 60;
+    }
+}

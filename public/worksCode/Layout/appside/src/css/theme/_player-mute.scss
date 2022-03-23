@@ -1,0 +1,42 @@
+.player-mute {
+  position: absolute;
+  width: 160px;
+  height: 140px;
+  top: calc(50% - 70px);
+  left: calc(50% - 80px);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  animation: pulse 1s linear infinite;
+}
+
+.mute-icon {
+  width: 90px;
+  height: 80px;
+  font-size: 78px;
+  color: $color-main;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.mute-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-main;
+}

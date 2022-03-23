@@ -1,0 +1,85 @@
+.section-link{
+    width: 100%;
+    background-color: $dark;
+    &__list{
+    list-style: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include flex(space-around, stretch,column);
+    @media screen and (min-width: $screen-tablet){
+        flex-direction: row;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &-line{ 
+            @media screen  and (max-width: $screen-tablet){
+                display: none;
+            }
+            flex-grow: 1;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 160%;
+                left: -70px;
+                top: -30px;
+                height: 94px;
+                border-radius: 50%;
+                border-top: 2px dashed rgb(70, 69, 69);
+              }
+              &:before {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 120%;
+                top: 0;
+                height: 2px;
+                background-color: #333333;
+                z-index: 2;
+              }
+    }
+    &-item{
+        @include flex(flex-start, center, column);
+        margin-bottom: 25px;
+        position: relative;
+        @media screen and (min-width: $screen-tablet){
+            margin: 0;
+        }
+    }
+    &-title{
+        @include text(36px, 400, $white);
+        @media screen and (max-width: $screen-tablet){
+            font-size: 24px;
+        }
+    }
+    
+    &-picture{
+        @include svg(40px);
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        @media screen and (min-width: $screen-tablet){
+            @include svg(60px);  
+        }
+        &--search{
+            fill: $blue;
+            &:hover{
+                fill: #00a2ff;
+            }
+        }
+        &--success{
+            fill: #ff6363;
+            &:hover{
+                fill: $blue;
+            }
+        }
+        &--ok{
+            fill: #00a2ff;
+            &:hover{
+                fill: #ff6363;
+            }
+        }
+    }
+}
+}

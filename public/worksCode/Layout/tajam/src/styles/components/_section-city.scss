@@ -1,0 +1,39 @@
+.section-city{
+    position: relative;
+    padding-top: 202px;
+    margin-bottom: 71px;
+    &__background{
+        @extend %image-absolute;
+    }
+    &__container{
+        @extend %container;
+    }
+    &__image{
+        cursor: pointer;
+      
+    }
+    &__image svg{
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        fill: $white;
+        transition: all 0.5s ease;
+        border: 10px solid transparent;
+        &:hover{
+            background-color: rgba($color: #fff, $alpha: 0.5);
+            border-radius: 50%;
+            fill: $btn-color;
+            transform: scale(1.3);
+        }
+    }
+    &__title{
+        color: $white;
+        font-size: $H200;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 34px;
+        padding-bottom: 201px;
+    }
+}

@@ -1,0 +1,23 @@
+.robots-btn {
+  padding: 10px 20px;
+  @include text($font-size-small-second, 500, $color-main);
+  line-height: 40px;
+  text-transform: uppercase;
+  border: 1px solid rgba($color-main, 0.3);
+  border-radius: 80px;
+  transition: all 0.2s ease;
+
+  @include desktop {
+    font-size: $font-size-large-primary;
+    padding: 10px 80px;
+
+    &:hover {
+      background-color: $color-main;
+      color: $color-text-main;
+    }
+
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+}

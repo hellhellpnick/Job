@@ -1,0 +1,23 @@
+.list-nav {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.nav-item {
+  padding: 10px;
+  border: 1px solid $color-text-dark;
+  transition: all 0.2s ease;
+}
+
+.nav-item .fas {
+  color: $color-text-dark;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+}
