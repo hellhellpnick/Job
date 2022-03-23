@@ -1,0 +1,23 @@
+(function () {
+  'use strict';
+
+  const btn = document.querySelector('#main-btn');
+
+  function generate() {
+    const quotes = {
+      '- Deepak Chopra': 'Sex is always about emotions. Good sex is about free emotions; bad sex is about blocked emotions.',
+      '- C.S. Lewis ': 'I was not born to be free---I was born to adore and obey.',
+      '― Charlotte Eriksson': "There are very few friends that will lie down with you on empty streets in the middle of the night, without a word. No questions, no asking why, just quietly lay there with you, observing the stars, until you're ready to get back up on your feet again and walk the last bit home, softly holding your hand as a quiet way of saying I'm here     It was a beautiful night"
+    };
+    const authors = Object.keys(quotes);
+    const author = authors[Math.floor(Math.random() * authors.length)];
+    const quote = quotes[author];
+    document.getElementById('quote').innerHTML = quote;
+    document.getElementById('author').innerHTML = author;
+  }
+
+  btn.addEventListener('click', generate);
+
+}());
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VzIjpbInNyYy9qcy9pbmRleC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBidG4gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjbWFpbi1idG4nKTtcclxuXHJcbmZ1bmN0aW9uIGdlbmVyYXRlKCkge1xyXG4gIGNvbnN0IHF1b3RlcyA9IHtcclxuICAgICctIERlZXBhayBDaG9wcmEnOlxyXG4gICAgICAnU2V4IGlzIGFsd2F5cyBhYm91dCBlbW90aW9ucy4gR29vZCBzZXggaXMgYWJvdXQgZnJlZSBlbW90aW9uczsgYmFkIHNleCBpcyBhYm91dCBibG9ja2VkIGVtb3Rpb25zLicsXHJcbiAgICAnLSBDLlMuIExld2lzICc6XHJcbiAgICAgICdJIHdhcyBub3QgYm9ybiB0byBiZSBmcmVlLS0tSSB3YXMgYm9ybiB0byBhZG9yZSBhbmQgb2JleS4nLFxyXG4gICAgJ+KAlSBDaGFybG90dGUgRXJpa3Nzb24nOlxyXG4gICAgICBcIlRoZXJlIGFyZSB2ZXJ5IGZldyBmcmllbmRzIHRoYXQgd2lsbCBsaWUgZG93biB3aXRoIHlvdSBvbiBlbXB0eSBzdHJlZXRzIGluIHRoZSBtaWRkbGUgb2YgdGhlIG5pZ2h0LCB3aXRob3V0IGEgd29yZC4gTm8gcXVlc3Rpb25zLCBubyBhc2tpbmcgd2h5LCBqdXN0IHF1aWV0bHkgbGF5IHRoZXJlIHdpdGggeW91LCBvYnNlcnZpbmcgdGhlIHN0YXJzLCB1bnRpbCB5b3UncmUgcmVhZHkgdG8gZ2V0IGJhY2sgdXAgb24geW91ciBmZWV0IGFnYWluIGFuZCB3YWxrIHRoZSBsYXN0IGJpdCBob21lLCBzb2Z0bHkgaG9sZGluZyB5b3VyIGhhbmQgYXMgYSBxdWlldCB3YXkgb2Ygc2F5aW5nIEknbSBoZXJlICAgICBJdCB3YXMgYSBiZWF1dGlmdWwgbmlnaHRcIixcclxuICB9O1xyXG4gIGNvbnN0IGF1dGhvcnMgPSBPYmplY3Qua2V5cyhxdW90ZXMpO1xyXG4gIGNvbnN0IGF1dGhvciA9IGF1dGhvcnNbTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogYXV0aG9ycy5sZW5ndGgpXTtcclxuXHJcbiAgY29uc3QgcXVvdGUgPSBxdW90ZXNbYXV0aG9yXTtcclxuXHJcbiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3F1b3RlJykuaW5uZXJIVE1MID0gcXVvdGU7XHJcbiAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2F1dGhvcicpLmlubmVySFRNTCA9IGF1dGhvcjtcclxufVxyXG5cclxuYnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgZ2VuZXJhdGUpO1xyXG4iXSwibmFtZXMiOlsiYnRuIiwiZG9jdW1lbnQiLCJxdWVyeVNlbGVjdG9yIiwiZ2VuZXJhdGUiLCJxdW90ZXMiLCJhdXRob3JzIiwiT2JqZWN0Iiwia2V5cyIsImF1dGhvciIsIk1hdGgiLCJmbG9vciIsInJhbmRvbSIsImxlbmd0aCIsInF1b3RlIiwiZ2V0RWxlbWVudEJ5SWQiLCJpbm5lckhUTUwiLCJhZGRFdmVudExpc3RlbmVyIl0sIm1hcHBpbmdzIjoiOzs7RUFBQSxNQUFNQSxHQUFHLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixXQUF2QixDQUFaOztFQUVBLFNBQVNDLFFBQVQsR0FBb0I7RUFDbEIsUUFBTUMsTUFBTSxHQUFHO0VBQ2IsdUJBQ0UsbUdBRlc7RUFHYixxQkFDRSwyREFKVztFQUtiLDRCQUNFO0VBTlcsR0FBZjtFQVFBLFFBQU1DLE9BQU8sR0FBR0MsTUFBTSxDQUFDQyxJQUFQLENBQVlILE1BQVosQ0FBaEI7RUFDQSxRQUFNSSxNQUFNLEdBQUdILE9BQU8sQ0FBQ0ksSUFBSSxDQUFDQyxLQUFMLENBQVdELElBQUksQ0FBQ0UsTUFBTCxLQUFnQk4sT0FBTyxDQUFDTyxNQUFuQyxDQUFELENBQXRCO0VBRUEsUUFBTUMsS0FBSyxHQUFHVCxNQUFNLENBQUNJLE1BQUQsQ0FBcEI7RUFFQVAsRUFBQUEsUUFBUSxDQUFDYSxjQUFULENBQXdCLE9BQXhCLEVBQWlDQyxTQUFqQyxHQUE2Q0YsS0FBN0M7RUFDQVosRUFBQUEsUUFBUSxDQUFDYSxjQUFULENBQXdCLFFBQXhCLEVBQWtDQyxTQUFsQyxHQUE4Q1AsTUFBOUM7RUFDRDs7RUFFRFIsR0FBRyxDQUFDZ0IsZ0JBQUosQ0FBcUIsT0FBckIsRUFBOEJiLFFBQTlCOzs7OyJ9

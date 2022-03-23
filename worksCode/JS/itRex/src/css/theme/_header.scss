@@ -1,0 +1,28 @@
+.header {
+  margin-bottom: 30px;
+}
+
+.header-title {
+  font-size: $font-size-large;
+  color: $main-color;
+}
+
+.header-user {
+  color: $color-text-ligth;
+  margin-right: 20px;
+  font-size: $font-size-small;
+}
+
+.header-btn {
+  cursor: pointer;
+  color: $main-color;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: $font-size-small;
+  transition: all 0.2s ease;
+}
+
+.header-btn:hover {
+  transform: scale(1.1);
+}

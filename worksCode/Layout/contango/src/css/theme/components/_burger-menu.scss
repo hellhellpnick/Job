@@ -1,0 +1,19 @@
+.burger-menu {
+  @include flex(center, center, column);
+  cursor: pointer;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.burger-item {
+  width: 28px;
+  height: 3px;
+  background-color: $color-main;
+  transition: all 0.2s ease;
+
+  & + & {
+    margin-top: 8px;
+  }
+}

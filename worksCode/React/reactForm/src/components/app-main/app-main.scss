@@ -1,0 +1,39 @@
+.main {
+  background-image: url("./background.png");
+  position: relative;
+  padding: 100px 0 60px;
+  background-color: #006ef1;
+  background-repeat: no-repeat;
+  background-position: right top -80px;
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__block {
+    margin: 0 auto;
+    max-width: 1120px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
+}
+.get-in-touch {
+  &__title {
+    margin: 0 80px 0 0;
+    max-width: 350px;
+    font-size: 36px;
+    line-height: 44px;
+    font-family: Circe, Arial, sans-serif;
+    color: #fff;
+  }
+  &__subtitle {
+    margin: 0;
+    max-width: 170px;
+    font-size: 24px;
+    line-height: 31px;
+    font-family: Circe;
+    font-weight: 200;
+    color: #fff;
+  }
+}

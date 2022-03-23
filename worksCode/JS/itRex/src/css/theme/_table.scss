@@ -1,0 +1,107 @@
+tbody {
+  width: 100%;
+}
+tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid $color-text-ligth;
+}
+
+th {
+  padding: 10px 0;
+  width: 190px;
+  color: $main-color;
+  font-size: $font-size-small;
+  & > i {
+    color: $color-text-dark !important;
+  }
+}
+
+th:first-child {
+  width: 45px;
+  margin-left: -10px;
+}
+
+th:last-child {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 190px;
+}
+
+td {
+  text-align: center;
+  width: 190px;
+}
+
+td:first-child {
+  width: 45px;
+  margin-left: -10px;
+}
+
+.table {
+  margin-bottom: 50px;
+}
+
+.checkbox-table {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.checkbox-table:focus + label::before {
+  border-color: $color-text-dark;
+}
+
+.checkbox-table + label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+.checkbox-table + label::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  transition: all 0.2s ease;
+}
+
+.checkbox-table:checked + label::before {
+  border-color: $color-text-brigth;
+  background-color: $color-text-brigth;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+
+  transition: all 0.2s ease;
+}
+
+.table-btn {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid transparent;
+  outline: none;
+  margin-right: 10px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.table-btn:hover {
+  transform: scale(1.1);
+}
+
+.table-btn:focus {
+  border-color: $color-text-dark;
+}
+
+.fa-pen,
+.fa-trash {
+  color: $main-color;
+}

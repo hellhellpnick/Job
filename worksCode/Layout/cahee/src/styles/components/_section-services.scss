@@ -1,0 +1,71 @@
+.section-services{
+    background-color: $service-bg-color;
+    padding-top: 100px;
+    @extend %section;
+    &__container{
+        @extend %container;
+        @include flex(center, center, column-reverse);
+        @media screen and (min-width: $screen-tablet){
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__list{
+        @include flex(space-between, center, column);
+        list-style: none;
+        &-item{
+            @include flex(flex-start, stretch, row);
+            background-color: $white;
+            transition: all 0.2s ease;
+            max-width: 400px;
+            height: 100px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            @media screen and (min-width: $screen-tablet){
+                &:hover{
+                    box-shadow: $card-shadow;
+                }
+                
+            }
+        }
+    }
+    &__icon{
+        @include svg(60px, $dark);
+    }
+    &__icon-wrapper{
+        width: 100px;
+        @include flex(center, center);
+        border-left: 1px solid $grey;
+    }
+    &__tomato{
+        position: relative;
+        &_image{
+            position: absolute;
+        }
+        &-title{
+            @include text($H700, 700, $white);
+            position: absolute; 
+            bottom: 40%;
+            text-align: center;
+            @media screen and (min-width: $screen-tablet){
+                position: absolute;
+                top: 40%;
+                font-size: $H900;
+                text-align: left;
+            }
+        }
+    }
+}
+.item__text{
+    @include text($H300, 700, $dark);
+    @include flex(center, center);
+    text-align: center;
+    width: 300px;
+}
+.list-services{
+    @include flex(center, center, column);
+    @media screen and (min-width: $screen-tablet){
+        justify-content: flex-start;
+    }
+}

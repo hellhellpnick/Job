@@ -1,0 +1,125 @@
+.wrapper-modal {
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  padding: 15px 65px 15px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  max-width: 535px;
+
+  & > .main-form > .box-mb {
+    margin-bottom: 0;
+
+    &::before,
+    &::after {
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  & > .main-form > .box-center {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  & > .main-form > .box-center > .input-wrapper {
+    max-width: 405px;
+    padding: 0;
+  }
+}
+
+.modal-title {
+  position: absolute;
+  top: -30px;
+  left: 2%;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1eacf5;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 24px;
+  background-color: transparent;
+}
+
+.modal-text {
+  text-align: center;
+  margin-bottom: 15px;
+  color: $color-text-main;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.modal-input-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #ededed;
+  border: none;
+  padding-left: 40px;
+  border-radius: 3px;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modal-input {
+  background-color: #ededed;
+}
+
+.btn-main-modal {
+  position: relative;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  top: 0;
+  -webkit-box-shadow: 0 0 15px 0 #1eacf5;
+  box-shadow: 0 0 15px 0 #1eacf5;
+  background: #1eacf5;
+  background: -webkit-gradient(linear, left top, right top, from(#1eacf5), to(#1885bc));
+  background: linear-gradient(90deg, #1eacf5 0%, #1885bc 100%);
+  width: 100%;
+  max-width: 405px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding: 22px 15px;
+
+  &::before {
+    display: none;
+  }
+}
+
+.btn-modal-close {
+  position: absolute;
+  top: -40px;
+  left: 100%;
+  background-color: transparent;
+}
+
+.modal-agreement-link {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.modal-agreement-label {
+  text-align: left;
+  position: relative;
+  background-color: transparent;
+}
+
+.modal-agreement-text {
+  top: -1px;
+  display: block;
+  font-size: 11px;
+  line-height: 14px;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.modal-agreement-checkbox {
+  width: auto;
+  float: left;
+}

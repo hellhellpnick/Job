@@ -1,0 +1,22 @@
+.info-title {
+  @include text($font-size-large-second, 900, $color-title-second);
+  line-height: 55px;
+  margin-bottom: 16px;
+  max-width: 610px;
+  width: 100%;
+}
+
+.info-subtitle {
+  @include text($font-size-medium-primary, 500, $color-title-second);
+  line-height: 25px;
+  margin-bottom: 22px;
+  max-width: 610px;
+  width: 100%;
+}
+
+.info-text {
+  @include text($font-size-small-primary, 400, $color-title-primary);
+  line-height: 23px;
+  max-width: 610px;
+  width: 100%;
+}

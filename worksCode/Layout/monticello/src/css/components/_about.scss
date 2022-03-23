@@ -1,0 +1,99 @@
+.about{
+    padding-top: 100px;
+    position: relative;
+    &__title{
+        @include text($H200, 700, $button);
+        font-family: "gotham";
+        text-transform: uppercase;
+        text-align: center;
+        padding-bottom: 170px;
+        &:before{
+            @include line(100px, $button);
+        }
+    }
+    &__container{
+        @include flex(space-between, center, column);
+        &:last-child{
+            flex-direction: column;
+        }
+        @media screen and (min-width: $screen-tablet){
+            flex-direction: row;
+            &:last-child{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    &__wrapper{
+        @include flex(flex-start, stretch, column);
+        &:last-child{
+            margin-bottom: 80px;
+        }
+        &-title{
+            @include text($H200, 700, $button);
+            font-family: $second-font;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        &-subtitle{
+            @include text($H100, 400, $button);
+            font-family: $second-font;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        &-text{@include text($H50, 400, $button);
+            font-family: $base-font;
+            margin-bottom: 35px;
+            max-width: 460px;
+        }
+    }
+    &__box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &-author{
+            @include text($H50, 400, $button);
+            font-style: italic;
+        }
+        &-svg{
+            @include svg(20px, #000);
+            margin-right: 10px;
+            transition: all 0.2s ease;
+            &:hover{
+                fill: $purple;
+            }
+        }
+    }
+    &__image{
+        max-width: 100%;
+        margin-bottom: 100px;
+        &-wrapper{
+            max-width: 585px;
+        }
+        &-block{
+            &--blue{
+            position: absolute;
+            width: 585px;
+            height: 470px;
+            background-color: $blue;
+            z-index: -1;
+            left: 0;
+            top: 300px;
+            @media screen and (max-width: $screen-tablet){
+                display:none;
+            }
+            }
+            &--purple{
+                position: absolute;
+                width: 585px;
+                height: 470px;
+                background-color: $purple;
+                z-index: -1;
+                right: 0;
+                bottom: 70px;  
+                @media screen and (max-width: $screen-tablet){
+                display:none;
+                }
+            }
+        }
+    }
+}

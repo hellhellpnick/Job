@@ -1,0 +1,29 @@
+.card{
+    background-color: rgba($darker, 0.75);
+    max-width: 540px;
+    padding: 50px 30px 90px;
+    transition: all 0.5s ease;
+    border: 1px solid transparent;
+    &:hover{
+        box-shadow: 0 0 10px 1px #000;
+        border-radius: 10px;
+    }
+    &__title{
+        @include text(20px, 400, $grey-light, $secondary-font);
+        margin-bottom: 30px;
+        &:nth-child(2){
+            text-transform: uppercase;
+        }
+    }
+    &__text{
+        @include text(16px, 300, $grey-light, $secondary-font);
+        text-align: justify;
+        padding-bottom: 50px;
+        line-height: 1.8;
+        
+    }
+    &--right{
+        margin-left: auto;
+    }
+
+}

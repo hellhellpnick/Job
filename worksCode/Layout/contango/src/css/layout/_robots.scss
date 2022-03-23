@@ -1,0 +1,9 @@
+.layout-robots {
+  @include flex(center, center, column, nowrap);
+  padding: 50px 20px;
+  background-image: url('./../images/bg-robots.png');
+
+  @include desktop {
+    padding: 55px 165px 85px 165px;
+  }
+}

@@ -1,0 +1,151 @@
+.card{
+    @include flex(flex-start, stretch, column);
+    position: relative;
+    background-color: $white;
+    width: 373px !important;
+    padding-bottom: 30px;
+    height: 514px;
+    &:not(:last-child){
+        margin-right: 20px;
+    }   
+    &__box{
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover{
+            .card__icon-wrapper{
+                display: block;
+            }
+        }
+    } 
+    &__image{
+        max-width: 100%;
+        max-height: 100%;
+        &-wrapper{
+            position: relative;
+            max-width: 373px;
+            max-height: 243px;
+        }
+    }
+    &__icon{
+        @include size(80px);
+        &-wrapper{
+            transition: all 0.2s ease;
+            margin: auto;
+            display: none;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            @include size(80px);
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__title{
+        @include text($H100, 700, $button);
+        font-family: $second-font;
+        text-transform: uppercase;
+        padding-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 23px;
+    }
+    &__subtitle{
+        @include text($H50, 400, $button);
+        margin-bottom: 35px;
+        margin-left: 23px;
+    }
+    &__wrapper{
+        @include flex(flex-start, center, row);
+        margin-left: 23px;
+        &-box{
+            position: relative;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+    }
+    &__author{
+        @include text($H50, 500, $button);
+        text-transform: uppercase;
+    }
+    &__date{
+        @include text($H10, 500,  $blue);
+    }
+}
+
+.card-dots { 
+    z-index: 2;
+    position: absolute; 
+    bottom: 450px; 
+    list-style: none; 
+    display: block; 
+    text-align: center; 
+    padding: 0; 
+    width: 100%; 
+
+    li { 
+    position: relative; 
+    display: inline-block; 
+    height: 10px; 
+    width: 10px; 
+    margin: 0; 
+    margin-right: 30px;
+    padding: 0; 
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer; 
+    transition: all 0.5s ease;
+    }
+    button { 
+    border: 0; 
+    background: transparent; 
+    display: block; 
+    height: 10px; 
+    width: 10px; 
+    outline: none; 
+    line-height: 0; 
+    font-size: 0; 
+    color: transparent; 
+    padding: 5px; 
+    cursor: pointer; 
+    transition: all 0.5s ease;
+        &:hover, 
+        &:focus { 
+        outline: none; 
+        border-radius: 50%;
+        background-color: #fff;
+        transition: all 0.5s ease;
+        &:before, 
+        &:before { 
+            opacity: 1; 
+            border-radius: 50%;
+            background-color: #fff;
+            transition: all 0.5s ease;
+            }   
+        }
+    
+    &:before { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    content: "•"; 
+    width: 10px; 
+    height: 10px; 
+    font-family: "card"; 
+    font-size: 6px; 
+    text-align: center; 
+    color: black; 
+    opacity: 0.25; 
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale; 
+    }
+    }
+}
+.card-dots li.slick-active button::before,
+.card-dots li.slick-active button:hover {
+    padding: 0;
+    color: transparent;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 1;
+    @include size(10px);
+  }

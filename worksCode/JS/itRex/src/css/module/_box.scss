@@ -1,0 +1,28 @@
+.box-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box-small {
+  justify-content: start;
+}
+
+.box-margin-bottom {
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 20px;
+  background-color: $color-line-main;
+  color: $color-text-extra-ligth;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}

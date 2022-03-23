@@ -1,0 +1,22 @@
+.touch-title {
+  text-align: center;
+  @include text($font-size-large-second, 900, $color-title-second);
+  line-height: 48px;
+  margin-bottom: 28px;
+}
+
+.touch-text {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  @include text($font-size-medium-primary, 500, $color-text-main);
+  line-height: 30px;
+  margin-bottom: 60px;
+}
+
+.touch-link {
+  @include text(12px, 500, $color-main);
+  line-height: 23px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}

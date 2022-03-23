@@ -1,0 +1,96 @@
+.section-meet{
+    padding-top: 71px;
+    position: relative;
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+    min-height: 100vh;
+    &__container{
+        @extend %container;
+    }
+    &__background{
+        @extend %image-absolute;
+        width: 100%;
+        min-height: 100vh;
+    }
+    &__title{
+        @include text($H200, 700, $white);
+        text-align: center;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        font-family: $logo-font;
+    }
+    &__text{
+        @include text($H50, 400, $grey-light);
+        font-family: $logo-font;
+        text-align: center;
+        margin-bottom: 67px;
+        &:after{
+            display: block;
+            width: 50px;
+            content: "";
+            margin: 0 auto;
+            padding-bottom: 21px;
+            border-bottom: 2px solid rgba($grey-light, 0.5);
+            left: 48.5%;
+            margin-bottom: 84px;
+        }
+    }
+    &__list{
+        list-style: none;
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        &-item{
+            width: 222px;
+            @include flex(center, center, column);
+            margin-right: 10px;
+            margin-top: 20px;
+            border: 1px solid $white;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            &:hover{
+                border-color: $btn-color;
+            }
+        }
+        &-wrapper{
+            z-index: -1;
+            @media screen and (min-width: $screen-tablet) {
+                z-index: 10;
+            }
+            max-height: 229px;
+            margin-bottom: 22px;
+        }
+        &-image{
+            z-index: -1;
+            margin-bottom: 23px;
+            height: 229px;
+            width: 220px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+            &:hover{
+                transform: scale(1.1);
+                border-radius: 20px;
+            }
+            &--position{
+                object-position: center 10%;
+            }
+        }
+        &-subtitle{
+            text-align: center;
+            @include text($H50, 700, $white);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        &-text{
+            text-align: center;
+            @include text($H10, 400, $grey-light);
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+    }
+    &__subtext{
+        @include text($H50, 400, $grey-light);
+        text-align: center;
+        padding-bottom: 80px;
+    }
+}

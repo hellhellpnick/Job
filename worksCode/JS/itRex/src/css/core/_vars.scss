@@ -1,0 +1,23 @@
+/* color */
+$main-color: rgb(167, 167, 167);
+$color-text-extra-ligth: #fff;
+$color-text-ligth: rgb(216, 216, 216);
+$color-text-dark: rgb(31, 31, 31);
+$color-text: rgb(82, 82, 82);
+$color-text-brigth: rgb(238, 74, 224);
+$color-line-main: rgb(61, 31, 196);
+
+/* width */
+$container-width: 1440px;
+
+/* font */
+$font-size-large: 24px;
+$font-size-medium: 20px;
+$font-size-small: 16px;
+
+.container {
+  max-width: $container-width;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}

@@ -1,0 +1,130 @@
+.section-expertise{
+    @extend %container;
+    &__title{
+        @include text($H200,700);
+        font-family: $logo-font;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    &__text{
+        @include text($H50, 400, $text);
+        text-align: center;
+        margin-bottom: 16px;
+        font-family: $logo-font;
+        &:after{
+            display: block;
+            width: 50px;
+            content: "";
+            margin: 0 auto;
+            padding-bottom: 21px;
+            border-bottom: 2px solid rgba($text, 0.5);
+            left: 48.5%;
+            margin-bottom: 84px;
+        }
+    }
+    &__list{
+        list-style: none;
+        margin-top: 80px;
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+        margin-bottom: 101px;
+        &-item{
+            width: 300px;
+            @include flex(center, center, column);
+            padding-top: 20px;
+            cursor: pointer;
+            &:nth-child(1){
+                border-bottom: 1px solid rgba($text, 0.25);
+            }
+            &:nth-child(2){
+                border-bottom: 1px solid rgba($text, 0.25);
+            }                
+            &:nth-child(3){
+                border-bottom: 1px solid rgba($text, 0.25);
+            }
+            &:nth-child(4){
+                border-bottom: 1px solid rgba($text, 0.25);
+            }                
+            &:nth-child(5){
+                border-bottom: 1px solid rgba($text, 0.25);
+            }
+            @media screen and (min-width: 637px){
+                &:nth-child(1){
+                    border: none;
+                    border-right: 1px solid rgba($text, 0.25);
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(4){
+                    border: none;
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(5){
+                    border: none;
+                    border-right: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(2){
+                    border: none;
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(3){
+                    border: none;
+                    border-right: 1px solid rgba($text, 0.25);
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }                
+                &:nth-child(6){
+                    border: none;
+                }
+            }
+            @media screen and (min-width: 917px){
+                &:hover svg{
+                    fill: rgb(38, 28, 99); 
+                }
+                &:nth-child(2){
+                    border: none;
+                    border-left: 1px solid rgba($text, 0.25);
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(3){
+                    border: none;
+                    border-left: 1px solid rgba($text, 0.25);
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(1){
+                    border: none;
+                    border-bottom: 1px solid rgba($text, 0.25);
+                }
+                &:nth-child(5){
+                    border: none;
+                    border-left: 1px solid rgba($text, 0.25);
+                }
+                
+                &:nth-child(6){
+                    border: none;
+                    border-left: 1px solid rgba($text, 0.25);
+                }
+            }  
+        }
+        &-subtitle{
+            @include text($H50, 700);
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+        &-text{
+            @include text($H50, 400, $text);
+            max-width: 254px;
+            text-align: justify;
+            padding-bottom: 20px;
+        }
+    }
+    &__link{
+        @include flex(center, center);
+        width: 100px;
+        margin-bottom: 20px;
+        &-icon{
+            @include svg(50px, $btn-color);
+            transition: all 0.2s ease;
+        }
+    }
+}

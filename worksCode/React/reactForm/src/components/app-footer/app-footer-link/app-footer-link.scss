@@ -1,0 +1,30 @@
+.footer-link {
+  padding: 30px 0;
+  background-color: #202f40;
+  &__wrapper {
+    margin: 0 auto;
+    width: 1120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__text {
+    margin: 0;
+    align-self: center;
+    font-family: Helvetica Neue, Helvetica, serif;
+    font-size: 18px;
+    color: #707e8c;
+  }
+}
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  &__item {
+    text-decoration: none;
+    padding: 0 20px;
+    color: #6a7785;
+    font-weight: 500;
+    font-family: Helvetica Neue, Helvetica, serif;
+    font-size: 18px;
+  }
+}

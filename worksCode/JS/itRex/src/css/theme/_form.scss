@@ -1,0 +1,108 @@
+.form-title {
+  color: $color-text;
+  font-size: $font-size-small;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  border: 1px solid $color-text-ligth;
+  padding: 10px;
+  outline: none;
+  color: $color-text;
+  margin-right: 10px;
+}
+
+.form-btn {
+  cursor: pointer;
+  background-color: $color-line-main;
+  padding: 10px 30px;
+  color: $color-text-extra-ligth;
+  border: 1px solid transparent;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-btn:hover {
+  transform: scale(1.1);
+}
+
+.form-btn:focus {
+  border-color: $color-text-dark;
+}
+
+.form-btn-add {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  background-color: $color-text-brigth;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  outline: none;
+  padding: 15px;
+  transition: all 0.2s ease;
+}
+
+.form-btn-add:focus {
+  border-color: $color-text-dark;
+}
+
+.form-btn-add:hover {
+  transform: scale(1.1);
+}
+
+.position-center {
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-text-extra-ligth;
+  padding: 20px 40px;
+  border-radius: 20px;
+  border: 1px solid $color-text-ligth;
+  box-shadow: 0px 0px 2200px 1000px rgba(0, 0, 0, 0.2);
+  pointer-events: visible;
+}
+
+.form-add-title {
+  margin-bottom: 20px;
+  color: $color-text-dark;
+}
+
+.form-add {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-add-input {
+  border: 1px solid $color-text-ligth;
+  padding: 10px;
+  outline: none;
+  color: $color-text;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: $color-text-dark;
+}
+
+.form-add-input:focus {
+  border-color: $color-text-dark;
+}
+
+.form-add-btn {
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid $color-text-dark;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.form-add-btn:focus {
+  border-color: $color-text-brigth;
+}

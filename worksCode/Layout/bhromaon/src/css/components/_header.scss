@@ -1,0 +1,90 @@
+.header {
+  background-image: url("../images/header.png");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  height: 100vh;
+  @include flex(center, center, column);
+  &__title {
+    @include text(42px, 700, $white);
+    font-family: $secondary-font;
+    padding-top: 100px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    @media screen and (min-width: $screen-tablet) {
+      font-style: 48px;
+    }
+  }
+  &__subtitle {
+    @include text(16px, 400, $white);
+    font-family: $secondary-font;
+    letter-spacing: 8px;
+    text-align: center;
+    margin-bottom: 50px;
+    @media screen and (min-width: $screen-tablet) {
+      font-style: 22px;
+    }
+  }
+  &__text {
+    @include text(14px, 300, $white, $secondary-font);
+    text-align: center;
+    letter-spacing: 2px;
+    max-width: 150px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover {
+      color: $grey;
+    }
+  }
+  &__wrapper {
+    &:hover {
+      .header__text {
+        color: $grey;
+      }
+      .scroll-down {
+        fill: $grey;
+        transform: translateY(10px);
+      }
+    }
+  }
+  &__footer {
+    @include flex(center, center, column);
+    @media screen and (min-width: $screen-tablet) {
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+    }
+    &-text {
+      @include text(24px, 700, $white);
+      margin-bottom: 25px;
+      vertical-align: top;
+      line-height: 20px;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+      font-family: $secondary-font;
+      letter-spacing: 5px;
+      @media screen and (min-width: $screen-tablet) {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  &__background {
+    width: 100%;
+    padding: 5px 10px;
+    top: 0;
+    height: 100px;
+    background-color: $blue;
+    position: fixed;
+    z-index: 11;
+    @media screen and (min-width: $screen-tablet) {
+      top: auto;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+}

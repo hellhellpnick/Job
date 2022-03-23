@@ -1,0 +1,51 @@
+.card-character {
+  position: relative;
+  padding: 12px 13px;
+  background-color: $color-main;
+  border-radius: 8px;
+
+  @include desktop {
+    width: 330px !important;
+  }
+}
+
+.card-img {
+  margin-bottom: 15px;
+  height: 100%;
+  max-width: 200px;
+  max-height: 350px;
+
+  @include desktop {
+    min-width: 300px;
+    max-height: 475px;
+  }
+}
+
+.card-box {
+  min-width: 200px;
+  max-height: 350px;
+
+  @include desktop {
+    min-width: 300px;
+    max-height: 475px;
+
+    .is-opacity-card .card-box {
+      min-width: 150px;
+    }
+  }
+}
+
+.card-subtitle {
+  @include text($font-size-small-second, 500, $color-text-primary);
+  margin-bottom: 8px;
+}
+
+.card-title {
+  @include text($font-size-medium-primary, 500, $color-text-second);
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.card-character.slick-dots {
+  background-color: #fff;
+}

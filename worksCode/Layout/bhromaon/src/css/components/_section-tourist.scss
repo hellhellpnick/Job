@@ -1,0 +1,80 @@
+.section-tourist{
+    background-image: linear-gradient(90deg, rgba($dark,0.75) 0%, rgba($dark, 0.75) 100%),
+    url("../images/section-4.png");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height:100vh;
+    padding-top: 10%;
+    height: max-content;
+    padding-bottom: 100px;
+    @media screen and (min-width: $screen-tablet){
+        height:100vh;
+        height: max-content;
+        padding-bottom: 10%;
+    }
+    &__title{
+        @include text(36px, 400, $white);
+        margin-bottom: 95px;
+        text-align: center;
+    }
+    &__image{
+        max-width: 445px;
+        height: 334px;
+        margin-bottom: 10px;
+        
+        @media screen and (max-width: $screen-desktop) {
+            margin: 0 auto;
+            max-width: 764px;
+            max-height: 150%;
+        }
+        object-fit: cover;
+        transition: all 0.5s ease;
+        object-position: center, center;
+        border: 1px solid transparent;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 1px 1px 10px 0 #000;
+            border-radius: 10px;
+        }
+        &-wrapper{
+            max-width: 455px;
+            max-height: 283px;
+            margin-bottom: 50px;
+        }
+    }
+    &__wrapper{
+        @include flex(flex-end, center, column);
+        @media screen and (min-width: $screen-desktop){
+            flex-direction: row;
+            align-items: stretch;
+        }
+    }
+    &__content{
+        width: 100%;
+        background-color: $dark;
+        padding: 50px;
+        &-title{
+            @include text(20px, 400, $white, $secondary-font);
+            margin-bottom: 33px;
+            text-transform: uppercase;
+        }
+        &-text{
+            position: relative;
+           @include text(16px, 300, $white, $secondary-font); 
+           line-height: 1.9;
+           text-align: justify;
+           text-indent: 30px;
+           &:before{
+               position: absolute;
+               content: "❝";
+               display: block;
+               font-size: 56px;
+               left: -35px;
+               top: -30px;
+               color:$blue;
+           }
+        }
+    }
+}

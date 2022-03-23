@@ -1,0 +1,158 @@
+.footer{
+    position: relative;
+    padding-top: 70px;
+    &__container{
+        @extend %container;
+        @include flex(space-around, stretch, row);
+        flex-wrap: wrap;
+    }
+    &__logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 128px;
+    }
+    &__logo-text{
+    padding-left: 11px;
+    font-size: $logo-fs;
+    font-weight: 100;
+    font-family: $base-font;
+    color: $btn-color;
+    }
+    &__background{
+        &-image{
+            @extend %image-absolute;
+        }
+    }
+    &__wrapper{
+        @include flex(start, stretch, column);
+        margin-bottom: 50px;
+    }
+    &__image{
+        width: 17px;
+        &-wrapper{
+            width: 17px;
+            margin-right: 15px;
+        }
+    }
+    &__content{
+        @include flex(flex-start, stretch, row);
+        &:not(:last-child){
+            margin-bottom: 27px;
+        }
+        &-text{
+            @include text($H50, 400, $white);
+            text-align: justify;
+            line-height: 1.8;
+            &--pos{
+                margin-top: 15px;
+                margin-right: 36px;
+                max-width: 287px;
+            }
+            &--our{
+               max-width: 237px;
+               margin-right: 62px; 
+
+            }
+            
+        }
+        &-title{
+            @include text(15px, 700, $white);
+            text-transform: uppercase;
+            margin-bottom: 42px;
+            margin-top: 10px;
+            text-align: center;
+            @media screen and (min-width: $screen-desktop){
+                text-align: left;
+            }
+        }
+    }
+    &__form{
+         @include flex(flex-start, center, row);
+         margin-bottom: 27px;
+         &-input{
+             outline: none;
+             border: 1px solid $grey;
+             background-color: transparent;
+             padding: 15px 15px;
+             margin-right: 10px;
+             color: $white;
+             width: 185px;
+             transition: all 0.5s ease;
+             &:hover{
+                 border-left: 5px solid $btn-color;
+                 border-radius: 5px;
+             }
+             &::placeholder{
+                 color: $grey;
+             }
+             &:invalid:not(:placeholder-shown){
+                 border-left: 5px solid red;
+                 border-radius: 5px;
+             }
+             &:valid{
+                 border-left: 5px solid green;
+                 border-radius: 5px;
+             }
+         }
+        &-button{
+            padding: 10px 20px;
+            background-color: $grey;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            &:hover{
+                border-radius: 5px;
+                transform: scale(1.1);
+            }
+        }     
+        &:valid &-button{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    &__aside{
+        @extend %container;
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+        @media screen and (min-width: 534px){
+            justify-content: space-between;
+        }margin: 0 auto;
+        padding-bottom: 72px;
+    }
+    &__list{
+        list-style: none;
+        @include flex();
+        @include text($H50, 400, $white);
+        text-transform: uppercase;
+        max-width: 287px;
+        margin-bottom: 30px;
+        @media screen and (min-width: 534px){
+            margin-bottom: 0;
+        }
+        &-item{
+            &:not(:last-child){
+                margin-right: 30px;
+            }
+        }
+    }
+}
+.list{
+    list-style: none;
+    @include flex(flex-start, stretch, row);
+    &__item{
+        width: 35px;
+        margin-top: -35px;
+        margin-right: 8px;
+        padding: 20px 0;
+        cursor: pointer;
+        &-image{
+            @include svg(35px, $white);
+            transition: all 0.5s ease;
+            &:hover{
+                fill: $btn-color;
+            }
+        }
+    }
+}

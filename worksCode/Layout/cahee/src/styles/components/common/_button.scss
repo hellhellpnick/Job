@@ -1,0 +1,77 @@
+.button{
+    text-decoration: none;
+    text-transform: uppercase;
+    @include text($H100, 400);
+    font-family: $base-font;
+    color: $white;
+    background-color: $blog-btn-color;
+    width: 100%;
+    padding: 20px 15px;
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    @media screen and (min-width: $screen-fullhd) {
+        font-size: $H200;
+    }
+    @media screen and(min-width: $screen-tablet){
+        width: 200px;
+        &:hover{
+            transform: scale(1.1);
+            box-shadow: 6px 6px 6px 0 #66CCCC,
+                        -6px -6px 6px 0 #CCFF99;
+        } 
+        &--header:hover{
+            box-shadow: 6px 6px 6px 0 #6899D3,
+                        -6px -6px  6px 0 #95EE6B;
+        }
+        &--contact:hover{
+            box-shadow: 6px 6px 6px 0 #FFCC66,
+                        -6px -6px 6px 0 #FF6666;
+        }
+        &--form{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            vertical-align: center;
+            width: 170px;  
+            height: 55px;
+            background-color: $subscribe-btn-color; 
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+            border: none;
+            &:hover{
+                box-shadow: 6px 6px 6px 0 #CC6699,
+                            -6px -6px 6px 0 #9966CC;
+            }
+        }
+        &--gallery{
+            &:hover{
+                box-shadow: 6px 6px 6px 0 #CA3E3A,
+                            -6px -6px 6px 0 #CA6360;
+            }
+        }
+    }
+    &--gallery{
+        display: block;
+        margin: 0 auto;
+        background-color: #5585a2;
+    }
+    &--header{
+        background-color: $header-btn-color;
+        /* width: 75%; */
+    }
+    &--form{
+        background-color: $subscribe-btn-color;
+        outline: none;
+        border: none;
+    }
+    &--contact{
+        background-color: $about-bg-color;
+        border: none;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+    }
+}

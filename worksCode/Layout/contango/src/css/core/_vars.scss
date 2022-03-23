@@ -1,0 +1,85 @@
+//font face
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('./../fonts/HelveticaNeueCyr-Medium.eot');
+  src: local('../../fonts/HelveticaNeueCyr-Medium'),
+    url('./../fonts/HelveticaNeueCyr-Medium.eot?#iefix')
+      format('embedded-opentype'),
+    url('./../fonts/HelveticaNeueCyr-Medium.woff') format('woff'),
+    url('./../fonts/HelveticaNeueCyr-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('./../fonts/HelveticaNeueCyr-Heavy.eot');
+  src: local('../../fonts/HelveticaNeueCyr-Heavy'),
+    url('./../fonts/') format('embedded-opentype'),
+    url('./../fonts/HelveticaNeueCyr-Heavy.woff') format('woff'),
+    url('./../fonts/HelveticaNeueCyr-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url('./../fonts/HelveticaNeueCyr-UltraLight.eot');
+  src: local('../../fonts/HelveticaNeueCyr-UltraLight'),
+    url('./../fonts/HelveticaNeueCyr-UltraLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('./../fonts/HelveticaNeueCyr-UltraLight.woff') format('woff'),
+    url('./../fonts/') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+//Color
+$color-main: #fff;
+$color-text-second: #202020;
+$color-text-primary: #747474;
+$color-text-main: #375d9f;
+$color-title-primary: #2a5298;
+$color-title-second: #1e3c72;
+
+//Bg-color
+$background-gradient-bubble: linear-gradient(180deg, #dc3dd4 0%, #2a5298 100%);
+$background-gradient-circle: linear-gradient(
+  270deg,
+  #d851d2 1.77%,
+  #38529d 101.77%
+);
+$background-gradient-button: linear-gradient(90deg, #bb52c9 0%, #35519c 90.48%);
+$background-gradient-btn-message: linear-gradient(
+  90deg,
+  #3b529e 0%,
+  #ce51ce 100%
+);
+
+//Size block
+$container-width: 1110px;
+
+//Font size
+$font-size-extra-large: 62px;
+$font-size-large-second: 36px;
+$font-size-large-primary: 24px;
+$font-size-medium-second: 20px;
+$font-size-medium-primary: 18px;
+$font-size-small-second: 16px;
+$font-size-small-primary: 14px;
+
+//Font weigth
+$font-weigth: 200;
+
+//Font family
+$font-family-main: 'HelveticaNeueCyr';
+
+//Responsive
+$screen-mobile: 320px;
+$screen-mobile-large: 480px;
+$screen-tablet: 768px;
+$screen-desktop: 1024px;
+$screen-desktop-large: 1280px;
+$screen-hd: 1366px;
+$screen-fullhd: 1440px;
+$screen-retina: 1660px;

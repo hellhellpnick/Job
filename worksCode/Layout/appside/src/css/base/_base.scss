@@ -1,0 +1,29 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  @include flex(center, center, column);
+  padding: 20px 15px 2px 15px;
+
+  @include mobile-large {
+    padding: 20px 30px;
+  }
+}

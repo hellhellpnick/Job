@@ -1,0 +1,18 @@
+.btn-subscribe {
+  opacity: 0;
+  background-image: $background-gradient-btn-message;
+  border-radius: 100px;
+  max-width: 200px;
+  width: 100%;
+  @include text($font-size-small-primary, 550, $color-text-second);
+  line-height: 27px;
+  border: none;
+
+  &:hover {
+    color: $color-main;
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
+}

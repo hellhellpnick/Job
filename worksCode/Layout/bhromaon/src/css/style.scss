@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Aleo:400,700|Josefin+Sans&display=swap');
+
+//Core
+@import './core/vars';
+@import './core/inheritance';
+@import './core/mixins';
+@import './core/common';
+
+//components
+@import './components/header';
+@import './components/section-choose';
+@import './components/section-link';
+@import './components/section-what';
+@import './components/section-tourist';
+@import './components/footer';
+
+//common
+@import './components/common/form';
+@import './components/common/navigation';
+@import './components/common/button';
+@import './components/common/card';
+@import './components/common/scroll-down';
+@import './components/common/burger';

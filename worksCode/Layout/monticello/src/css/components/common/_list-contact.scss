@@ -1,0 +1,17 @@
+.list-contact{
+    list-style: none;
+    @include flex(flex-start, stretch, column);
+    margin-bottom: 20px;
+    &__item{
+        @include flex(flex-start, center, row);
+        margin-bottom: 42px;
+        &-svg{
+            @include svg(15px, $purple);
+            margin-right: 10px;
+        }
+        &-text{
+            @include text($H50, 400, $button);
+            font-family: $second-font;
+        }
+    }
+}

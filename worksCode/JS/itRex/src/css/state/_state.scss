@@ -1,0 +1,36 @@
+.is-hidden-td {
+  display: none !important;
+  overflow: hidden;
+}
+
+.is-dont-point-event {
+  pointer-events: none;
+}
+
+.is-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.is-active-item {
+  background-color: $color-line-main;
+  color: $color-text-extra-ligth;
+}
+
+.is-sort {
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $color-text-brigth;
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+.is-show-info {
+  visibility: visible;
+  margin: auto;
+}
