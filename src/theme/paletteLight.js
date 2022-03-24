@@ -1,6 +1,6 @@
 const palette = {
   background: {
-    main: '#fff',
+    main: '#f9f9f9',
     primary: '#939393',
     second: '#2b2b2b',
   },

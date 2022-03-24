@@ -1,15 +1,14 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { styled } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 'auto',
     width: '100%',
     margin: '0 20px',
     overflowY: 'auto',
-    position: 'relative',
     marginBottom: '30px',
-    zIndex: 1,
-    overflowX: 'hidden',
+    position: 'relative',
     backgroundColor: theme.palette.background.second,
     display: 'flex',
     transition: '0.3s',
@@ -17,6 +16,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     borderRadius: 10,
     boxShadow: '0 0 0 8px rgba(255, 255, 255, 0.2)',
+    overflow: 'hidden',
+    zIndex: 1,
 
     '@media (min-width: 768px)': {
       marginBottom: '40px',
@@ -52,17 +53,45 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: (props) => `url(${props.bgImgHeader})`,
   },
 
-  cardAvatar: {
+  cardAvatarBox: {
     width: '100px',
     height: '100px',
     boxShadow: '0 8px 8px rgba(0, 0, 0, 0.2)',
     borderRadius: '50%',
-    objectPosition: 'center',
-    objectFit: 'cover',
     position: 'absolute',
     bottom: 0,
     left: '50%',
     transform: 'translateX(-50%) translateY(-64px)',
+    overflow: 'hidden',
+    zIndex: 3
+  },
+
+  cardAvatarBigBox: {
+    width: '100%',
+    maxWidth: 340,
+    height: '300px',
+    right: 0,
+    boxShadow: '0 8px 8px rgba(0, 0, 0, 0.2)',
+    position: 'absolute',
+    overflow: 'hidden',
+    zIndex: 3
+  },
+
+  cardAvatar: {
+    width: '100px',
+    height: '100px',
+    borderRadius: '50%',
+    objectPosition: 'center',
+    objectFit: 'cover',
+    zIndex: 1,
+  },
+
+  boxFrame: {
+    position: 'absolute',
+    width: '100%',
+    maxWidth: 340,
+    height: '300px',
+    zIndex: 4
   },
 
   cardFullName: {
@@ -146,5 +175,28 @@ const Link = styled('a')(({ theme }) => ({
   },
 }));
 
+const LinkSite = styled(NavLink)(({ theme }) => ({
+  position: 'absolute',
+  bottom: '-10px',
+  right: '-10px',
+  alignSelf: 'flex-end',
+  marginBottom: 20,
+  marginRight: 20,
+  width: 20,
+  height: 20,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: 10,
+  borderRadius: '50%',
+  backgroundColor: theme.palette.background.main,
+  textDecoration: 'none',
 
-export { useStyles, Link };
+  '& > i': {
+    fontSize: 13,
+    color: theme.palette.iconBack.primary,
+  },
+}));
+
+
+export { useStyles, Link, LinkSite };

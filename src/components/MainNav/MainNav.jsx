@@ -1,45 +1,38 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import SwitchTheme from './Switches/SwitcheTheme';
 import { Box, Button } from '@material-ui/core';
 import '../../css/mainNavAnimation.css';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useStyles } from './MainNav.styled';
 import { routes } from '../../Router';
+import {
+  CallMeUserArr,
+} from '../../constants';
+import ArticleUser from './../HomePage/ArticleUser/ArticleUser';
+import CallMeUser from './../HomePage/CallMeUser/CallMeUser';
+import Aos from 'aos';
 
 const MainNav = () => {
   const [stateMenu, setStateMenu] = React.useState(false);
   const [stateAnimationMenu, setstateAnimationMenu] = React.useState(false);
-
-  const handleCloseMenu = () => {
-    setStateMenu(false);
-    document.body.style.overflow = 'visible';
-  };
-
-  const handleOpenMenu = () => {
-    setStateMenu(true);
-    document.body.style.overflow = 'hidden';
-  };
-
-  const handleOpenAnimation = () => {
-    setstateAnimationMenu(true);
-  };
-
-  const handleCloseAnimation = () => {
-    setstateAnimationMenu(false);
-  };
-
   const classes = useStyles();
+  
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
+  const SwitchStateMenu = () => {
+    setStateMenu(!stateMenu);
+    setstateAnimationMenu(!stateAnimationMenu);
+  }
 
   return (
-    <>
+    <Box className={classes.wrapperMain}>
       <header className={classes.header}>
         <Button
           variant="text"
           className={stateMenu ? classes.wrapperBtnOpenDisable : classes.wrapperBtnOpenActive}
-          onClick={() => {
-            handleOpenMenu();
-            handleOpenAnimation();
-          }}
+          onClick={() => {SwitchStateMenu()}}
         >
           <i className={`fas fa-angle-double-right ${classes.iconArrow}`}></i>
         </Button>
@@ -52,29 +45,20 @@ const MainNav = () => {
           <Button
             variant="text"
             className={classes.wrapperBtn}
-            onClick={() => {
-              handleCloseMenu();
-              handleCloseAnimation();
-            }}
+            onClick={() => {SwitchStateMenu()}}
           >
             <i className={`fas fa-times ${classes.iconClose}`}></i>
           </Button>
           <ul className={classes.menu}>
             <li
               className={classes.item}
-              onClick={() => {
-                handleCloseMenu();
-                handleCloseAnimation();
-              }}
+              onClick={() => {SwitchStateMenu()}}
             >
               <NavLink to={routes.main}>Home</NavLink>
             </li>
             <li
               className={classes.item}
-              onClick={() => {
-                handleCloseMenu();
-                handleCloseAnimation();
-              }}
+              onClick={() => {SwitchStateMenu()}}
             >
               <NavLink to={routes.works.main}>Works</NavLink>
             </li>
@@ -110,7 +94,13 @@ const MainNav = () => {
         </nav>
       </header>
       <Outlet />
-    </>
+      <Box data-aos="fade-right" className={classes.wrapperSection}>
+        <ArticleUser title="Contact" text="Call me!" />
+        <Box className={classes.wrapperCallMeUser}>
+          <CallMeUser items={CallMeUserArr} />
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

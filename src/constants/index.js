@@ -174,7 +174,7 @@ const ListWorks = [
     url: '/Job/works/MusicPlayer',
     typeWork: 'js',
     local: true,
-    truePath: './works/musicPlayer/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/musicPlayer/index.html`,
   },
   {
     title: 'Work with JSON Placeholder',
@@ -207,7 +207,7 @@ const ListWorks = [
     url: '/Job/works/reactForm',
     typeWork: 'react',
     local: false,
-    truePath: './works/reactForm/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/reactForm/index.html`,
   },
   {
     title: 'Cahee',
@@ -218,7 +218,7 @@ const ListWorks = [
     url: '/Job/works/Cahee',
     typeWork: 'layout',
     local: true,
-    truePath: './works/cahee/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/cahee/index.html`,
   },
   {
     title: 'Tajam',
@@ -229,7 +229,7 @@ const ListWorks = [
     url: '/Job/works/Tajam',
     typeWork: 'layout',
     local: true,
-    truePath: './works/tajam/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/tajam/index.html`,
   },
   {
     title: 'Contango',
@@ -240,7 +240,7 @@ const ListWorks = [
     url: '/Job/works/Contango',
     typeWork: 'layout',
     local: true,
-    truePath: './works/contango/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/contango/index.html`,
   },
   {
     title: 'Monticello',
@@ -251,7 +251,7 @@ const ListWorks = [
     url: '/Job/works/Monticello',
     typeWork: 'layout',
     local: true,
-    truePath: './works/monticello/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/monticello/index.html`,
   },
   {
     title: 'Bhromaon',
@@ -262,7 +262,7 @@ const ListWorks = [
     url: '/Job/works/Bhromaon',
     typeWork: 'layout',
     local: true,
-    truePath: './works/bhromaon/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/bhromaon/index.html`,
   },
   {
     title: 'ItRex-JSON',
@@ -273,7 +273,7 @@ const ListWorks = [
     url: '/Job/works/itRex',
     typeWork: 'js',
     local: true,
-    truePath: './works/itRex/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/itRex/index.html`,
   },
   {
     title: 'To do list',
@@ -284,7 +284,7 @@ const ListWorks = [
     url: '/Job/works/toDoList',
     typeWork: 'js',
     local: true,
-    truePath: './works/toDoList/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/toDoList/index.html`,
   },
   {
     title: 'Tip calculator',
@@ -295,7 +295,7 @@ const ListWorks = [
     url: '/Job/works/TipCalculator',
     typeWork: 'js',
     local: true,
-    truePath: './works/tipCalculator/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/tipCalculator/index.html`,
   },
   {
     title: 'Timer',
@@ -306,7 +306,7 @@ const ListWorks = [
     url: '/Job/works/Timer',
     typeWork: 'js',
     local: true,
-    truePath: './works/timer/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/timer/index.html`,
   },
   {
     title: 'Sticky Notes',
@@ -317,7 +317,7 @@ const ListWorks = [
     url: '/Job/works/StickyNotes',
     typeWork: 'js',
     local: true,
-    truePath: './works/stickyNotes/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/stickyNotes/index.html`,
   },
   {
     title: 'Random Quotes',
@@ -328,7 +328,7 @@ const ListWorks = [
     url: '/Job/works/RandomQuotes',
     typeWork: 'js',
     local: true,
-    truePath: './works/randomQuotes/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/randomQuotes/index.html`,
   },
   {
     title: 'Quotes Api',
@@ -339,7 +339,7 @@ const ListWorks = [
     url: '/Job/works/QuotesApi',
     typeWork: 'js',
     local: true,
-    truePath: './works/quotesApi/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/quotesApi/index.html`,
   },
   {
     title: 'Math 4 Kids',
@@ -350,7 +350,7 @@ const ListWorks = [
     url: '/Job/works/MathKids',
     typeWork: 'js',
     local: true,
-    truePath: './works/mathKids/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/mathKids/index.html`,
   },
   {
     title: 'Image Carousel',
@@ -361,7 +361,7 @@ const ListWorks = [
     url: '/Job/works/ImageCarousel',
     typeWork: 'js',
     local: true,
-    truePath: './works/imageCarousel/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/imageCarousel/index.html`,
   },
   {
     title: 'Hex Color',
@@ -372,7 +372,7 @@ const ListWorks = [
     url: '/Job/works/HexColor',
     typeWork: 'js',
     local: true,
-    truePath: './works/HexColor/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/HexColor/index.html`,
   },
   {
     title: 'Grocery List',
@@ -383,7 +383,7 @@ const ListWorks = [
     url: '/Job/works/GroceryList',
     typeWork: 'js',
     local: true,
-    truePath: './works/groceryList/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/groceryList/index.html`,
   },
   {
     title: 'Flash Cards',
@@ -394,7 +394,7 @@ const ListWorks = [
     url: '/Job/works/FlashCards',
     typeWork: 'js',
     local: true,
-    truePath: './works/flashCards/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/flashCards/index.html`,
   },
   {
     title: 'Digital Clock',
@@ -405,7 +405,7 @@ const ListWorks = [
     url: '/Job/works/DigitalClock',
     typeWork: 'js',
     local: true,
-    truePath: './works/digitalClock/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/digitalClock/index.html`,
   },
   {
     title: 'Calculator',
@@ -416,7 +416,7 @@ const ListWorks = [
     url: '/Job/works/Calculator',
     typeWork: 'js',
     local: true,
-    truePath: './works/calculator/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/calculator/index.html`,
   },
   {
     title: 'Game Dots',
@@ -427,7 +427,7 @@ const ListWorks = [
     url: '/Job/works/DotsPhaser',
     typeWork: 'game',
     local: true,
-    truePath: './works/dotsPhaser/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/dotsPhaser/index.html`,
   },
   {
     title: 'Game Shooter',
@@ -438,7 +438,7 @@ const ListWorks = [
     url: '/Job/works/ShooterPhaser',
     typeWork: 'game',
     local: true,
-    truePath: './works/shooterPhaser/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/shooterPhaser/index.html`,
   },
   {
     title: 'Game Memory Card',
@@ -449,7 +449,7 @@ const ListWorks = [
     url: '/Job/works/MemoryCardPhaser',
     typeWork: 'game',
     local: true,
-    truePath: './works/memoryCardPhaser/index.html',
+    truePath: `${document.location.protocol}//${document.location.host}/Job/works/memoryCardPhaser/index.html`,
   },
 ];
 

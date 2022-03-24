@@ -16,6 +16,11 @@ const InputLabelCustom = withStyles((theme) => ({
 }))(InputLabel);
 
 const useStyles = makeStyles((theme) => ({
+  wrapperMain: {
+    backgroundColor: theme.palette.background.main,
+    paddingBottom: 30
+  },
+
   header: {
     padding: '10px',
     backgroundColor: theme.palette.background.main,
@@ -25,6 +30,23 @@ const useStyles = makeStyles((theme) => ({
     '@media screen and (min-width: 1024px)': {
       padding: 0,
     },
+  },
+
+  wrapperSection: {
+    display: 'flex',
+    flexDirection: 'column',
+
+    '@media screen and (min-width: 1024px)': {
+      flexDirection: 'row',
+      borderTop: `2px solid ${theme.palette.border.main}`,
+    },
+  },
+
+  wrapperCallMeUser: {
+    width: '100%',
+    padding: '25px 25px 0 25px',
+    backgroundColor: theme.palette.background.main,
+    transition: 'all 0.2s ease',
   },
 
   navActive: {
