@@ -162,8 +162,8 @@ const ListWorks = [
     img: imgVue,
     url: 'https://hellhellpnick.github.io/project-beetroot/',
     typeWork: 'vue',
-    local: false,
-    truePath: '',
+    local: true,
+    truePath: 'https://hellhellpnick.github.io/project-beetroot/',
   },
   {
     title: 'Music Player',
@@ -184,7 +184,7 @@ const ListWorks = [
     img: imgJsonPlaceholder,
     url: 'https://hellhellpnick.github.io/-PartsTech',
     typeWork: 'react',
-    local: false,
+    local: true,
     truePath: '',
   },
   {
@@ -195,7 +195,7 @@ const ListWorks = [
     img: imgITRexMedicine,
     url: 'https://hellhellpnick.github.io/itrex-training/',
     typeWork: 'react',
-    local: false,
+    local: true,
     truePath: '',
   },
   {
@@ -206,7 +206,7 @@ const ListWorks = [
     img: imgEmailJS,
     url: '/Job/works/reactForm',
     typeWork: 'react',
-    local: false,
+    local: true,
     truePath: `${document.location.protocol}//${document.location.host}/Job/works/reactForm/index.html`,
   },
   {

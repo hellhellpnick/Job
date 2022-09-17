@@ -1,0 +1,50 @@
+.card-info {
+  background-color: $background-light-color;
+  border-radius: $box-radius-main;
+  z-index: 5;
+  max-width: 320px;
+  width: 100%;
+  padding: 25px;
+  border-radius: $box-radius-main;
+  display: none;
+}
+
+.card-info--active {
+  display: block;
+  position: relative;
+  transform: translate(0%, 100%);
+  transition: all 0.2s ease;
+  animation: show-card 1s linear;
+
+  @include tablet-media {
+    transform: translate(60%, 100%);
+  }
+
+  @include desktop-large-media {
+    transform: translate(-50%, 25%);
+  }
+
+  @media (min-width: 1500px) {
+    transform: translate(175%, 25%);
+  }
+}
+
+.card-info__title {
+  @include text-constructor($font-size-medium, $font-weigth-bold, $text-second-color, $font-family-main);
+  line-height: 157%;
+  margin-bottom: 15px;
+
+  @include desktop-media {
+    margin-bottom: 30px;
+  }
+}
+
+@keyframes show-card {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

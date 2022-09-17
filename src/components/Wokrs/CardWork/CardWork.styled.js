@@ -67,14 +67,40 @@ const useStyles = makeStyles((theme) => ({
   },
 
   cardAvatarBigBox: {
-    width: '100%',
-    maxWidth: 340,
-    height: '300px',
-    right: 0,
+    width: '100px',
+    height: '100px',
     boxShadow: '0 8px 8px rgba(0, 0, 0, 0.2)',
+    borderRadius: '50%',
     position: 'absolute',
+    bottom: 0,
+    left: '50%',
+    transform: 'translateX(-50%) translateY(-64px)',
     overflow: 'hidden',
-    zIndex: 3
+    zIndex: 3,
+
+    '@media (min-width: 768px)': {
+      position: 'absolute',
+      top: '30%',
+      left: '50%',
+      bottom: 0,
+      right: 0,
+      width: '100%',
+      borderRadius: '0',
+      maxWidth: 340,
+      height: '300px',
+      boxShadow: '0 8px 8px rgba(0, 0, 0, 0.2)',
+      overflow: 'hidden',
+      zIndex: 3,
+    },
+
+    "& > iframe": {
+      display: 'none',
+      zIndex: 4,
+
+      "@media(min-width: 768px)": {
+        display: 'block'
+      }
+    }
   },
 
   cardAvatar: {
